@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* リキッドレイアウト対応 */
 body {
-  font-family: "";
+  font-family: "Gotu", sans-serif;
 }
 
 .u-desktop {
