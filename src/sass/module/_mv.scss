@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.mv {
+
+}
+
+.mv__inner {
+
+}
+
+.mv__swiper-container {
+
+}
+
+.swiper-container {
+
+}
+
+.mv__swiper {
+
+}
+
+.swiper-wrapper {
+
+}
+
+.mv__swiper-wrapper {
+
+}
+
+.swiper-slide {
+
+}
+
+.mv__swiper-slide {
+position: relative;//テキストを絶対配置値できるようにする
+}
+
+.swiper__img {
+width: 100%;
+display: block;
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+}
+
+.mv__text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: $white;
+text-align: center;
+}
+
+.mv__maintext {
+  font-family: $eg2-font-family;
+  font-size: rem(80);
+  font-weight: $bold;
+  letter-spacing: rem(43.2);
+  font-weight: $normal;
+}
+
+.mv__subtext {
+  color: $white;
+  font-family: $eg-font-family;
+  font-size: rem(20);
+  font-weight: $normal;
+  // letter-spacing: rem(1.2);
+}
+
