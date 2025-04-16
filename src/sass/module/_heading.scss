@@ -1,0 +1,30 @@
+@use "global" as *;
+
+
+  .heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #408F95;
+    /* opacity: 0; */
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 3;
+  }
+
+  .heading__main {
+    font-family: Lato;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 125%; /* 125% */
+    letter-spacing: 43.2px;
+  }
+
+  .heading__sub {
+    font-family: Gotu;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  

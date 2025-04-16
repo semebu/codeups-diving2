@@ -15,6 +15,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
+// ローディングアニメーション
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+
+    // アニメーションスタート
+    setTimeout(() => {
+      loader.classList.add('loaded');
+    }, 500);
+  });
+
   // ボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
     $('body,html').animate({

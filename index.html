@@ -30,6 +30,16 @@
   <script defer src="./js/script.js"></script>
 </head>
 <body>
+<!-- ローディングアニメーション -->
+  <div class="loader" id="loader">
+      <div class="image-half left"></div>
+      <div class="image-half right"></div>
+      <div class="heading">
+          <h1 class="heading__main">DIVING</h1>
+          <div class="heading__sub">into the ocean</div>
+      </div>
+  </div>
+  <!--  -->
 <header class="header">
   <div class="header__inner">
     <h1 class="header__logo">
@@ -91,6 +101,7 @@
     </nav>
   </div>
 </header>
+<!-- ファーストビュー -->
  <div class="mv">
   <div class="mv__inner">
     <div class="mv__swiper-container">
@@ -161,11 +172,51 @@
     </div>
   </div>
 </div>
+<!-- キャンペーンセクション -->
+ <div class="campaign">
+  <div class="campaign__inner">
+    <!-- セクションタイトル(共通パーツ) -->
+     <div class="section-title">
+        <h2 class="section-title__en">
+          <span class="section-title__en--accent">C</span>ampaign
+        </h2>
+        <p class="section-title__jp">キャンペーン</p>
+      </div>
+    <!-- キャンペーンスライダー -->
+    <div class="campaign__swiper-container">
+      <div class="swiper campaign__swiper">
+        <div class="swiper-wrapper campaign__swiper-wrapper">
+          <div class="swiper-slide campaign__swiper-slide">
+            <p>Card</p>
+          </div>
+          <div class="swiper-slide campaign__swiper-slide">
+            <p>Card</p>
+          </div>
+          <div class="swiper-slide campaign__swiper-slide">
+            <p>Card</p>
+          </div>
+          <div class="swiper-slide campaign__swiper-slide">
+            <p>Card</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <!-- ボタン(共通パーツ) -->
+      <div class="btn-border">
+        <a href="#" class="btn-border__inner">
+          View more
+          <span class="btn-border__arrow"></span>
+        </a>
+      </div>
+  </div>
+ </div>
+
 
   <footer>
-    <div class="step-box__image">
-      <img src="./images/common/bg_fv1_pc.jpg" alt="">
-    </div>
+   
   </footer>
 </body>
 </html>

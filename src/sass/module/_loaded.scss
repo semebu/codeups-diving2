@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.loaded .left {
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.loaded .right {
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.loaded .heading {
+  opacity: 1;
+  color: $white;
+  transition-delay: 1s;
+}
+
