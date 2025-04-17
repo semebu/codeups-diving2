@@ -18,8 +18,23 @@
   line-height: 150%;
 }
 
+.voice-card__texts {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: rem(16);
+  gap: rem(24);
+}
+
+.voice-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  margin-top: rem(24);
+}
+
 .voice-card__age {
-  color: $green;
+  color: $font-color;
   font-family: $jp-font-family;
   font-size: rem(12);
   font-weight: 400;
@@ -29,27 +44,39 @@
 .voice-card__tag {
   display: inline-block;
   border: rem(1) solid $green;
-  border-radius: rem(100);
   padding: rem(6) rem(16);
   color: $green;
   font-family: $jp-font-family;
   font-size: rem(12);
   font-weight: 400;
-  line-height: 150%; /* 150% */
+  line-height: 183.333%; /* 150% */
 }
 .voice-card__header {
 display: flex;
 justify-content: space-between;
 align-items: flex-start;
-margin-bottom: rem(16);
+padding-bottom: rem(4);
 gap: rem(24);
+border-bottom: rem(1) solid $green;
 }
 
 .voice-card__title {
-
+  color: $font-color;
+  font-family: $jp-font-family;
+  font-size: rem(24);
+  font-weight: 500;
 }
 
 .voice-card__image {
 
+}
+
+.voice-card__text {
+  margin-top: rem(40);
+  color: $font-color;
+  font-family: $jp-font-family;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 150%; /* 150% */
 }
 
