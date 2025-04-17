@@ -1,8 +1,20 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+  // ページトップボタン処理
   var topBtn = $('.pagetop');
   topBtn.hide();
+
+  //スクロールでページトップボタン表示
+  $(window).scroll(function () {
+    if($(this).scrollTop()> 70) {
+      topBtn.fadeIn();
+    } else {
+      topBtn.fadeOut();
+    }
+  });
+
+
 
   // ボタンの表示設定
   $(window).scroll(function () {
@@ -15,15 +27,45 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }
   });
 
-// ローディングアニメーション
-window.addEventListener('load', () => {
-    const loader = document.getElementById('loader');
+  // ========================================
+  // ✅ ローディングアニメーション
+  // ========================================
+  window.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loading');
+    const leftImage = document.querySelector('.image-half.left');
+    console.log('leftImage', leftImage);
+    const rightImage = document.querySelector('.image-half.right');
+    const heading = document.querySelector('.heading');
 
-    // アニメーションスタート
+    // ローディングをまず表示させる(display:block;)
+    loadingScreen.style.display = "block";
+
+    // ③ テキストフェードイン
+      setTimeout(() => {
+        heading.classList.add('show');
+      }, 800);//テキストは2.２秒後
+
+    // アニメーションスタート(左→右の順にクラス付与)
+    // まずは　①　左スライド
     setTimeout(() => {
-      loader.classList.add('loaded');
-    }, 500);
-  });
+      leftImage.classList.add('js-slide-out-left');
+    }, 1800);
+
+      // 次に　②　右スライド（さらに遅らせる）
+    setTimeout(() => {
+      rightImage.classList.add('js-slide-out-right');
+    }, 2600);
+
+  
+
+      // ④ 最終的にローディング自体を非表示に(全て終了後)
+      setTimeout(()=> {
+        loadingScreen.style.display = "none";
+      }, 5500);//全体終了後に非表示に
+    });
+
+    // }, loadingEndTime);
+  // });
 
   // ボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
@@ -32,6 +74,7 @@ window.addEventListener('load', () => {
     }, 300, 'swing');
     return false;
   });
+
 
   //ドロワーメニュー
   $("#MenuButton").click(function () {
@@ -42,6 +85,7 @@ window.addEventListener('load', () => {
     $("html").toggleClass("is-fixed");
 
   });
+
 
 
 

@@ -1,17 +1,23 @@
 @use "global" as *;
 
-
   .heading {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
     text-align: center;
+    width: 100%;
     color: #408F95;
-    /* opacity: 0; */
-    transition: opacity 1s ease, transform 1s ease;
-    z-index: 3;
+    z-index: 200;
+    opacity: 1;
+    transition: opacity 1s ease 1.2s;//←スライド後にフェードイン
+
+    &.show {
+      opacity: 1;
+      color: $white;
+      transition-delay: 1.2s;
+    }
+  
   }
 
   .heading__main {
@@ -26,5 +32,6 @@
     font-family: Gotu;
     font-size: 20px;
     font-weight: 400;
+    text-align: center;
   }
-  
+

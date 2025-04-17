@@ -1,12 +1,41 @@
 @use "global" as *;
 
 .image-half {
- position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("./src/images/common/bg_fv1_pc.jpg");
-    background-size: cover;
-    background-position: center;
-    transform: translateY(100%);
-    transition: transform 1s ease-out;
+  position: absolute;
+  bottom:0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./../../images/common/bg_fv1_pc.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: translateY(100%);
+  z-index: 10;
+  transition: transform 1s ease;
+
+    &.left {
+      // left: 0;
+      // transform: translateY(0);
+      clip-path: inset(0 50% 0 0);
+      z-index: 1;
+    }
+
+    &.right {
+      // right: 0;
+      // transform: translateY(0);
+      // transition-delay: 0.8s;//右だけ遅らせる
+      clip-path: inset(0 0 0 50%);
+      z-index: 2;
+    }
+
+    &.js-slide-out-left {
+      // transform: translateY(-100%);
+        transform: translateY(0);
+    transition-delay: 0s;
+    }
+
+    &.js-slide-out-right {
+      // transform: translateY(-100%);
+        transform: translateY(0);
+    transition-delay: 0.3s;
+    }
 }
