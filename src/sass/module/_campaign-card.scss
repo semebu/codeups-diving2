@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.campaign-card {
+  background: $white;
+  box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.campaign-card__image img {
+    width: 100%;
+    display: block;
+  }
+
+.campaign-card__body {
+    padding: rem(16) rem(16) rem(24) rem(16);
+  }
+
+.campaign-card__label {
+    display: inline-block;
+    padding: rem(4) rem(12);
+    border: 1px solid $green;
+    font-size: rem(12);
+    color: $green;
+    // margin-bottom: 8px;
+  }
+
+.campaign-card__title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: rem(4);
+    margin-bottom: rem(8);
+  }
+
+.campaign-card__desc {
+    font-size: rem(14);
+    color: $font-color;
+    border-top: 1px solid $green;
+    padding-top: rem(14);
+    margin-bottom: rem(16);
+  }
+
+.campaign-card__price {
+    display: flex;
+    align-items: baseline;
+    gap: rem(16);
+    justify-content: center;
+}
+
+.campaign-card__price--old {
+      position: relative;
+      display: inline-block;
+      color: $font-color;
+      font-size: rem(20);
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 3px;
+        background-color: #c94800;
+        transform: translateY(-50%);
+      }
+    }
+
+.campaign-card__price--new {
+      font-size: rem(32);
+      font-weight: bold;
+      color: #408f95;
+    }
+
+

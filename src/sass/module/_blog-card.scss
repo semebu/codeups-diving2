@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.blog-card {
+  background-color: $white;
+  padding: rem(16) rem(16) rem(16) rem(24);
+  box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  max-width: rem(333);
+  margin: auto;
+}
+
+.blog-card__image img {
+  width: 100%;
+  display: block;
+}
+
+.blog-card__content {
+margin-top: rem(24);
+}
+
+.blog-card__date {
+  color: $font-color;
+  font-family: $eg2-font-family;
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: 150%; /* 150% */
+}
+
+.blog-card__title {
+  color: $font-color;
+  font-family: $jp-font-family;
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: 150%; /* 150% */
+  padding-bottom: rem(4);
+  border-bottom: 1px solid $green;
+}
+
+.blog-card__text {
+  margin-top: rem(16);
+  color: $black;
+  font-family: $jp-font-family;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: 150%; /* 150% */
+}
+
