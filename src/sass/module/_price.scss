@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.price {
+  background-color: #e0eff0;
+  padding: rem(80) 0;
+}
+
+.price__inner {
+  width: 90%;
+  max-width: rem(1077);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.price__title {
+  font-size: rem(28);
+  margin-bottom: rem(4);
+}
+
+.price__sub {
+font-size: rem(14);
+margin-bottom: rem(40);
+}
+
+.price__contents {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+flex-wrap: wrap;
+gap: rem(40);
+
+}
+
+.price__table {
+ flex: 1;
+ min-width: rem(300);
+}
+
+.price__category {
+
+}
+
+.price__category-title {
+  font-weight: bold;
+  border-bottom: rem(1) solid $green;
+
+}
+
+.price__list {
+
+}
+
+.price__item {
+
+}
+
+.price__name {
+
+}
+
+.price__cost {
+
+}
+
+.price__image {
+
+}
+
+.price__button {
+
+}
+
+.btn {
+
+}
+

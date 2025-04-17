@@ -655,6 +655,64 @@ select::-ms-expand {
   font-weight: 400;
 }
 
+.price {
+  background-color: #e0eff0;
+  padding: 80px 0;
+  padding: 5rem 0;
+}
+
+.price__inner {
+  width: 90%;
+  max-width: 1077px;
+  max-width: 67.3125rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.price__title {
+  font-size: 28px;
+  font-size: 1.75rem;
+  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
+}
+
+.price__sub {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+}
+
+.price__contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+  gap: 2.5rem;
+}
+
+.price__table {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 300px;
+  min-width: 18.75rem;
+}
+
+.price__category-title {
+  font-weight: bold;
+  border-bottom: 1px solid #4e7f85;
+  border-bottom: 0.0625rem solid #4e7f85;
+}
+
 .right {
   -webkit-clip-path: inset(0 0 0 50%);
           clip-path: inset(0 0 0 50%); /* 右半分を表示 */
