@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .price {
-  background-color: #e0eff0;
-  padding: rem(80) 0;
+  background-color: $light-blue;
+  padding: rem(100) 0;
 }
 
 .price__inner {
@@ -23,17 +23,33 @@ margin-bottom: rem(40);
 }
 
 .price__contents {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-flex-wrap: wrap;
-gap: rem(40);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: rem(93);
+  margin-top: rem(40);
+  flex-wrap: wrap; //スマホで折り返し可能に
+  margin-bottom: rem(80);
 
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/common/deco_fish.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: rem(437);
+    height: rem(201);
+    bottom: rem(-180);
+    left: rem(-82);
+  }
 }
 
 .price__table {
- flex: 1;
- min-width: rem(300);
+//  flex: 1;
+//  min-width: rem(300);
+width: calc(rem(492) / rem(1077) * 100%);
 }
 
 .price__category {
@@ -41,29 +57,54 @@ gap: rem(40);
 }
 
 .price__category-title {
+  color: $font-color;
   font-weight: bold;
+  font-family:$jp-font-family;
   border-bottom: rem(1) solid $green;
-
+  margin-bottom: rem(4);
+  font-size: rem(16);
+  text-align: left;
 }
 
 .price__list {
-
+  margin: 0;
+  padding: 0;
 }
 
 .price__item {
-
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: rem(8)0;
 }
 
 .price__name {
-
+  font-size: rem(16);
+  color: $font-color;
+  // width: 70%;
+  text-align: left;
+  margin-top: rem(4);
+  line-height: 150%;
 }
 
 .price__cost {
-
+  font-size: rem(16);
+  color: $font-color;
+  // width: 30%;
+  text-align: right;
+  line-height: 150%;
 }
 
 .price__image {
+width: 45%;
+// width: calc(rem(746) / rem(1077) * 100%);
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 }
 
 .price__button {

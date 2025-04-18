@@ -128,17 +128,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   spaceBetween: 30,
 
   // ページネーション
-  pagination: {
-    el: ".swiper-pagination", // paginationのclass
-    clickable: true, // クリックでの切り替えを有効に
-    type: "bullets" // paginationのタイプ (※2)
-  },
+  // pagination: {
+  //   el: ".swiper-pagination", // paginationのclass
+  //   clickable: true, // クリックでの切り替えを有効に
+  //   type: "bullets" // paginationのタイプ (※2)
+  // },
 
   // ナビゲーション
-  navigation: {
-    prevEl: ".swiper-button-prev", // 戻るボタンのclass
-    nextEl: ".swiper-button-next" // 進むボタンのclass
-  },
+  // navigation: {
+  //   prevEl: ".swiper-button-prev", // 戻るボタンのclass
+  //   nextEl: ".swiper-button-next" // 進むボタンのclass
+  // },
 
   // スクロールバー
   scrollbar: { // スクロールバーを表示したいとき
