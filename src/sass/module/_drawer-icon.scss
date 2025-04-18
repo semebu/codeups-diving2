@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.drawer-icon {
+  position: fixed;
+  top: rem(28);
+  right: rem(15);
+  width: rem(24);
+  height: rem(24);
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-icon__bar {
+  width: 100%;
+  height: 1px;
+  background: $white;
+}
+

@@ -5,8 +5,13 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: rem(80);
   z-index: 100;
   background-color: rgba(13, 41, 54, 0.68);
+
+  @include mq(md) {
+    height: rem(90);
+  }
 }
 
 .header__inner {
@@ -25,8 +30,12 @@
 }
 
 .header__nav {
-  display: flex;
-  flex-direction: column;
+  display: none;
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .header__nav-list {

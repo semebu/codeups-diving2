@@ -103,6 +103,12 @@
     </nav>
   </div>
 </header>
+<!-- ドロワーアイコン -->
+ <button class="drawer-icon">
+  <div class="drawer-icon__bar"></div>
+  <div class="drawer-icon__bar"></div>
+  <div class="drawer-icon__bar"></div>
+ </button>
 <!-- ファーストビュー -->
  <div class="mv">
   <div class="mv__inner">
@@ -303,9 +309,16 @@
               </div>
             </div>
 
-            <div class="price__image">
-              <img src="./images/common/img_price.jpg" alt="海中の珊瑚に赤い小さい魚が沢山いる風景" />
-            </div>
+            <picture class="price__image">
+              <!-- PCタブレット用 -->
+               <source media="(min-width: 768px)" srcset="./images/common/img_price.jpg" alt="海中の珊瑚に赤い小さい魚が沢山いる風景"/>
+              <!-- <img src="./images/common/img_price.jpg" alt="海中の珊瑚に赤い小さい魚が沢山いる風景" /> -->
+              <!-- スマホ用 -->
+              <img src="./images/common/img_price_sp.jpg" alt="海亀が海を泳いでいる"/>
+            </picture>
+
+
+
           </div>
 
           <div class="btn-border">

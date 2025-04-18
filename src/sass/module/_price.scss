@@ -13,8 +13,14 @@
 }
 
 .price__title {
-  font-size: rem(28);
-  margin-bottom: rem(4);
+  font-size: rem(16);
+  font-weight: bold;
+  line-height: 150%;
+
+  @include mq(md) {
+    font-size: rem(28);
+    margin-bottom: rem(4);
+  }
 }
 
 .price__sub {
@@ -23,33 +29,48 @@ margin-bottom: rem(40);
 }
 
 .price__contents {
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: rem(93);
-  margin-top: rem(40);
-  flex-wrap: wrap; //スマホで折り返し可能に
-  margin-bottom: rem(80);
+  flex-direction: column-reverse;
+  margin-top: rem(24);
+  margin-bottom: rem(40);
+
+  @include mq(md) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: rem(93);
+    margin-top: rem(40);
+    flex-wrap: wrap; //スマホで折り返し可能に
+    margin-bottom: rem(80);
+  }
 
   &::after {
-    content: "";
-    position: absolute;
-    background-image: url(../images/common/deco_fish.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: rem(437);
-    height: rem(201);
-    bottom: rem(-180);
-    left: rem(-82);
+    display: none;
+
+    @include mq(md) {
+      display: block;
+      content: "";
+      position: absolute;
+      background-image: url(../images/common/deco_fish.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: rem(437);
+      height: rem(201);
+      bottom: rem(-180);
+      left: rem(-82);
+    }
   }
 }
 
 .price__table {
-//  flex: 1;
-//  min-width: rem(300);
-width: calc(rem(492) / rem(1077) * 100%);
+  width: 100%;
+  margin-top: rem(40);
+
+  @include mq(md) {
+  width: calc(rem(492) / rem(1077) * 100%);
+  }
 }
 
 .price__category {
@@ -80,25 +101,38 @@ width: calc(rem(492) / rem(1077) * 100%);
 }
 
 .price__name {
-  font-size: rem(16);
-  color: $font-color;
-  // width: 70%;
-  text-align: left;
-  margin-top: rem(4);
+  font-size: rem(14);
   line-height: 150%;
+  color: $font-color;
+  text-align: left;
+  margin-top: rem(8);
+
+  @include mq(md) {
+  font-size: rem(16);
+  margin-top: rem(4);
+  }
 }
 
 .price__cost {
-  font-size: rem(16);
-  color: $font-color;
-  // width: 30%;
-  text-align: right;
+  font-size: rem(14);
   line-height: 150%;
+  color: $font-color;
+  text-align: right;
+  margin-top: rem(8);
+
+  @include mq(md) {
+    font-size: rem(16);
+    color: $font-color;
+  }
 }
 
 .price__image {
-width: 45%;
-// width: calc(rem(746) / rem(1077) * 100%);
+width: 100%;
+
+@include mq(md) {
+  width: 45%;
+  // width: calc(rem(746) / rem(1077) * 100%);
+}
 
 img {
   width: 100%;

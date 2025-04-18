@@ -57,18 +57,26 @@ text-align: center;
 }
 
 .mv__maintext {
+  font-size: rem(40);
+  letter-spacing: rem(21.6);
   font-family: $eg2-font-family;
-  font-size: rem(80);
-  font-weight: $bold;
-  letter-spacing: rem(43.2);
   font-weight: $normal;
+
+  @include mq(md) {
+    font-size: rem(80);
+    letter-spacing: rem(43.2);
+  }
 }
 
 .mv__subtext {
-  color: $white;
-  font-family: $eg-font-family;
   font-size: rem(20);
   font-weight: $normal;
-  // letter-spacing: rem(1.2);
+  color: $white;
+  font-family: $eg-font-family;
+
+  @include mq(md) {
+    font-size: rem(20);
+    // letter-spacing: rem(1.2);
+  }
 }
 
