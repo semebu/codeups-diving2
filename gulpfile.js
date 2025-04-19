@@ -7,19 +7,22 @@ const rename = require("gulp-rename");
 const srcPath = {
     css: 'src/sass/**/*.scss',
     img: 'src/images/**/*',
-    html: './**/*.html'
+    // html: './**/*.html'
+    html: 'src/**/*.html'
 }
 
 // 吐き出し先（なければ生成される）
 const destPath = {
-    css: 'css/',
-    img: 'images/'
+    // css: 'css/',
+    // img: 'images/'
+    css: 'dist/css/',
+    img: 'dist/images/'
 }
 
 // ブラウザーシンク（リアルタイムでブラウザに反映させる処理）
 const browserSync = require("browser-sync");
 const browserSyncOption = {
-    server: "./"
+    server: "dist/"
 }
 const browserSyncFunc = () => {
     browserSync.init(browserSyncOption);
@@ -88,11 +91,17 @@ const imgImagemin = () => {
     .pipe(dest(destPath.img))
 }
 
+const htmlCopy = () => {
+  return src('./index.html') // 必要であれば './*.html' でもOK
+    .pipe(dest('dist/'));
+};
+
+
 // ファイルの変更を検知
 const watchFiles = () => {
     watch(srcPath.css, series(cssSass, browserSyncReload))
     watch(srcPath.img, series(imgImagemin, browserSyncReload))
-    watch(srcPath.html, series(browserSyncReload))
+    watch(srcPath.html, series(htmlCopy, browserSyncReload))
 }
 
 // 画像だけ削除
