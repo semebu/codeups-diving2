@@ -1,276 +1,120 @@
-
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+jQuery(function ($) {
 // ============================
 // ✅ ページトップボタン
 // ============================
-  var topBtn = $('.pagetop');
-  topBtn.hide();
+// document.addEventListener("DOMContentLoaded", function () {
+  const topBtn = document.querySelector(".pagetop");
+  if (topBtn) {
+    topBtn.style.display = "none";
 
-  //スクロールでページトップボタン表示
-  $(window).on('scroll',function () {
-    if($(this).scrollTop()> 70) {
-      topBtn.fadeIn();
-    } else {
-      topBtn.fadeOut();
-    }
-  });
-
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
-    }
-  });
-
-
-  // ========================================
-  // ✅ ローディングアニメーション
-  // ========================================
-  window.addEventListener('load', () => {
-    const loadingScreen = document.getElementById('loading');
-    const leftImage = document.querySelector('.image-half.left');
-    console.log('leftImage', leftImage);
-    const rightImage = document.querySelector('.image-half.right');
-    const heading = document.querySelector('.heading');
-
-    // ローディングをまず表示させる(display:block;)
-    loadingScreen.style.display = "block";
-
-    // ③ テキストフェードイン
-      setTimeout(() => {
-        heading.classList.add('show');
-      }, 800);//テキストは2.２秒後
-
-    // アニメーションスタート(左→右の順にクラス付与)
-    // まずは　①　左スライド
-    setTimeout(() => {
-      leftImage.classList.add('js-slide-out-left');
-    }, 1800);
-
-      // 次に　②　右スライド（さらに遅らせる）
-    setTimeout(() => {
-      rightImage.classList.add('js-slide-out-right');
-    }, 2600);
-
-  
-
-      // ④ 最終的にローディング自体を非表示に(全て終了後)
-      setTimeout(()=> {
-        loadingScreen.style.display = "none";
-      }, 5500);//全体終了後に非表示に
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 70) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
     });
 
-    // }, loadingEndTime);
-  // });
+    topBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 
-  // ボタンをクリックしたらスクロールして上に戻る
-  topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
-    return false;
+  // ============================
+  // ✅ ローディングアニメーション
+  // ============================
+  window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loading");
+    const leftImage = document.querySelector(".image-half.left");
+    const rightImage = document.querySelector(".image-half.right");
+    const heading = document.querySelector(".heading");
+
+    if (loadingScreen) loadingScreen.style.display = "block";
+
+    setTimeout(() => heading?.classList.add("show"), 800);
+    setTimeout(() => leftImage?.classList.add("js-slide-out-left"), 1800);
+    setTimeout(() => rightImage?.classList.add("js-slide-out-right"), 2600);
+    setTimeout(() => {
+      if (loadingScreen) loadingScreen.style.display = "none";
+    }, 5500);
   });
 
-// ========================================
-// ✅ ハンバーガーメニュー
-// ========================================
-document.addEventListener("DOMContentLoaded", () => {
-  //定義
-  const drawerIcon = document.querySelector('.drawer-icon');
-  const drawer = document.querySelector('.drawer');
+  // ============================
+  // ✅ ハンバーガーメニュー
+  // ============================
+  const drawerIcon = document.querySelector(".drawer-icon");
+  const drawer = document.querySelector(".drawer");
   const drawerNavItem = document.querySelectorAll('.drawer__body a[href^="#"]');
-  const headerHeight = document.querySelector('header').offsetHeight;
+  const header = document.querySelector("header");
+  const headerHeight = header ? header.offsetHeight : 0;
   const breakpoint = 768;
   let isMenuOpen = false;
   let isMenuOpenAtBreakpoint = false;
 
-  //メニューを開くアニメーション
   const openMenu = () => {
-    if (!drawer.classList.contains("js-show")) {
-      drawer.classList.add("js-show");
-      drawerIcon.classList.add("js-show");
-    }
-  }
+    drawer?.classList.add("js-show");
+    drawerIcon?.classList.add("js-show");
+  };
 
-  //メニューを閉じるアニメーション
   const closeMenu = () => {
-    if (drawer.classList.contains("js-show")) {
-      drawer.classList.remove("js-show");
-      drawerIcon.classList.remove("js-show");
-      isMenuOpen = false;
-    }
-  }
+    drawer?.classList.remove("js-show");
+    drawerIcon?.classList.remove("js-show");
+    isMenuOpen = false;
+  };
 
-  //メニューの開閉動作
   const toggleMenu = () => {
-    if (!drawer.classList.contains("js-show")) {
-      openMenu();
-    } else {
+    if (drawer?.classList.contains("js-show")) {
       closeMenu();
+    } else {
+      openMenu();
     }
   };
 
-  //リサイズ処理
-  const handleResize = () => {
-    const bp = breakpoint;
+  drawerIcon?.addEventListener("click", toggleMenu);
+
+  window.addEventListener("resize", () => {
     const windowWidth = window.innerWidth;
-    if (windowWidth > bp && isMenuOpenAtBreakpoint) {
+    if (windowWidth > breakpoint && isMenuOpenAtBreakpoint) {
       closeMenu();
-    } else if (windowWidth <= bp && drawer.classList.contains("js-show")) {
+    } else if (windowWidth <= breakpoint && drawer?.classList.contains("js-show")) {
       isMenuOpenAtBreakpoint = true;
     }
-  };
+  });
 
-  //メニュー外クリック処理
-  const clickOuter = (event) => {
-    if (drawer.classList.contains("js-show") && !drawer.contains(event.target) && isMenuOpen) {
-      closeMenu();
-    } else if (drawer.classList.contains("js-show") && !drawer.contains(event.target)) {
-      isMenuOpen = true;
+  document.addEventListener("click", (e) => {
+    if (drawer?.classList.contains("js-show") && !drawer.contains(e.target)) {
+      if (isMenuOpen) {
+        closeMenu();
+      } else {
+        isMenuOpen = true;
+      }
     }
-  }
+  });
 
-  //該当箇所までスクロール
-  const linkScroll = (target) => {
-    if (target) {
-      const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-      const offsetPosition = targetPosition - headerHeight;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
-  }
-
-  //ヘッダーアイコン クリック時
-  drawerIcon.addEventListener("click", toggleMenu);
-  //画面幅リサイズ時
-  window.addEventListener("resize", handleResize);
-  //メニュー外クリック時
-  document.addEventListener("click", clickOuter);
-  //ページ内リンクナビメニュー クリック時
-  drawerNavItem.forEach(item => {
-    item.addEventListener("click", event => {
-      event.preventDefault();
+  drawerNavItem.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
       closeMenu();
-      const targetItem = document.querySelector(item.getAttribute("href"));
-      linkScroll(targetItem);
+      const targetId = this.getAttribute("href");
+      const target = document.querySelector(targetId);
+      if (target) {
+        const offsetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({ top: offsetTop, behavior: "smooth" });
+      }
+    });
+  });
+
+  // ============================
+  // ✅ スムーススクロール
+  // ============================
+  document.querySelectorAll('a[href*="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const target = document.querySelector(this.hash);
+      if (!target) return;
+      e.preventDefault();
+      const offsetTop = target.offsetTop - headerHeight;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     });
   });
 });
-
-
-  //ドロワーメニュー
-  $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
-  });
-
-
-
-
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
-
-  // $(document).on('click', 'a[href*="#"]', function () {
-  //   let time = 400;
-  //   let header = $('header').innerHeight();
-  //   let target = $(this.hash);
-  //   if (!target.length) return;
-  //   let targetY = target.offset().top - header;
-  //   $('html,body').animate({ scrollTop: targetY }, time, 'swing');
-  //   return false;
-  // });
-
-
-
-  // mvスワイパー
-  const mvSwiper = new Swiper('.mv__swiper', { // swiperの名前
-  // 切り替えのモーション
-  // speed: 1000, // 表示切り替えのスピード
-  effect: "fade", // 切り替えのmotion (※1)　フェードする
-   fadeEffect: {
-        crossFade: true　//前後のスライドをクロスフェード
-    },
-  allowTouchMove: false, // スワイプで表示の切り替えを無効に
-
-  // 最後→最初に戻るループ再生を有効に
-  loop: true,
-
-  // 自動スライドについて
-  autoplay: {
-    delay: 3000, // 何秒ごとにスライドを動かすか
-    stopOnLastSlide: false, // 最後のスライドで自動再生を終了させるか
-    disableOnInteraction: false, // ユーザーの操作時に止めない
-    reverseDirection: false, // 自動再生を逆向きにする
-  },
-
-  // 表示について
-  centeredSlides: true, // 中央寄せにする
-  slidesPerView: "auto",
-  spaceBetween: 30,
-
-  // ページネーション
-  // pagination: {
-  //   el: ".swiper-pagination", // paginationのclass
-  //   clickable: true, // クリックでの切り替えを有効に
-  //   type: "bullets" // paginationのタイプ (※2)
-  // },
-
-  // ナビゲーション
-  // navigation: {
-  //   prevEl: ".swiper-button-prev", // 戻るボタンのclass
-  //   nextEl: ".swiper-button-next" // 進むボタンのclass
-  // },
-
-  // スクロールバー
-  scrollbar: { // スクロールバーを表示したいとき
-    el: ".swiper-scrollbar", // スクロールバーのclass
-    hide: true, // 操作時のときのみ表示
-    draggable: true // スクロールバーを直接表示できるようにする
-  },
-
-  // ブレイクポイントによって変える
-  // breakpoints: {
-  //     768: {
-  //         slidesPerView: 1.2,
-  //         spaceBetween: 15,
-  //     },
-  //     1500: {
-  //         slidesPerView: 3,
-  //         spaceBetween: 40,
-  //     },
-  // }
-});
-
-/* ===================================================
-※1 effectについて
-slide：左から次のスライドが流れてくる
-fade：次のスライドがふわっと表示
-■ fadeの場合は下記を記述
-    fadeEffect: {
-        crossFade: true
-    },
-cube：スライドが立方体になり、3D回転を繰り返す
-coverflow：写真やアルバムジャケットをめくるようなアニメーション
-flip：平面が回転するようなアニメーション
-cards：カードを順番にみていくようなアニメーション
-creative：カスタマイズしたアニメーションを使うときに使用します
-
-=======================================================
-※2 paginationのタイプ
-bullets：スライド枚数と同じ数のドットが表示
-fraction：分数で表示（例：1 / 3）
-progressbar：スライドの進捗に応じてプログレスバーが伸びる
-custom：自由にカスタマイズ
-
-=====================================================*/
-});
-
-
