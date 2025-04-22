@@ -10,6 +10,10 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 102;
+
+  @include mq(md) {
+    display: none;
+  }
 }
 
 .drawer-icon__bar {

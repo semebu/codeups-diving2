@@ -411,6 +411,11 @@ select::-ms-expand {
           justify-content: space-between;
   z-index: 102;
 }
+@media screen and (min-width: 768px) {
+  .drawer-icon {
+    display: none;
+  }
+}
 
 .drawer-icon__bar {
   width: 32px;
@@ -444,6 +449,11 @@ select::-ms-expand {
   left: 0.9375rem;
   z-index: 102;
 }
+@media screen and (min-width: 768px) {
+  .drawer-logo {
+    display: none;
+  }
+}
 
 .drawer {
   position: fixed;
@@ -457,12 +467,14 @@ select::-ms-expand {
   padding-top: 5rem;
   background-color: #4e7f85;
   overflow-y: scroll;
-  translate: 101%;
-  -webkit-transition: translate 0.5s ease;
-  transition: translate 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 .drawer.js-show {
-  translate: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .drawer__body {

@@ -5,4 +5,8 @@
   top: rem(21);
   left: rem(15);
   z-index: 102;
+
+  @include mq(md) {
+    display: none;
+  }
 }

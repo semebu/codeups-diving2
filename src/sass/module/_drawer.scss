@@ -11,11 +11,16 @@
   padding-top: rem(80);
   background-color: $green;
   overflow-y: scroll;
-  translate: 101%;
-  transition: translate 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  // translate: 101%;
+  // transition: translate 0.5s ease;
+  transition: opacity 0.5s ease;
 
   &.js-show {
-    translate: 0;
+    // translate: 0;
+    opacity: 1;
+    visibility: visible;
   }
 }
 
