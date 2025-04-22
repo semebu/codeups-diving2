@@ -391,152 +391,6 @@ select::-ms-expand {
   color: #408f95;
 }
 
-.drawer-icon {
-  position: fixed;
-  top: 28px;
-  top: 1.75rem;
-  right: 15px;
-  right: 0.9375rem;
-  height: 24px;
-  height: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  z-index: 102;
-}
-
-.drawer-icon__bar {
-  width: 32px;
-  width: 2rem;
-  height: 1px;
-  height: 0.0625rem;
-  background: #fff;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.drawer-icon.js-show .drawer-icon__bar:nth-child(1) {
-  rotate: 45deg;
-  translate: 0 11.5px;
-  translate: 0 0.71875rem;
-}
-.drawer-icon.js-show .drawer-icon__bar:nth-child(2) {
-  display: none;
-}
-.drawer-icon.js-show .drawer-icon__bar:nth-child(3) {
-  rotate: -45deg;
-  translate: 0 -10px;
-  translate: 0 -0.625rem;
-}
-
-.drawer-logo {
-  position: fixed;
-  top: 21px;
-  top: 1.3125rem;
-  left: 15px;
-  left: 0.9375rem;
-  z-index: 102;
-}
-
-.drawer {
-  position: fixed;
-  z-index: 101;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  height: 100svh;
-  padding-top: 80px;
-  padding-top: 5rem;
-  background-color: #4e7f85;
-  overflow-y: scroll;
-  translate: 101%;
-  -webkit-transition: translate 0.5s ease;
-  transition: translate 0.5s ease;
-}
-.drawer.js-show {
-  translate: 0;
-}
-
-.drawer__body {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 24px 37px;
-  padding: 1.5rem 2.3125rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 29px;
-  gap: 1.8125rem;
-}
-
-.drawer__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 40px;
-  row-gap: 2.5rem;
-}
-
-.drawer__category {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 24px;
-  row-gap: 1.5rem;
-}
-
-.drawer__category-title {
-  color: #fff;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 112.5%; /* 112.5% */
-}
-
-.drawer__sub-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 24px;
-  row-gap: 1.5rem;
-}
-
-.drawer__item {
-  color: #fff;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 112.5%; /* 112.5% */
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -547,8 +401,6 @@ select::-ms-expand {
 }
 
 .header__inner {
-  padding: 21px 15px;
-  padding: 1.3125rem 0.9375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -558,11 +410,8 @@ select::-ms-expand {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .header__inner {
-    padding: 1.25rem 2.5rem;
-  }
+  padding: 20px 40px;
+  padding: 1.25rem 2.5rem;
 }
 
 .header__logo a {
@@ -573,18 +422,13 @@ select::-ms-expand {
 }
 
 .header__nav {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .header__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .header__nav-list {

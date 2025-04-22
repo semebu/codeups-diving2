@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.drawer-logo {
+  position: fixed;
+  top: rem(21);
+  left: rem(15);
+  z-index: 102;
+}

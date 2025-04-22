@@ -10,10 +10,14 @@
 }
 
 .header__inner {
+  padding: rem(21) rem(15);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: rem(20) rem(40);
+
+  @include mq(md) {
+    padding: rem(20) rem(40);
+  }
 }
 
 .header__logo {
@@ -25,8 +29,12 @@
 }
 
 .header__nav {
-  display: flex;
-  flex-direction: column;
+  display: none;
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .header__nav-list {
