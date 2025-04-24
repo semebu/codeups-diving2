@@ -57,18 +57,28 @@ text-align: center;
 }
 
 .mv__maintext {
-  font-family: $eg2-font-family;
-  font-size: rem(80);
-  font-weight: $bold;
-  letter-spacing: rem(43.2);
-  font-weight: $normal;
+font-family: $eg2-font-family;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 21.6px;
+
+  @include mq(md) {
+    font-size: rem(80);
+    font-weight: $bold;
+    letter-spacing: rem(43.2);
+    font-weight: $normal;
+  }
 }
 
 .mv__subtext {
-  color: $white;
-  font-family: $eg-font-family;
-  font-size: rem(20);
-  font-weight: $normal;
-  // letter-spacing: rem(1.2);
+font-family: $eg-font-family;
+font-size: rem(20);
+font-weight: $normal;
+
+  @include mq(md) {
+    // 変更なし
+  }
 }
 

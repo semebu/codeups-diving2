@@ -1,16 +1,30 @@
 @use "global" as *;
 
 .image-half {
-  position: absolute;
-  bottom:0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("./../../images/common/bg_fv1_pc.jpg");
-  background-size: cover;
-  background-position: center;
-  transform: translateY(100%);
-  z-index: 10;
-  transition: transform 1s ease;
+    position: absolute;
+    bottom:0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./../../images/common/bg_fv1_sp.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: translateY(100%);
+    z-index: 10;
+    transition: transform 1s ease;
+
+
+  @include mq(md) {
+    // position: absolute;
+    // bottom:0;
+    // width: 100vw;
+    // height: 100vh;
+    background-image: url("./../../images/common/bg_fv1_pc.jpg");
+  //   background-size: cover;
+  // background-position: center;
+  //   transform: translateY(100%);
+  //   z-index: 10;
+  //   transition: transform 1s ease;
+  }
 
     &.left {
       // left: 0;
@@ -29,13 +43,13 @@
 
     &.js-slide-out-left {
       // transform: translateY(-100%);
-        transform: translateY(0);
-    transition-delay: 0s;
+      transform: translateY(0);
+      transition-delay: 0s;
     }
 
     &.js-slide-out-right {
       // transform: translateY(-100%);
         transform: translateY(0);
-    transition-delay: 0.3s;
+        transition-delay: 0.3s;
     }
 }
