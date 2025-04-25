@@ -1,0 +1,62 @@
+@use "../global" as *;
+
+.blog {
+ padding-top: rem(100);
+ padding-bottom: rem(40);
+ background-image: url(../images/common/bg_blog.jpg);
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ height: rem(500);
+// height: fit-content;
+}
+
+.blog__inner {
+
+}
+
+.blog__cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  
+  @include mq(md) {
+    margin-top: rem(80);
+    flex-direction: row;
+    gap: rem(40);
+    max-width: rem(1080);
+    margin: 0 auto;
+  }
+}
+
+.blog-card {
+
+}
+
+.blog-card__image {
+
+}
+
+.blog-card__content {
+
+}
+
+.blog-card__date {
+
+}
+
+.blog-card__title {
+
+}
+
+.blog-card__text {
+
+}
+
+.blog__button {
+  margin-top: rem(80);
+  text-align: center;
+}
+
+
+

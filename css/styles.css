@@ -192,6 +192,7 @@ select::-ms-expand {
   max-width: 67.5rem;
   margin: 0 auto;
   padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .about__content {
@@ -209,11 +210,19 @@ select::-ms-expand {
 }
 
 .about__image--left {
+  width: 194px;
+  width: 12.125rem;
+  position: absolute;
+  top: -26px;
+  top: -1.625rem;
+  left: 0px;
+  left: 0rem;
   width: 128px;
   width: 8rem;
 }
 @media screen and (min-width: 768px) {
   .about__image--left {
+    width: 8rem;
     position: absolute;
     top: -5rem;
     left: 0rem;
@@ -228,6 +237,7 @@ select::-ms-expand {
 .about__image--right {
   width: 281px;
   width: 17.5625rem;
+  margin-left: auto;
 }
 @media screen and (min-width: 768px) {
   .about__image--right {
@@ -242,12 +252,14 @@ select::-ms-expand {
 
 .about__text-block {
   position: static;
+  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 @media screen and (min-width: 768px) {
   .about__text-block {
     position: absolute;
     top: 7.5rem;
-    left: 0rem;
+    left: 12.0625rem;
     z-index: 100;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -314,13 +326,16 @@ select::-ms-expand {
 }
 
 .about__decoration {
-  position: absolute;
-  bottom: -303px;
-  bottom: -18.9375rem;
-  right: -129px;
-  right: -8.0625rem;
-  width: 194px;
-  width: 12.125rem;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .about__decoration {
+    display: block;
+    position: absolute;
+    bottom: -16.5625rem;
+    right: -6.5625rem;
+    width: 12.125rem;
+  }
 }
 .about__decoration img {
   width: 100%;
@@ -378,6 +393,49 @@ select::-ms-expand {
   font-size: 1rem;
   font-weight: 400;
   line-height: 150%; /* 150% */
+}
+
+.blog {
+  padding-top: 100px;
+  padding-top: 6.25rem;
+  padding-bottom: 40px;
+  padding-bottom: 2.5rem;
+  background-image: url(../images/common/bg_blog.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  height: 31.25rem;
+}
+
+.blog__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  gap: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .blog__cards {
+    margin-top: 5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2.5rem;
+    max-width: 67.5rem;
+    margin: 0 auto;
+  }
+}
+
+.blog__button {
+  margin-top: 80px;
+  margin-top: 5rem;
+  text-align: center;
 }
 
 .btn-border {
@@ -957,6 +1015,89 @@ select::-ms-expand {
           transition-delay: 0.3s;
 }
 
+.information {
+  background-color: #DDF0F1;
+  padding: 100px 20px;
+  padding: 6.25rem 1.25rem;
+}
+
+.information__inner {
+  max-width: 1080px;
+  max-width: 67.5rem;
+  margin: 0 auto;
+}
+
+.information__content {
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .information__content {
+    margin-top: 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.information__text-block {
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .information__text-block {
+    margin-top: 3.8125rem;
+  }
+}
+
+.information__heading {
+  color: #0D2936;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 120%; /* 120% */
+}
+@media screen and (min-width: 768px) {
+  .information__heading {
+    font-size: 1.5rem;
+    line-height: 100%; /* 100% */
+  }
+}
+
+.information__text {
+  padding-top: 8px;
+  padding-top: 0.5rem;
+  border-top: 1px solid #4e7f85;
+  margin-top: 16px;
+  margin-top: 1rem;
+  color: #0D2936;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+.information__button {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
 .inner {
   width: 100%;
   padding-right: 20px;
@@ -1179,6 +1320,10 @@ select::-ms-expand {
 
 .section-title {
   text-align: center;
+}
+
+.section-title--white {
+  color: #fff;
 }
 
 .section-title__en {
