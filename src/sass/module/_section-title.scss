@@ -4,11 +4,6 @@
 text-align: center;
 }
 
-.section-title--white {
-  color: $white;
-}
-
-
 .section-title__en {
 color: $font-color;
 font-family: $eg-font-family;
@@ -21,6 +16,15 @@ font-size: rem(32);
 }
 }
 
+.section-title__en--white {
+  color: $green;
+
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+
 .section-title__en--accent {
 color: $green;
 font-family: $eg-font-family;
@@ -31,6 +35,14 @@ line-height: rem(40);
 @include mq(md) {
 font-size: rem(32);
 }
+}
+
+.section-title__en--accent--white {
+  color: $green;
+
+  @include mq(md) {
+    color: $white;
+  }
 }
 
 .section-title__jp {
@@ -47,4 +59,26 @@ line-height: rem(18); /* 150% */
 margin-top: rem(4);
 }
 }
+
+.section-title__jp--white {
+  color: $green;
+
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.section-title__en--contact {
+  font-size: rem(80);
+}
+
+.section-title__en--accent-contact {
+  font-size: rem(80);
+}
+
+.section-title__jp--contact {
+
+}
+
+
 

@@ -1,0 +1,170 @@
+@use "global" as *;
+
+.contact {
+  padding: rem(0) rem(20);
+  position: relative;
+  background-color: $white;
+  
+  @include mq(md) {
+  padding: rem(140) rem(20);
+}
+}
+
+.contact__inner {
+ 
+}
+
+.contact__content {
+  position: relative;
+  
+   display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  margin-inline: auto;
+
+  @include mq(md) {
+  flex-direction: row;
+  border-right: rem(1) solid $green;
+  max-width: rem(1080);
+  gap: rem(0);
+  background:$white;
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+  &::before {
+    display: none;
+
+    @include mq(md) {
+    content: "";
+    position: absolute;
+    top: rem(80);
+    bottom: rem(80);
+    left: 53%;
+    transform: translateX(-50%);
+    width: rem(1);
+    background-color:$green;
+  }
+  }
+}
+
+.contact__info,
+.contact__form {
+  // width: 50%;
+}
+
+.contact__info {
+  width: 100%;
+  padding-inline: rem(20);
+  padding-block: rem(80) rem(40);
+
+  @include mq(md) {
+  width: calc(572 / 1080 * 100%);
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  padding: rem(80) rem(82) rem(80) rem(50);
+  }
+}
+}
+
+.contact__title {
+  text-align: center;
+
+  a {
+    display: inline-block;
+  }
+  @include mq(md) {
+  margin-inline: auto;
+    a {
+    max-width: rem(200);
+    width: 100%;
+    }
+  }
+
+}
+
+.contact__address {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+
+  @include mq(md) {
+  display: flex;
+  flex-direction: row;
+  gap: rem(21);
+  border-top: rem(1) solid $green;
+  padding-top: rem(24);
+  }
+}
+
+.contact__list {
+  text-align: center;
+
+  @include mq(md) {
+  text-align: left;
+  }
+}
+
+.contact__item {
+
+}
+
+.contact__map {
+  aspect-ratio: 295 / 160;
+  // width: rem(295);
+
+
+  @include mq(md) {
+  aspect-ratio: 273 / 148;
+  max-width: rem(273);
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contact__form {
+  width: 100%;
+  padding-block: rem(0) rem(99);
+
+  @include mq(md) {
+  width: calc(508 / 1080 * 100%);
+  padding-inline: rem(40);
+  padding-block: rem(100) rem(99);
+  }
+}
+
+.contact_form-title {
+
+}
+
+.contact__form-text {
+  margin-top: rem(8);
+  color:$green;
+  text-align: center;
+  font-family: $jp-font-family;
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 128.571%;
+}
+
+.contact__button {
+  margin-top: rem(40);
+  text-align: center;
+}
+
+.contact__decoration {
+  position: absolute;
+  top: rem(54);
+  right:rem(15);
+  width: rem(109);
+
+  @include mq(md) {
+  position: absolute;
+  top: rem(100);
+  right:rem(50);
+  width: rem(301);
+}
+}
+
