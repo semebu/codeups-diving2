@@ -42,6 +42,7 @@
 
 .footer__sns-link {
   width: rem(32);
+  margin-top: auto;
 
   img {
     width: 100%;
@@ -64,7 +65,7 @@
   @include mq(md) {
     display: flex;
     flex-direction: row;
-    gap: rem(142);
+    gap: rem(120);
   }
 }
 
@@ -104,6 +105,21 @@
   line-height: 18px; /* 112.5% */
 
   a {
+  
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: rem(18);
+    height: rem(18);
+    left:rem(-4);
+    top:50%;
+    transform: translateY(-50%);
+    background-image: url(../images/common/deco_starfish.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
   }
 }
 
@@ -121,6 +137,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px; /* 112.5% */
+    padding-left: rem(calc(18 + 4));
   }
 }
 
