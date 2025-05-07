@@ -16,8 +16,7 @@
 
 .contact__content {
   position: relative;
-  
-   display: flex;
+  display: flex;
   flex-direction: column;
   gap: rem(40);
   margin-inline: auto;
@@ -29,11 +28,13 @@
   gap: rem(0);
   background:$white;
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }
 
   &::before {
     display: none;
 
     @include mq(md) {
+    display: block;
     content: "";
     position: absolute;
     top: rem(80);
@@ -42,7 +43,7 @@
     transform: translateX(-50%);
     width: rem(1);
     background-color:$green;
-  }
+    }
   }
 }
 
@@ -64,7 +65,7 @@
   padding: rem(80) rem(82) rem(80) rem(50);
   }
 }
-}
+
 
 .contact__title {
   text-align: center;

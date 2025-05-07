@@ -202,65 +202,47 @@ custom：自由にカスタマイズ
 
 =====================================================*/
 
-  // ============================
-  // ✅ キャンペーンスワイパー
-  // ============================
-  const campaignSwiper = new Swiper('.campaign__swiper', { // swiperの名前
-  // 切り替えのモーション
-  speed: 1000, // 表示切り替えのスピード
-  effect: "slide", // 切り替えのmotion (※1)
-  allowTouchMove: true, // スワイプで表示の切り替えを有効に
+// ============================
+// ✅ キャンペーンスワイパー
+// ============================
 
-  // 最後→最初に戻るループ再生を有効に
+const campaignSwiper = new Swiper(".campaign-swiper", {
   loop: true,
-
-  // 自動スライドについて
-  // autoplay: {
-  //   delay: 3000, // 何秒ごとにスライドを動かすか
-  //   stopOnLastSlide: false, // 最後のスライドで自動再生を終了させるか
-  //   disableOnInteraction: true, // ユーザーの操作時に止める
-  //   reverseDirection: false, // 自動再生を逆向きにする
-  // },
-
-  // 表示について
-  centeredSlides: false, // １枚目のスライドを中央寄せにしない
-  slidesPerView: "auto",
+  // loop: false,
   spaceBetween: 40,
+  // slidesPerView: 1.5,
+  slidesPerView: "auto",
+  // slidesPerView: 1.5273,
+  // centeredSlides: true,
+  centeredSlides: false,
+  slidesPerGroup: 1,
+  keyboard: true,
 
-  // ページネーション
-  pagination: {
-    el: ".swiper-pagination", // paginationのclass
-    clickable: true, // クリックでの切り替えを有効に
-    type: "bullets" // paginationのタイプ (※2)
-  },
-
-  // ナビゲーション
   navigation: {
-    prevEl: ".swiper-button-prev", // 戻るボタンのclass
-    nextEl: ".swiper-button-next" // 進むボタンのclass
+    nextEl: "#js-campaign-next",
+    prevEl: "#js-campaign-prev",
   },
-
-  // スクロールバー
-  scrollbar: { // スクロールバーを表示したいとき
-    el: ".swiper-scrollbar", // スクロールバーのclass
-    hide: true, // 操作時のときのみ表示
-    draggable: true // スクロールバーを直接表示できるようにする
-  },
-
-  // ブレイクポイントによって変える
-  // breakpoints: { 
-  //     768: {
-  //         slidesPerView: 1.2,
-  //         spaceBetween: 15,
-  //     },
-  //     1500: {
-  //         slidesPerView: 3,
-  //         spaceBetween: 40,
-  //     },
-  // }
+  // breakpoints: {
+  //   768: {
+  //     slidesPerView: 1.5,
+  //   },
+    // 600: {
+    //   slidesPerView: 2,
+    //   centeredSlides: true,
+    // },
+    // 900: {
+    //   slidesPerView: 2.2,
+    //   centeredSlides: false,
+    // },
+    // 1200: {
+    //   slidesPerView: 3.2234,
+    //   spaceBetween: 32,
+    //   centeredSlides: false,
+    // },
+  // },
 });
 
-/* =================================================== 
+/* ===================================================
 ※1 effectについて
 slide：左から次のスライドが流れてくる
 fade：次のスライドがふわっと表示

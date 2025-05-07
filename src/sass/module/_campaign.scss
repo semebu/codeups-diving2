@@ -1,49 +1,135 @@
 @use "global" as *;
 
-.campaign__swiper-container,
-.campaign__swiper,
-.campaign__swiper-wrapper,
-.campaign__swiper-slide {
+.campaign {
+  background-color: $white;
   position: relative;
+  padding-top: rem(120);
+  padding-left: rem(15);
+  // margin-top: -48.714px;
+
+  // @include mq(lg) {
+  //   padding-top: 120px;
+  //   padding-bottom: 120px;
+  //   margin-top: -120px;
+  // }
+
+  @include mq(md) {
+    padding-left: rem(20);
+  }
 }
 
+.campaign__outer {
+  position: relative;
+  padding-bottom: rem(40);
 
-.campaign {
-padding-block: rem(120) rem(20);
+  @include mq(md) {
+    padding-bottom: rem(20);
+  }
 }
 
 .campaign__inner {
-
+  position: absolute;
+  top: rem(-96);
+  right: rem(160);
+  max-width: rem(1080);
+  padding-left: rem(20);
+  padding-right: rem(20);
+  margin-inline: auto;
+  margin-bottom: rem(24);
 }
 
-.campaign__swiper-wrapper {
+.campaign__top {
+  padding-left: rem(0);
+
+  @include mq(md) {
+    margin-top: rem(40);
+    display: flex;
+    column-gap: 32px;
+    // padding-left: max(30px, 50vw - 512px);
+    padding-left: rem(158);
+  }
 }
 
-.campaign__swiper-container {
-  margin-top: rem(40);
-  padding-left: rem(180);
+.campaign__slider {
+  width:100%;
+  margin-top: 0;
 }
 
-.campaign__swiper {
-overflow: visible;
+.campaign__arrows {
+  position: relative;
+  z-index: 2;
+  max-width: 240px;
+  margin-top: -10px;
+  // margin-right: auto;
+  margin-left: auto;
 }
 
-.campaign__swiper-wrapper {
+.campaign__bottom {
+  margin-right: auto;
+  margin-left: auto;
 
+  @include mq(xl) {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
 }
 
-.campaign__swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: rem(333);
-  height: auto;
-  flex-shrink: 0;
+.campaign__decoration-english {
+  display: block;
+  width: 255px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1;
+
+  @include mq(lg) {
+    width: 360px;
+    margin-top: -45px;
+  }
+
+  @include mq(xl) {
+    width: 495px;
+    margin: 0;
+  }
 }
 
-.campaign__btn-wrapper {
-  margin-top: rem(80);
+.campaign__text-wrap {
+  margin-top: 15px;
+
+  @include mq(xl) {
+    margin-top: 0;
+  }
+}
+
+.campaign__text {
+  font-size: 11.444px;
+  color: #fff;
   text-align: center;
+
+  @include mq(sm) {
+    font-size: 14px;
+  }
+
+  @include mq(xl) {
+    font-size: 16px;
+    text-align: right;
+  }
 }
+
+.campaign__button {
+   margin-top: rem(40);
+   text-align: center;
+
+  @include mq(xl) {
+    margin-top: rem(80);
+  }
+}
+
+
+
+
 
 

@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.campaign-swiper__slide {
+  height: auto;
+  // width: rem(333)!important;
+  width: auto;
+  flex-shrink: 0;
+  margin-right: rem(40);
+}

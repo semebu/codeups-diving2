@@ -58,17 +58,16 @@ text-align: center;
 
 .mv__maintext {
 font-family: $eg2-font-family;
-font-size: 40px;
-font-style: normal;
+font-size: rem(40);
 font-weight: 400;
-line-height: normal;
-letter-spacing: 21.6px;
+letter-spacing: rem(21.6);
 
-  @include mq(md) {
-    font-size: rem(80);
-    font-weight: $bold;
-    letter-spacing: rem(43.2);
-    font-weight: $normal;
+@include mq(md) {
+  font-size: rem(80);
+  font-weight: $bold;
+  letter-spacing: rem(43.2);
+  font-weight: $normal;
+  padding-left: rem(34);
   }
 }
 
