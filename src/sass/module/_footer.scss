@@ -129,30 +129,37 @@
   font-weight: $bold;
   line-height: rem(18);
   text-align: left;
-  padding-left: rem(18);
+  // padding-left: rem(18);
   margin-top: 0;
   padding-top: 0;
+  position: relative;
 
-  a {
-  &::before {
+   &::before {
     content: "";
     display: block;
-    position: relative;
+    position: absolute;
     width: rem(18);
     height: rem(18);
-    left:rem(-24);
-    top:rem(19);
+    left:rem(-9);
+    top:rem(2);
     // transform: translateY(-50%);
     background-image: url(../images/common/deco_starfish.png);
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: 0;
-    padding-top: 0;
-    line-height: 1;
-    vertical-align:top;
+    // margin-top: 0;
+    // padding-top: 0;
+    // line-height: 1;
+    // vertical-align:top;
   }
+
+  a {
+    display: block;
+    padding-left: rem(18);
   }
+
+ 
 }
+
 
 .footer__br {
 padding-left: rem(22);
@@ -170,6 +177,7 @@ padding-left: rem(22);
 
 .footer__item {
   a {
+    display: block;
     color: var(--White, #FFF);
     font-family: "Noto Sans JP";
     font-size: 16px;

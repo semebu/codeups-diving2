@@ -39,7 +39,7 @@ display: none;
   gap: rem(40);
   
   @include mq(md) {
-    margin-top: rem(80);
+    margin-top: rem(83);
     margin-inline: auto;
     flex-direction: row;
     gap: rem(40);
@@ -47,36 +47,12 @@ display: none;
   }
 }
 
-.blog-card {
-
-}
-
-.blog-card__image {
-
-}
-
-.blog-card__content {
-
-}
-
-.blog-card__date {
-
-}
-
-.blog-card__title {
-
-}
-
-.blog-card__text {
-
-}
-
 .blog__button {
   margin-top: rem(40);
   text-align: center;
 
   @include mq(md) {
-    margin-top: rem(80);
+    margin-top: rem(79);
   }
 }
 

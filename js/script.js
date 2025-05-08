@@ -32,7 +32,11 @@ jQuery(function ($) {
 
     if (loadingScreen) loadingScreen.style.display = "block";
 
+    //headingがある場合だけ　showをつける
+    if(heading) {
     setTimeout(() => heading?.classList.add("show"), 800);
+    }
+
     setTimeout(() => leftImage?.classList.add("js-slide-out-left"), 1800);
     setTimeout(() => rightImage?.classList.add("js-slide-out-right"), 2600);
     setTimeout(() => {
@@ -265,4 +269,70 @@ custom：自由にカスタマイズ
 
 =====================================================*/
 
+// ============================
+// ✅colorbox (画像のアニメーション)
+// ============================
+
+$(function () {
+  var box = $('.colorbox'),
+      speed = 700;
+
+  box.each(function () {
+    $(this).append('<div class="color"></div>');
+    var color = $(this).find('.color'),
+        image = $(this).find('img');
+    var counter = 0;
+
+    color.css('width', '0%');
+
+    $(this).on('inview', function (event,isInView) {
+      if (isInView && counter === 0) {
+        color.delay(200).animate({ 'width': '100%' }, speed, function () {
+          image.css('opacity', '1');
+          $(this).css({ 'left': '0', 'right': 'auto' });
+          $(this).animate({ 'width': '0%' }, speed);
+        });
+        counter = 1;
+      }
+    });
+  });
+
+
+  // $('.colorbox').on('inview', function (event, isInView) {
+  // if (isInView) {
+  //   console.log('inview動いてます！');
+  // }
 });
+});
+
+// ============================
+// ✅colorbox2 (画像のアニメーション)
+// ============================
+
+//要素の取得とスピードの設定
+var box = $('.colorbox2'),
+    speed = 700;
+
+//.colorboxの付いた全ての要素に対して下記の処理を行う
+box.each(function(){
+    $(this).append('<div class="color"></div>')
+    var color = $(this).find($('.color')),
+    image = $(this).find('img');
+    var counter = 0;
+
+    image.css('opacity','0');
+    color.css('width','0%');
+    //inviewを使って背景色が画面に現れたら処理をする
+    color.on('inview', function(){
+        if(counter == 0){
+      $(this).delay(200).animate({'width':'100%'},speed,function(){
+                   image.css('opacity','1');
+                   $(this).css({'left':'0' , 'right':'auto'});
+                   $(this).animate({'width':'0%'},speed);
+                })
+            counter = 1;
+          }
+     });
+});
+
+// });

@@ -191,8 +191,8 @@ select::-ms-expand {
 
 .about__inner {
   position: relative;
-  max-width: 1120px;
-  max-width: 70rem;
+  max-width: 1083px;
+  max-width: 67.6875rem;
   margin: 0 auto;
 }
 
@@ -328,8 +328,8 @@ select::-ms-expand {
   .about__decoration {
     display: block;
     position: absolute;
-    bottom: -16.5625rem;
-    right: -6.5625rem;
+    bottom: -18.9375rem;
+    right: -8.625rem;
     width: 12.125rem;
   }
 }
@@ -339,8 +339,8 @@ select::-ms-expand {
 
 .blog-card {
   background-color: #fff;
-  padding: 16px 16px 16px 24px;
-  padding: 1rem 1rem 1rem 1.5rem;
+  padding: 16px 16px 25px 16px;
+  padding: 1rem 1rem 1.5625rem 1rem;
   -webkit-box-shadow: 0.125rem 0.125rem 0.625rem 0rem rgba(0, 0, 0, .25);
           box-shadow: 0.125rem 0.125rem 0.625rem 0rem rgba(0, 0, 0, .25);
   overflow: hidden;
@@ -357,6 +357,11 @@ select::-ms-expand {
 .blog-card__content {
   margin-top: 24px;
   margin-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-card__content {
+    margin-top: 1.1875rem;
+  }
 }
 
 .blog-card__date {
@@ -375,8 +380,8 @@ select::-ms-expand {
   font-size: 1rem;
   font-weight: 500;
   line-height: 150%; /* 150% */
-  padding-bottom: 4px;
-  padding-bottom: 0.25rem;
+  padding-bottom: 2px;
+  padding-bottom: 0.125rem;
   border-bottom: 1px solid #408F95;
 }
 
@@ -444,7 +449,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .blog__cards {
-    margin-top: 5rem;
+    margin-top: 5.1875rem;
     margin-inline: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -462,7 +467,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .blog__button {
-    margin-top: 5rem;
+    margin-top: 4.9375rem;
   }
 }
 
@@ -869,6 +874,66 @@ select::-ms-expand {
   .campaign__button {
     margin-top: 5rem;
   }
+}
+
+.colorbox {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.colorbox img {
+  display: block;
+  width: 100%;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.colorbox .color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #4e7f85;
+}
+
+.colorbox__pc {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .colorbox__pc {
+    display: block;
+  }
+}
+
+.colorbox__sp {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .colorbox__sp {
+    display: none;
+  }
+}
+
+.colorbox2 {
+  position: relative;
+  width: 80%;
+  margin: 30px auto 30px;
+}
+.colorbox2 img {
+  display: block;
+  width: 100%;
+}
+
+.colorbox2 .color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: #4e7f85;
 }
 
 .contact {
@@ -1421,30 +1486,30 @@ select::-ms-expand {
   line-height: 18px;
   line-height: 1.125rem;
   text-align: left;
-  padding-left: 18px;
-  padding-left: 1.125rem;
   margin-top: 0;
   padding-top: 0;
+  position: relative;
 }
-.footer__category-title a::before {
+.footer__category-title::before {
   content: "";
   display: block;
-  position: relative;
+  position: absolute;
   width: 18px;
   width: 1.125rem;
   height: 18px;
   height: 1.125rem;
-  left: -24px;
-  left: -1.5rem;
-  top: 19px;
-  top: 1.1875rem;
+  left: -9px;
+  left: -0.5625rem;
+  top: 2px;
+  top: 0.125rem;
   background-image: url(../images/common/deco_starfish.png);
   background-size: contain;
   background-repeat: no-repeat;
-  margin-top: 0;
-  padding-top: 0;
-  line-height: 1;
-  vertical-align: top;
+}
+.footer__category-title a {
+  display: block;
+  padding-left: 18px;
+  padding-left: 1.125rem;
 }
 
 .footer__br {
@@ -1470,6 +1535,7 @@ select::-ms-expand {
 }
 
 .footer__item a {
+  display: block;
   color: #FFF;
   font-family: "Noto Sans JP";
   font-size: 16px;
@@ -1705,7 +1771,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .information {
-    padding: 6.25rem 0.9375rem;
+    padding: 6.0625rem 0.9375rem;
   }
 }
 
@@ -1740,7 +1806,7 @@ select::-ms-expand {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 3rem;
+    gap: 2.8125rem;
   }
 }
 
@@ -1787,8 +1853,8 @@ select::-ms-expand {
 }
 
 .information__text {
-  padding-top: 8px;
-  padding-top: 0.5rem;
+  padding-top: 5px;
+  padding-top: 0.3125rem;
   border-top: 1px solid #4e7f85;
   margin-top: 8px;
   margin-top: 0.5rem;
@@ -1899,7 +1965,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .price {
-    padding: 6.25rem 0rem;
+    padding: 6rem 0rem;
   }
 }
 
@@ -1955,7 +2021,7 @@ select::-ms-expand {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 5.8125rem;
+    gap: 5.5625rem;
     margin-top: 2.5rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1970,7 +2036,7 @@ select::-ms-expand {
     background-repeat: no-repeat;
     width: 27.3125rem;
     height: 12.5625rem;
-    bottom: -11.25rem;
+    bottom: -10.8125rem;
     left: -5.125rem;
   }
 }
@@ -1993,6 +2059,7 @@ select::-ms-expand {
         -ms-flex: 1;
             flex: 1;
     min-width: 18.75rem;
+    gap: 2.25rem;
     width: 45.6824512535%;
   }
 }
@@ -2008,6 +2075,8 @@ select::-ms-expand {
   font-size: 16px;
   font-size: 1rem;
   text-align: left;
+  padding-bottom: 3px;
+  padding-bottom: 0.1875rem;
 }
 
 .price__list {
@@ -2025,8 +2094,8 @@ select::-ms-expand {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 8px 0;
-  padding: 0.5rem 0;
+  padding: 4px 0 0;
+  padding: 0.25rem 0 0;
 }
 
 .price__name {
@@ -2037,6 +2106,7 @@ select::-ms-expand {
   margin-top: 4px;
   margin-top: 0.25rem;
   line-height: 150%;
+  letter-spacing: 0.02em;
 }
 
 .price__cost {
@@ -2045,18 +2115,22 @@ select::-ms-expand {
   color: #0D2936;
   text-align: right;
   line-height: 150%;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .price__image {
+  display: block;
   width: 100%;
+  height: auto;
 }
 @media screen and (min-width: 768px) {
   .price__image {
-    width: 45%;
+    width: 46%;
   }
   .price__image img {
     width: 100%;
-    height: auto;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
     display: block;
   }
 }
@@ -2254,6 +2328,10 @@ select::-ms-expand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -2278,8 +2356,8 @@ select::-ms-expand {
           align-items: flex-start;
   margin-bottom: 16px;
   margin-bottom: 1rem;
-  gap: 24px;
-  gap: 1.5rem;
+  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .voice-card__body {
@@ -2296,7 +2374,7 @@ select::-ms-expand {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 0.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1.5625rem;
   }
 }
 
@@ -2307,6 +2385,8 @@ select::-ms-expand {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 150%; /* 150% */
+  margin-top: 17px;
+  margin-top: 1.0625rem;
 }
 
 .voice-card__tag {
@@ -2346,7 +2426,7 @@ select::-ms-expand {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.0625rem;
     gap: 1.5rem;
     border-bottom: 0.0625rem solid #4e7f85;
   }
@@ -2372,6 +2452,7 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .voice-card__image {
     margin-top: 0rem;
+    width: 19.4375rem;
   }
 }
 
@@ -2401,8 +2482,8 @@ select::-ms-expand {
   padding-inline: 20px;
   padding-inline: 1.25rem;
   margin-inline: auto;
-  max-width: 1080px;
-  max-width: 67.5rem;
+  max-width: 1122px;
+  max-width: 70.125rem;
   position: relative;
 }
 
@@ -2440,7 +2521,7 @@ select::-ms-expand {
     display: block;
     position: absolute;
     top: -7.5rem;
-    left: -3.75rem;
+    left: -3.625rem;
     width: 18.8125rem;
     -webkit-transform: scaleX(-1);
             transform: scaleX(-1);

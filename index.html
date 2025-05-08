@@ -24,9 +24,15 @@
   <!-- css -->
   <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/styles.css">
-  <!-- JavaScript -->
+
+  <!-- jQuery本体が一番最初 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- inview.jsをjQueryの後に(jQueryのライブラリなので) -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script> -->
+  <script src="./js/lib/jquery.inview.min.js"></script>
+  <!-- swiper-bundle.min.jsをこの位置に -->
   <script src="./js/lib/swiper-bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- 自作のスクリプトを最後に deferで -->
   <script defer src="./js/script.js"></script>
 </head>
 <body>
@@ -517,7 +523,7 @@
   </div>
 </section>
 
-  <!-- informationセクション -->
+<!-- informationセクション -->
 <section class="information">
       <div class="information__inner">
         <div class="section-title">
@@ -571,7 +577,7 @@
             <div class="blog-card__content">
               <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
               <h3 class="blog-card__title">ライセンス取得</h3>
-              <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
             </div>
           </article>
@@ -582,8 +588,8 @@
             </div>
             <div class="blog-card__content">
               <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-              <h3 class="blog-card__title">ライセンス取得</h3>
-              <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              <h3 class="blog-card__title">ウミガメと泳ぐ</h3>
+              <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
             </div>
           </article>
@@ -594,8 +600,8 @@
             </div>
             <div class="blog-card__content">
               <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-              <h3 class="blog-card__title">ライセンス取得</h3>
-              <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              <h3 class="blog-card__title">カクレクマノミ</h3>
+              <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
     ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
             </div>
           </article>
@@ -642,8 +648,8 @@
           </div>
           
           <div class="voice-card__text">
-           ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+           ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
 ここにテキストが入ります。ここにテキストが入ります。
           </div>
       </article>
@@ -667,8 +673,8 @@
           </div>
           </div>
           <div class="voice-card__text">
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。
           </div>
       </article>
@@ -808,26 +814,39 @@
           </div>
         </div>
 
-        <div class="price__image">
-          <!-- <img src="./images/common/img_price_pc.jpg" alt="海中の珊瑚に赤い小さい魚が沢山いる風景" /> -->
-           <picture class="price__img" loading="lazy">
+        <!-- <div class="price__image">
+          <div class="colorbox"> -->
+            <div class="price__image">
+              <div class="colorbox colorbox__pc">
+                <img src="images/common/img_price_pc.jpg" alt="確認用" />
+              </div>
+              <div class="colorbox colorbox__sp">
+                <img src="images/common/img_price_sp.jpg" alt="確認用" />
+              </div>
+
+            <!-- テスト用 -->
+             <!-- <div class="colorbox2">
+              <img src="images/common/img_price_pc.jpg" alt="">
+             </div> -->
+
+           <!-- <picture class="price__img" loading="lazy"> -->
                   <!-- PCタブレット用 -->
-                  <source media="(min-width: 768px)" srcset="./images/common/img_price_pc.jpg" alt="海中の珊瑚に赤い小さい魚が沢山いる風景"/>
+                  <!-- <source media="(min-width: 768px)" srcset="images/common/img_price_pc.jpg"/> -->
                   <!-- スマホ用 -->
-                  <img
-                        src="./images/common/img_price_sp.jpg"
-                        alt="海中の珊瑚に赤い小さい魚が沢山いる風景"/>
-            </picture>
+                  <!-- <img src="images/common/img_price_sp.jpg" alt="海中の珊瑚に赤い小さい魚が沢山いる風景"/> -->
+            <!-- </picture> -->
+          <!-- </div>
+        </div> -->
+            </div>
+      </div>
+      <div class="price__button">
+        <div class="btn-border">
+          <a href="#" class="btn-border__inner">
+            View more
+            <span class="btn-border__arrow"></span>
+          </a>
         </div>
       </div>
-<div class="price__button">
-  <div class="btn-border">
-    <a href="#" class="btn-border__inner">
-      View more
-      <span class="btn-border__arrow"></span>
-    </a>
-  </div>
-</div>
     </div>
 </section>
 

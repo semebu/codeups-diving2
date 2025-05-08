@@ -5,7 +5,7 @@
   padding:rem(80) rem(15);
 
   @include mq(md) {
-    padding:rem(100) rem(15);
+    padding:rem(97) rem(15);
   }
 }
 .information__inner {
@@ -24,7 +24,7 @@
     margin-top: rem(40);
     display: flex;
     flex-direction: row;
-    gap: rem(48);
+    gap: rem(45);
   }
 }
 .information__image {
@@ -68,7 +68,7 @@ margin-top: rem(24);
 }
 
 .information__text {
-  padding-top: rem(8);
+  padding-top: rem(5);
   border-top: 1px solid $green;
   margin-top: rem(8);
   color: $font-color;
