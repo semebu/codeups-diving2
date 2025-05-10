@@ -61,8 +61,8 @@
   width: calc(572 / 1080 * 100%);
   display: flex;
   flex-direction: column;
-  gap: rem(8);
-  padding: rem(80) rem(82) rem(80) rem(50);
+  gap: rem(5);
+  padding: rem(80) rem(82) rem(72) rem(50);
   }
 }
 
@@ -71,7 +71,7 @@
   text-align: center;
 
   a {
-    display: inline-block;
+    display:block;
   }
   @include mq(md) {
   margin-inline: auto;
@@ -131,8 +131,10 @@
 
   @include mq(md) {
   width: calc(508 / 1080 * 100%);
-  padding-inline: rem(40);
-  padding-block: rem(100) rem(99);
+  // padding-inline: rem(40);
+  padding-right: rem(113);
+  padding-left: rem(82);
+  padding-block: rem(119) rem(99);
   }
 }
 

@@ -45,6 +45,8 @@
 
   @include mq(md) {
     display: block;
+    width: rem(492);
+    aspect-ratio: 492/746;
   }
 }
 
