@@ -61,13 +61,14 @@ font-family: $eg2-font-family;
 font-size: rem(40);
 font-weight: 400;
 letter-spacing: rem(21.6);
+padding-left: rem(22);
+margin-top: rem(-15);
 
 @include mq(md) {
   font-size: rem(80);
   font-weight: $bold;
   letter-spacing: rem(43.2);
   font-weight: $normal;
-  padding-left: rem(34);
   }
 }
 
@@ -75,9 +76,11 @@ letter-spacing: rem(21.6);
 font-family: $eg-font-family;
 font-size: rem(20);
 font-weight: $normal;
+margin-top: rem(-10);
 
   @include mq(md) {
     // 変更なし
+    margin-top: rem(10);
   }
 }
 

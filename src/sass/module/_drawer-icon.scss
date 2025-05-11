@@ -10,6 +10,8 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 102;
+  width: rem(32);
+  padding: rem(0);
 
   @include mq(md) {
     display: none;

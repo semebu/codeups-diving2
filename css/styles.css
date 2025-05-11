@@ -1151,6 +1151,10 @@ select::-ms-expand {
       -ms-flex-pack: justify;
           justify-content: space-between;
   z-index: 102;
+  width: 32px;
+  width: 2rem;
+  padding: 0px;
+  padding: 0rem;
 }
 @media screen and (min-width: 768px) {
   .drawer-icon {
@@ -1189,6 +1193,8 @@ select::-ms-expand {
   left: 15px;
   left: 0.9375rem;
   z-index: 102;
+  width: 102px;
+  width: 6.375rem;
 }
 @media screen and (min-width: 768px) {
   .drawer-logo {
@@ -1599,7 +1605,8 @@ select::-ms-expand {
   max-width: 133px;
   max-width: 8.3125rem;
   display: block;
-  width: 100%;
+  width: 102px;
+  width: 6.375rem;
 }
 
 .header__nav {
@@ -1950,6 +1957,10 @@ select::-ms-expand {
   font-weight: 400;
   letter-spacing: 21.6px;
   letter-spacing: 1.35rem;
+  padding-left: 22px;
+  padding-left: 1.375rem;
+  margin-top: -15px;
+  margin-top: -0.9375rem;
 }
 @media screen and (min-width: 768px) {
   .mv__maintext {
@@ -1957,7 +1968,6 @@ select::-ms-expand {
     font-weight: 700;
     letter-spacing: 2.7rem;
     font-weight: 400;
-    padding-left: 2.125rem;
   }
 }
 
@@ -1966,7 +1976,15 @@ select::-ms-expand {
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 400;
+  margin-top: -10px;
+  margin-top: -0.625rem;
 }
+@media screen and (min-width: 768px) {
+  .mv__subtext {
+    margin-top: 0.625rem;
+  }
+}
+
 .price {
   padding: 80px 15px;
   padding: 5rem 0.9375rem;

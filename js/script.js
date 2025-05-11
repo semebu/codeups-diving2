@@ -127,7 +127,7 @@ jQuery(function ($) {
   // ============================
   const mvSwiper = new Swiper('.mv__swiper', { // swiperの名前
   // 切り替えのモーション
-  speed: 1000, // 表示切り替えのスピード
+  speed: 100000, // 表示切り替えのスピード
   effect: "fade", // 切り替えのmotion (※1)
   fadeEffect: {
         crossFade: true
