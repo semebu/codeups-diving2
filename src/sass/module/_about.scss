@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .about {
-padding-top: rem(40);
-padding-bottom: rem(70);
+padding-top: rem(36);
+padding-bottom: rem(66);
 padding-inline: rem(15);
 
 @include mq(md) {
@@ -22,7 +22,7 @@ padding-inline: rem(15);
 }
 
 .about__content {
-  margin-top: rem(50);
+  margin-top: rem(54);
 
   @include mq(md) {
   margin-top: rem(120);
@@ -107,11 +107,14 @@ img {
 }
 
 .about__text-block__inner {
-  // position: absolute;
-  top: rem(120);
-  left: rem(0);
+  margin-top: rem(16);
   z-index: 100;
   max-width: rem(400);
+
+  @include mq(md) {
+  // position: absolute;
+  
+  }
 }
 
 .about__text {

@@ -174,10 +174,10 @@ select::-ms-expand {
 }
 
 .about {
-  padding-top: 40px;
-  padding-top: 2.5rem;
-  padding-bottom: 70px;
-  padding-bottom: 4.375rem;
+  padding-top: 36px;
+  padding-top: 2.25rem;
+  padding-bottom: 66px;
+  padding-bottom: 4.125rem;
   padding-inline: 15px;
   padding-inline: 0.9375rem;
 }
@@ -197,8 +197,8 @@ select::-ms-expand {
 }
 
 .about__content {
-  margin-top: 50px;
-  margin-top: 3.125rem;
+  margin-top: 54px;
+  margin-top: 3.375rem;
 }
 @media screen and (min-width: 768px) {
   .about__content {
@@ -292,15 +292,12 @@ select::-ms-expand {
 }
 
 .about__text-block__inner {
-  top: 120px;
-  top: 7.5rem;
-  left: 0px;
-  left: 0rem;
+  margin-top: 16px;
+  margin-top: 1rem;
   z-index: 100;
   max-width: 400px;
   max-width: 25rem;
 }
-
 .about__text {
   color: #0D2936;
   font-family: "Noto Sans JP", sans-serif;
@@ -569,18 +566,28 @@ select::-ms-expand {
 }
 
 .campaign-card__body {
-  padding: 24px 16px 40px 16px;
-  padding: 1.5rem 1rem 2.5rem 1rem;
+  padding: 16px 16px 16px 16px;
+  padding: 1rem 1rem 1rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .campaign-card__body {
+    padding: 1.5rem 1rem 2.5rem 1rem;
+  }
 }
 
 .campaign-card__label {
   display: inline-block;
-  padding: 7px 15.5px;
-  padding: 0.4375rem 0.96875rem;
   border: 1px solid #4e7f85;
   font-size: 12px;
   font-size: 0.75rem;
   color: #4e7f85;
+  padding: 5px 11.5px;
+  padding: 0.3125rem 0.71875rem;
+}
+@media screen and (min-width: 768px) {
+  .campaign-card__label {
+    padding: 0.4375rem 0.96875rem;
+  }
 }
 
 .campaign-card__title {
@@ -594,20 +601,24 @@ select::-ms-expand {
 }
 
 .campaign-card__desc {
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 171.429%; /* 171.429% */
   font-family: "Noto Sans JP", sans-serif;
-  font-weight: 400;
-  line-height: 150%; /* 150% */
   color: #0D2936;
   border-top: 1px solid #4e7f85;
-  padding-top: 16px;
-  padding-top: 1rem;
-  margin-top: 5px;
-  margin-top: 0.3125rem;
   text-align: center;
-  padding-right: 10px;
-  padding-right: 0.625rem;
+  padding-top: 9px;
+  padding-top: 0.5625rem;
+}
+@media screen and (min-width: 768px) {
+  .campaign-card__desc {
+    font-size: 1rem;
+    line-height: 150%; /* 150% */
+    padding-top: 1rem;
+    margin-top: 0.3125rem;
+    padding-right: 0.625rem;
+  }
 }
 
 .campaign-card__price {
@@ -617,34 +628,43 @@ select::-ms-expand {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  gap: 25px;
-  gap: 1.5625rem;
+  gap: 17px;
+  gap: 1.0625rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .campaign-card__price {
+    gap: 1.5625rem;
+  }
 }
 
 .campaign-card__price--old {
   position: relative;
   display: inline-block;
   color: #0D2936;
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 100%; /* 100% */
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  line-height: 100%; /* 100% */
 }
-.campaign-card__price--old::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 3px;
-  height: 0.1875rem;
-  background-color: #c94800;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+@media screen and (min-width: 768px) {
+  .campaign-card__price--old {
+    font-size: 1.5rem;
+  }
+  .campaign-card__price--old::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 0.1875rem;
+    background-color: #c94800;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 .campaign-card__price--new {
@@ -727,10 +747,16 @@ select::-ms-expand {
 .campaign {
   background-color: #fff;
   position: relative;
-  padding-top: 120px;
-  padding-top: 7.5rem;
-  padding-left: 15px;
-  padding-left: 0.9375rem;
+  padding-top: 40px;
+  padding-top: 2.5rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+}
+@media screen and (min-width: 1024px) {
+  .campaign {
+    padding-top: 120px;
+    padding-left: 0.9375rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .campaign {
@@ -785,7 +811,15 @@ select::-ms-expand {
 
 .campaign__slider {
   width: 100%;
-  margin-top: 0;
+  margin-top: 28px;
+  margin-top: 1.75rem;
+  margin-left: 15px;
+  margin-left: 0.9375rem;
+}
+@media screen and (min-width: 1024px) {
+  .campaign__slider {
+    margin-top: 0;
+  }
 }
 
 .campaign__arrows {
@@ -1782,8 +1816,8 @@ select::-ms-expand {
 
 .information {
   background-color: #DDF0F1;
-  padding: 80px 15px;
-  padding: 5rem 0.9375rem;
+  padding: 78px 15px;
+  padding: 4.875rem 0.9375rem;
 }
 @media screen and (min-width: 768px) {
   .information {
@@ -1798,8 +1832,8 @@ select::-ms-expand {
 }
 
 .information__content {
-  margin-top: 24px;
-  margin-top: 1.5rem;
+  margin-top: 29px;
+  margin-top: 1.8125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1807,8 +1841,8 @@ select::-ms-expand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 47px;
-  gap: 2.9375rem;
+  gap: 0px;
+  gap: 0rem;
   max-width: 1080px;
   max-width: 67.5rem;
 }
@@ -1872,8 +1906,8 @@ select::-ms-expand {
   padding-top: 5px;
   padding-top: 0.3125rem;
   border-top: 1px solid #4e7f85;
-  margin-top: 8px;
-  margin-top: 0.5rem;
+  margin-top: 3px;
+  margin-top: 0.1875rem;
   color: #0D2936;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -1881,10 +1915,21 @@ select::-ms-expand {
   font-weight: 400;
   line-height: 150%;
 }
+@media screen and (min-width: 768px) {
+  .information__text {
+    margin-top: 0.5rem;
+  }
+}
+
 .information__button {
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 42px;
+  margin-top: 2.625rem;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .information__button {
+    margin-top: 2.5rem;
+  }
 }
 
 .inner {

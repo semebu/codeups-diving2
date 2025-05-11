@@ -226,10 +226,11 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
     nextEl: "#js-campaign-next",
     prevEl: "#js-campaign-prev",
   },
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 1.5,
-  //   },
+  breakpoints: {
+    768: {
+      slidesPerView: 1.5,
+      spaceBetween: 24,
+    },
     // 600: {
     //   slidesPerView: 2,
     //   centeredSlides: true,
@@ -243,7 +244,7 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
     //   spaceBetween: 32,
     //   centeredSlides: false,
     // },
-  // },
+  },
 });
 
 /* ===================================================

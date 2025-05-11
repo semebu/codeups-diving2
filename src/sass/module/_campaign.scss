@@ -3,15 +3,13 @@
 .campaign {
   background-color: $white;
   position: relative;
-  padding-top: rem(120);
-  padding-left: rem(15);
-  // margin-top: -48.714px;
-
-  // @include mq(lg) {
-  //   padding-top: 120px;
-  //   padding-bottom: 120px;
-  //   margin-top: -120px;
-  // }
+  padding-top: rem(40);
+  padding-left: rem(0);
+  
+  @include mq(lg) {
+    padding-top: 120px;
+    padding-left: rem(15);
+  }
 
   @include mq(md) {
     padding-left: rem(20);
@@ -52,7 +50,12 @@
 
 .campaign__slider {
   width:100%;
-  margin-top: 0;
+  margin-top: rem(28);
+  margin-left: rem(15);
+
+  @include mq(lg) {
+    margin-top: 0;
+  }
 }
 
 .campaign__arrows {
