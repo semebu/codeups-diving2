@@ -226,25 +226,25 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
     nextEl: "#js-campaign-next",
     prevEl: "#js-campaign-prev",
   },
-  breakpoints: {
-    768: {
-      slidesPerView: 1.5,
-      spaceBetween: 24,
-    },
-    // 600: {
-    //   slidesPerView: 2,
-    //   centeredSlides: true,
-    // },
-    // 900: {
-    //   slidesPerView: 2.2,
-    //   centeredSlides: false,
-    // },
-    // 1200: {
-    //   slidesPerView: 3.2234,
-    //   spaceBetween: 32,
-    //   centeredSlides: false,
-    // },
-  },
+  // breakpoints: {
+  //   768: {
+  //     slidesPerView: 1.5,
+  //     spaceBetween: 24,
+  //   },
+  //   // 600: {
+  //   //   slidesPerView: 2,
+  //   //   centeredSlides: true,
+  //   // },
+  //   // 900: {
+  //   //   slidesPerView: 2.2,
+  //   //   centeredSlides: false,
+  //   // },
+  //   // 1200: {
+  //   //   slidesPerView: 3.2234,
+  //   //   spaceBetween: 32,
+  //   //   centeredSlides: false,
+  //   // },
+  // },
 });
 
 /* ===================================================

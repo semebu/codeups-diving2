@@ -12,15 +12,7 @@
 
 }
 
-.swiper-container {
-
-}
-
 .mv__swiper {
-
-}
-
-.swiper-wrapper {
 
 }
 
@@ -28,28 +20,13 @@
 
 }
 
-.swiper-slide {
-
-}
-
 .mv__swiper-slide {
 position: relative;//テキストを絶対配置値できるようにする
 }
 
-.swiper__img {
-width: 100%;
-display: block;
-
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-}
-
 .mv__text {
 position: absolute;
-top: 50%;
+top: 49%;
 left: 50%;
 transform: translate(-50%, -50%);
 color: $white;
@@ -57,18 +34,17 @@ text-align: center;
 }
 
 .mv__maintext {
-font-family: $eg2-font-family;
-font-size: rem(40);
-font-weight: 400;
-letter-spacing: rem(21.6);
-padding-left: rem(22);
-margin-top: rem(-15);
+font-family:$eg2-font-family;
+font-size:rem(40);
+font-weight:$normal;
+letter-spacing:rem(21.6);
+padding-left:rem(22);
+// margin-top:rem(-15);
 
 @include mq(md) {
   font-size: rem(80);
-  font-weight: $bold;
   letter-spacing: rem(43.2);
-  font-weight: $normal;
+  padding-left: rem(43);
   }
 }
 
@@ -80,7 +56,7 @@ margin-top: rem(-10);
 
   @include mq(md) {
     // 変更なし
-    margin-top: rem(10);
+    // margin-top: rem(10);
   }
 }
 

@@ -5,7 +5,7 @@
   background-color: $light-green;
 
   @include mq(md) {
-    padding: rem(96) rem(0);
+    padding: rem(99) rem(0);
   }
 }
 
@@ -14,7 +14,7 @@
 
   @include mq(md) {
     width: 90%;
-    max-width: rem(1077);
+    max-width: rem(1090);
     margin: 0 auto;
     text-align: center;
   }
@@ -31,7 +31,7 @@ margin-bottom: rem(40);
 }
 
 .price__contents {
-  margin-top: rem(24);
+  margin-top: rem(29);
   display: flex;
   flex-direction: column-reverse;
   gap: rem(40);
@@ -66,14 +66,15 @@ margin-bottom: rem(40);
 .price__table {
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  gap: rem(42);
   width: 100%;
 
   @include mq(md) {
     flex: 1;
     min-width: rem(300);
-    gap: rem(36);
+    gap: rem(43);
     width: calc(rem(492) / rem(1077) * 100%);
+    padding-left: rem(5);
   }
 }
 
@@ -106,22 +107,35 @@ margin-bottom: rem(40);
 }
 
 .price__name {
+font-family: $jp-font-family;
+font-size: rem(14);
+font-weight: $normal;
+line-height: 1.9;
+color: $font-color;
+letter-spacing: 0.009em;
+
+  @include mq(md) {
   font-size: rem(16);
-  color: $font-color;
-  // width: 70%;
   text-align: left;
-  margin-top: rem(4);
+  margin-top: rem(2);
   line-height: 150%;
-  letter-spacing: 0.02em;
+  }
 }
 
 .price__cost {
-  font-size: rem(16);
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.9;
   color: $font-color;
+  letter-spacing: 0.02em;
+  font-family: $jp-font-family;
+
+  @include mq(md) {
+  font-size: rem(16);
   // width: 30%;
-  text-align: right;
   line-height: 150%;
   font-family: $jp-font-family;
+  }
 }
 
 .price__image {
@@ -144,7 +158,7 @@ margin-bottom: rem(40);
 }
 
 .price__button {
-  margin-top: rem(40);
+  margin-top: rem(39);
   text-align: center;
 
   @include mq(md) {

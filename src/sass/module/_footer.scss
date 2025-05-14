@@ -23,7 +23,7 @@
 .footer__icons {
   display: flex;
   flex-direction: column;
-  gap: rem(20);
+  gap: rem(17);
 
   @include mq(md) {
     display: flex;
@@ -103,6 +103,7 @@
   display: flex;
   flex-direction: column;
   gap: rem(40);
+  margin-right: rem(10);
 
    @include mq(md) {
     display: flex;
@@ -145,24 +146,23 @@
     position: absolute;
     width: rem(18);
     height: rem(18);
-    left:rem(-9);
-    top:rem(2);
+    left:rem(0);
+    top:rem(0);
     // transform: translateY(-50%);
     background-image: url(../images/common/deco_starfish.png);
     background-size: contain;
     background-repeat: no-repeat;
-    // margin-top: 0;
-    // padding-top: 0;
-    // line-height: 1;
-    // vertical-align:top;
+
+    @include mq(md) {
+    left:rem(-9);
+    top:rem(2);
   }
+}
 
   a {
     display: block;
     padding-left: rem(21);
   }
-
- 
 }
 
 
@@ -194,12 +194,19 @@ padding-left: rem(22);
 }
 
 .footer__copy {
-  margin-top: rem(80);
+  margin-top: rem(39);
   color: $white;
   text-align: center;
   font-family: $eg-font-family;
-  font-size: rem(14);
+  font-size: rem(12);
   font-weight: $normal;
+  line-height: 150%;
+  letter-spacing: 0.08em;
+
+  @include mq(md) {
+  margin-top: rem(80);
+  font-size: rem(14);
   line-height: 128.571%;
+  }
 }
 

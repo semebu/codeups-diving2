@@ -55,7 +55,7 @@
 .contact__info {
   width: 100%;
   padding-inline: rem(20);
-  padding-block: rem(80) rem(40);
+  padding-block: rem(80) rem(0);
 
   @include mq(md) {
   width: calc(572 / 1080 * 100%);
@@ -69,6 +69,8 @@
 
 .contact__title {
   text-align: center;
+  width: 174px;
+  margin-inline: auto;
 
   a {
     display:block;
@@ -84,6 +86,7 @@
 }
 
 .contact__address {
+  margin-top: rem(4);
   display: flex;
   flex-direction: column;
   gap: rem(16);
@@ -99,14 +102,22 @@
 
 .contact__list {
   text-align: center;
-
+  border-top: rem(1) solid $green;
+  padding-top: rem(17);
+  color: $font-color;
+  
   @include mq(md) {
   text-align: left;
   }
 }
 
 .contact__item {
-
+  margin-top: rem(3);
+  color: $green;
+  font-family: $jp-font-family;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 150%;
 }
 
 .contact__map {
@@ -127,7 +138,7 @@
 
 .contact__form {
   width: 100%;
-  padding-block: rem(0) rem(99);
+  padding-block: rem(19) rem(98);
 
   @include mq(md) {
   width: calc(508 / 1080 * 100%);

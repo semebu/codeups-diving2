@@ -1,16 +1,24 @@
 @use "../global" as *;
 
 .blog {
-  padding-top: rem(80);
+  padding-top: rem(0);
 
   @include mq(md) {
-    padding-top: rem(0);
     padding-bottom: rem(331);//273+31(背景画像の下からセクションの一番下までの距離)
   }
 }
 
 .blog__inner {
-display: none;
+    // display: none;
+    display: block;
+    padding-top: rem(81);
+    padding-inline: rem(20);
+    // background-image: url(../images/common/bg_blog.jpg);
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // height: rem(500);
+    position: relative;
 
   @include mq(md) {
     display: block;
@@ -26,18 +34,23 @@ display: none;
 }
 
 .blog__decoration {
-  position: absolute;
-  top: rem(24);
-  left: rem(100);
-  width: rem(437);
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    top: rem(24);
+    left: rem(100);
+    width: rem(437);
+  }
 }
 
 .blog__cards {
-  margin-top: rem(24);
+  margin-top: rem(28);
   display: flex;
   flex-direction: column;
   gap: rem(40);
-  
+
   @include mq(md) {
     margin-top: rem(83);
     margin-inline: auto;

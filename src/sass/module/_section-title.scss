@@ -77,7 +77,11 @@ margin-top: rem(8);
 }
 
 .section-title__jp--contact {
-  margin-top: rem(16);
+  margin-top: rem(14);
+
+  @include mq(md) {
+    margin-top: rem(16);
+  }
 }
 
 
