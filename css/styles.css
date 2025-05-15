@@ -183,7 +183,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .about {
-    padding-top: 7.5rem;
+    padding-top: 7.3125rem;
     padding-bottom: 8.75rem;
     padding-inline: 1.25rem;
   }
@@ -269,7 +269,7 @@ select::-ms-expand {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 2.5rem;
+    gap: 2.5625rem;
   }
 }
 
@@ -298,6 +298,12 @@ select::-ms-expand {
   max-width: 400px;
   max-width: 25rem;
 }
+@media screen and (min-width: 768px) {
+  .about__text-block__inner {
+    margin-top: 0rem;
+  }
+}
+
 .about__text {
   color: #0D2936;
   font-family: "Noto Sans JP", sans-serif;
@@ -319,7 +325,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .about__button {
-    margin-top: 6.25rem;
+    margin-top: 2.5rem;
   }
 }
 
@@ -341,8 +347,8 @@ select::-ms-expand {
 
 .blog-card {
   background-color: #fff;
-  padding: 16px 16px 25px 16px;
-  padding: 1rem 1rem 1.5625rem 1rem;
+  padding: 16px 16px 24px 16px;
+  padding: 1rem 1rem 1.5rem 1rem;
   -webkit-box-shadow: 0.125rem 0.125rem 0.625rem 0rem rgba(0, 0, 0, .25);
           box-shadow: 0.125rem 0.125rem 0.625rem 0rem rgba(0, 0, 0, .25);
   overflow: hidden;
@@ -360,12 +366,6 @@ select::-ms-expand {
   margin-top: 22px;
   margin-top: 1.375rem;
 }
-@media screen and (min-width: 768px) {
-  .blog-card__content {
-    margin-top: 1.1875rem;
-  }
-}
-
 .blog-card__date {
   color: #0D2936;
   font-family: "Lato", sans-serif;
@@ -427,7 +427,7 @@ select::-ms-expand {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 31.25rem;
+    height: 31.375rem;
     position: relative;
   }
 }
@@ -460,7 +460,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .blog__cards {
-    margin-top: 5.1875rem;
+    margin-top: 5.0625rem;
     margin-inline: auto;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1062,13 +1062,14 @@ select::-ms-expand {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 0.3125rem;
-    padding: 5rem 5.125rem 4.5rem 3.125rem;
+    padding: 4.875rem 5.125rem 4.5rem 3.125rem;
   }
 }
 
 .contact__title {
   text-align: center;
   width: 174px;
+  width: 10.875rem;
   margin-inline: auto;
 }
 .contact__title a {
@@ -1077,6 +1078,7 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .contact__title {
     margin-inline: auto;
+    width: 12.5rem;
   }
   .contact__title a {
     max-width: 12.5rem;
@@ -1099,6 +1101,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .contact__address {
+    margin-top: 0rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1116,25 +1119,31 @@ select::-ms-expand {
   text-align: center;
   border-top: 1px solid #4e7f85;
   border-top: 0.0625rem solid #4e7f85;
-  padding-top: 17px;
-  padding-top: 1.0625rem;
+  padding-top: 11px;
+  padding-top: 0.6875rem;
   color: #0D2936;
 }
 @media screen and (min-width: 768px) {
   .contact__list {
+    border-top: none;
     text-align: left;
+    padding-top: 0rem;
   }
 }
 
 .contact__item {
-  margin-top: 3px;
-  margin-top: 0.1875rem;
+  margin-top: 4px;
+  margin-top: 0.25rem;
   color: #4e7f85;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 150%;
+}
+.contact__item:first-child {
+  padding-right: 10px;
+  padding-right: 0.625rem;
 }
 
 .contact__map {
@@ -1161,7 +1170,7 @@ select::-ms-expand {
     width: 47.037037037%;
     padding-right: 7.0625rem;
     padding-left: 5.125rem;
-    padding-block: 7.4375rem 6.1875rem;
+    padding-block: 7.4375rem 5.75rem;
   }
 }
 
@@ -1195,7 +1204,7 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .contact__decoration {
     position: absolute;
-    top: 6.25rem;
+    top: 6rem;
     right: 3.125rem;
     width: 18.8125rem;
   }
@@ -1877,7 +1886,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .information {
-    padding: 6.0625rem 0.9375rem;
+    padding: 6.1875rem 0.9375rem 6.25rem;
   }
 }
 
@@ -1912,7 +1921,7 @@ select::-ms-expand {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 2.8125rem;
+    gap: 2.9375rem;
   }
 }
 
@@ -1984,7 +1993,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .information__button {
-    margin-top: 2.5rem;
+    margin-top: 2.625rem;
   }
 }
 
@@ -2068,13 +2077,13 @@ select::-ms-expand {
   margin-top: -0.625rem;
 }
 .price {
-  padding: 80px 15px;
-  padding: 5rem 0.9375rem;
+  padding: 80px 15px 78px;
+  padding: 5rem 0.9375rem 4.875rem;
   background-color: #DDF0F1;
 }
 @media screen and (min-width: 768px) {
   .price {
-    padding: 6.1875rem 0rem;
+    padding: 6.25rem 0rem;
   }
 }
 
@@ -2147,6 +2156,12 @@ select::-ms-expand {
     height: 12.5625rem;
     bottom: -10.8125rem;
     left: -5.125rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .price__contents::after {
+    bottom: -11rem;
+    left: -4.6875rem;
   }
 }
 
@@ -2261,8 +2276,8 @@ select::-ms-expand {
 }
 
 .price__button {
-  margin-top: 39px;
-  margin-top: 2.4375rem;
+  margin-top: 36px;
+  margin-top: 2.25rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -2371,7 +2386,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .section-title__jp--contact {
-    margin-top: 1rem;
+    margin-top: 0.6875rem;
   }
 }
 
@@ -2611,7 +2626,7 @@ select::-ms-expand {
   font-size: 16px;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.2;
   padding-bottom: 16px;
   padding-bottom: 1rem;
   border-bottom: 1px solid #4e7f85;
@@ -2620,7 +2635,8 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .voice-card__title {
     font-size: 1.5rem;
-    padding-bottom: 0.375rem;
+    padding-bottom: 0.125rem;
+    line-height: 1.5;
   }
 }
 
@@ -2667,7 +2683,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .voice {
-    padding-block: 8.6875rem;
+    padding-block: 8.6875rem 8.5625rem;
   }
 }
 
@@ -2702,7 +2718,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .voice__items {
-    margin-top: 2rem;
+    margin-top: 1.8125rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2745,7 +2761,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .voice__button {
-    margin-top: 5.0625rem;
+    margin-top: 5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

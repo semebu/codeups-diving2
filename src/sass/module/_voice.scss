@@ -5,7 +5,7 @@
   position: relative;
 
 @include mq(md) {
-  padding-block:rem(139);
+  padding-block:rem(139) rem(137);
 }
 }
 
@@ -28,7 +28,7 @@
   align-items: center;
 
   @include mq(md) {
-    margin-top: rem(32);
+    margin-top: rem(29);
     flex-direction: row;
   }
 }
@@ -63,7 +63,7 @@
   margin-top: rem(38);
 
   @include mq(md) {
-    margin-top: rem(81);
+    margin-top: rem(80);
   }
 }
 

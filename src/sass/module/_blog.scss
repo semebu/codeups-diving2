@@ -28,7 +28,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: rem(500);
+    height: rem(502);
     position: relative;
   }
 }
@@ -52,7 +52,7 @@
   gap: rem(40);
 
   @include mq(md) {
-    margin-top: rem(83);
+    margin-top: rem(81);
     margin-inline: auto;
     flex-direction: row;
     gap: rem(40);

@@ -6,7 +6,7 @@ padding-bottom: rem(66);
 padding-inline: rem(15);
 
 @include mq(md) {
-  padding-top: rem(120);
+  padding-top: rem(117);
   padding-bottom: rem(140);
   padding-inline: rem(20);
   }
@@ -86,7 +86,7 @@ img {
     z-index: 100;
     display: flex;
     flex-direction: row;
-    gap: rem(40);
+    gap: rem(41);
   }
 }
 
@@ -113,6 +113,7 @@ img {
 
   @include mq(md) {
   // position: absolute;
+  margin-top: rem(0);
   
   }
 }
@@ -134,7 +135,7 @@ img {
   text-align: center;
 
   @include mq(md) {
-    margin-top: rem(100);
+    margin-top: rem(40);
   }
 }
 

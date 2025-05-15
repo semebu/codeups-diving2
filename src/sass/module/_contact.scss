@@ -62,14 +62,14 @@
   display: flex;
   flex-direction: column;
   gap: rem(5);
-  padding: rem(80) rem(82) rem(72) rem(50);
+  padding: rem(78) rem(82) rem(72) rem(50);
   }
 }
 
 
 .contact__title {
   text-align: center;
-  width: 174px;
+  width: rem(174);
   margin-inline: auto;
 
   a {
@@ -77,6 +77,7 @@
   }
   @include mq(md) {
   margin-inline: auto;
+  width: rem(200);
     a {
     max-width: rem(200);
     width: 100%;
@@ -92,32 +93,39 @@
   gap: rem(16);
 
   @include mq(md) {
-  display: flex;
-  flex-direction: row;
-  gap: rem(21);
-  border-top: rem(1) solid $green;
-  padding-top: rem(24);
+    margin-top: rem(0);
+    display: flex;
+    flex-direction: row;
+    gap: rem(21);
+    border-top: rem(1) solid $green;
+    padding-top: rem(24);
   }
 }
 
 .contact__list {
   text-align: center;
   border-top: rem(1) solid $green;
-  padding-top: rem(17);
+  padding-top: rem(11);
   color: $font-color;
   
   @include mq(md) {
-  text-align: left;
+    border-top: none;
+    text-align: left;
+    padding-top: rem(0);
   }
 }
 
 .contact__item {
-  margin-top: rem(3);
+  margin-top: rem(4);
   color: $green;
   font-family: $jp-font-family;
   font-size: rem(16);
   font-weight: $normal;
   line-height: 150%;
+
+  &:first-child {
+    padding-right: rem(10);
+  }
 }
 
 .contact__map {
@@ -145,7 +153,7 @@
   // padding-inline: rem(40);
   padding-right: rem(113);
   padding-left: rem(82);
-  padding-block: rem(119) rem(99);
+  padding-block: rem(119) rem(92);
   }
 }
 
@@ -176,7 +184,7 @@
 
   @include mq(md) {
   position: absolute;
-  top: rem(100);
+  top: rem(96);
   right:rem(50);
   width: rem(301);
 }
