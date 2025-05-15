@@ -146,12 +146,15 @@ img {
     display: block;
     position: absolute;
     bottom: rem(-303);
-    right: rem(-138);
+    right: rem(0);
     width: rem(194);
+    transform: translateX(rem(140));
   }
 
  img {
   width: 100%;
+  height: auto;
+  display: block;
  };
 }
 

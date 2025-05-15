@@ -26,7 +26,7 @@ position: relative;//テキストを絶対配置値できるようにする
 
 .mv__text {
 position: absolute;
-top: 49%;
+top: 47.5%;
 left: 50%;
 transform: translate(-50%, -50%);
 color: $white;
@@ -49,6 +49,10 @@ padding-left:rem(22);
 }
 
 .mv__subtext {
+  position: absolute;
+  top: 135%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 font-family: $eg-font-family;
 font-size: rem(20);
 font-weight: $normal;

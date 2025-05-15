@@ -38,6 +38,10 @@ html {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* pcの電話番号発信対応 */
 @media screen and (min-width: 768px) {
   a[href^="tel:"] {
@@ -337,12 +341,16 @@ select::-ms-expand {
     display: block;
     position: absolute;
     bottom: -18.9375rem;
-    right: -8.625rem;
+    right: 0rem;
     width: 12.125rem;
+    -webkit-transform: translateX(8.75rem);
+            transform: translateX(8.75rem);
   }
 }
 .about__decoration img {
   width: 100%;
+  height: auto;
+  display: block;
 }
 
 .blog-card {
@@ -754,8 +762,6 @@ select::-ms-expand {
   width: auto;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-right: 40px;
-  margin-right: 2.5rem;
 }
 
 .campaign {
@@ -809,8 +815,6 @@ select::-ms-expand {
 .campaign__top {
   padding-left: 0px;
   padding-left: 0rem;
-  margin-left: 15px;
-  margin-left: 0.9375rem;
 }
 @media screen and (min-width: 768px) {
   .campaign__top {
@@ -2042,7 +2046,7 @@ select::-ms-expand {
 
 .mv__text {
   position: absolute;
-  top: 49%;
+  top: 47.5%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -2069,6 +2073,11 @@ select::-ms-expand {
 }
 
 .mv__subtext {
+  position: absolute;
+  top: 135%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-family: "Gotu", sans-serif;
   font-size: 20px;
   font-size: 1.25rem;
@@ -2438,6 +2447,8 @@ select::-ms-expand {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 100%;
+  width: 333px;
+  width: 20.8125rem;
 }
 
 .swiper-wrapper {

@@ -183,7 +183,7 @@ jQuery(function ($) {
   // }
 });
 
-/* =================================================== 
+/* ===================================================
 ※1 effectについて
 slide：左から次のスライドが流れてくる
 fade：次のスライドがふわっと表示
@@ -213,9 +213,9 @@ custom：自由にカスタマイズ
 const campaignSwiper = new Swiper(".campaign-swiper", {
   loop: true,
   // loop: false,
-  spaceBetween: 40,
-  // slidesPerView: 1.5,
-  slidesPerView: "auto",
+  spaceBetween: 24,
+  slidesPerView: 1.2,
+  // slidesPerView: "auto",
   // slidesPerView: 1.5273,
   // centeredSlides: true,
   centeredSlides: false,
@@ -226,11 +226,11 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
     nextEl: "#js-campaign-next",
     prevEl: "#js-campaign-prev",
   },
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 1.5,
-  //     spaceBetween: 24,
-  //   },
+  breakpoints: {
+    768: {
+      slidesPerView: 3.3,
+      spaceBetween: 40,
+    },
   //   // 600: {
   //   //   slidesPerView: 2,
   //   //   centeredSlides: true,
@@ -244,7 +244,7 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
   //   //   spaceBetween: 32,
   //   //   centeredSlides: false,
   //   // },
-  // },
+  },
 });
 
 /* ===================================================
@@ -279,19 +279,30 @@ $(function () {
       speed = 700;
 
   box.each(function () {
-    $(this).append('<div class="color"></div>');
+    // $(this).append('<div class="color"></div>');
+    $(this).prepend('<div class="color"></div>');
     var color = $(this).find('.color'),
         image = $(this).find('img');
     var counter = 0;
 
-    color.css('width', '0%');
+    // color.css('width', '0%');
+
+    // 初期状態
+    image.css('opacity', '0');
+    color.css({
+      width: '100%',
+      left: '100%',
+      right: 'auto',
+    });
 
     $(this).on('inview', function (event,isInView) {
       if (isInView && counter === 0) {
-        color.delay(200).animate({ 'width': '100%' }, speed, function () {
+        // color.delay(200).animate({ 'width': '100%' }, speed, function () {
+        color.animate({left: '0%'}, speed, function () {
           image.css('opacity', '1');
-          $(this).css({ 'left': '0', 'right': 'auto' });
-          $(this).animate({ 'width': '0%' }, speed);
+          // $(this).css({ 'left': '0', 'right': 'auto' });
+          // $(this).animate({ 'width': '0%' }, speed);
+          color.animate({width: '0%'}, speed);
         });
         counter = 1;
       }
