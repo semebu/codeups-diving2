@@ -2,23 +2,37 @@ jQuery(function ($) {
 // ============================
 // ✅ ページトップボタン
 // ============================
-  const topBtn = document.querySelector(".pagetop");
-  if (topBtn) {
-    topBtn.style.display = "none";
+  // const topBtn = document.querySelector(".pagetop");
+  // if (topBtn) {
+  //   topBtn.style.display = "none";
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 70) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
-      }
-    });
+  //   window.addEventListener("scroll", () => {
+  //     if (window.scrollY > 70) {
+  //       topBtn.style.display = "block";
+  //     } else {
+  //       topBtn.style.display = "none";
+  //     }
+  //   });
 
-    topBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+  //   topBtn.addEventListener("click", function (e) {
+  //     e.preventDefault();
+  //     window.scrollTo({ top: 0, behavior: "smooth" });
+  //   });
+  // }
+  const pageTop = jQuery('#js-pagetop-button');
+  jQuery(window).on("scroll",function() {
+    if(jQuery(window).scrollTop() > 300) {
+      pageTop.fadeIn();
+  } else {
+    pageTop.fadeOut();
   }
+});
+pageTop.on("click",function() {
+  jQuery('html, body').animate({
+    scrollTop: 0
+  }, 2500);
+});
+
 
   // ============================
   // ✅ ローディングアニメーション

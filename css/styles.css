@@ -1128,6 +1128,8 @@ select::-ms-expand {
 .contact__item:first-child {
   padding-right: 10px;
   padding-right: 0.625rem;
+  margin-top: 0px;
+  margin-top: 0rem;
 }
 
 .contact__map {
@@ -1621,12 +1623,13 @@ select::-ms-expand {
 
 .footer__item a {
   display: block;
-  color: #FFF;
-  font-family: "Noto Sans JP";
+  color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 112.5% */
+  line-height: 112.5%; /* 112.5% */
   padding-left: 22px;
   padding-left: 1.375rem;
 }
@@ -2065,6 +2068,29 @@ select::-ms-expand {
   margin-top: -10px;
   margin-top: -0.625rem;
 }
+.pagetop {
+  position: fixed;
+  right: 15px;
+  right: 0.9375rem;
+  bottom: 16px;
+  bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .pagetop {
+    right: 1.25rem;
+    bottom: 1.25rem;
+  }
+}
+.pagetop img {
+  width: 48px;
+  width: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .pagetop img {
+    width: 5rem;
+  }
+}
+
 .price {
   padding: 80px 15px 78px;
   padding: 5rem 0.9375rem 4.875rem;
