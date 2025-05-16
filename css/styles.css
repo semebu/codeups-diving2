@@ -2074,6 +2074,7 @@ select::-ms-expand {
   right: 0.9375rem;
   bottom: 16px;
   bottom: 1rem;
+  z-index: 10;
 }
 @media screen and (min-width: 768px) {
   .pagetop {
