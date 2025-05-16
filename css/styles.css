@@ -826,7 +826,7 @@ select::-ms-expand {
     -webkit-column-gap: 32px;
        -moz-column-gap: 32px;
             column-gap: 32px;
-    padding-left: 9.875rem;
+    padding-left: 10rem;
   }
 }
 
@@ -969,26 +969,6 @@ select::-ms-expand {
   .colorbox__sp {
     display: none;
   }
-}
-
-.colorbox2 {
-  position: relative;
-  width: 80%;
-  margin: 30px auto 30px;
-}
-.colorbox2 img {
-  display: block;
-  width: 100%;
-}
-
-.colorbox2 .color {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background: #4e7f85;
 }
 
 .contact {

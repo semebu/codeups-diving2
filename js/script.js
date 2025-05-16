@@ -2,7 +2,6 @@ jQuery(function ($) {
 // ============================
 // ✅ ページトップボタン
 // ============================
-// document.addEventListener("DOMContentLoaded", function () {
   const topBtn = document.querySelector(".pagetop");
   if (topBtn) {
     topBtn.style.display = "none";
@@ -149,38 +148,6 @@ jQuery(function ($) {
   centeredSlides: true, // 中央寄せにする
   slidesPerView: "auto",
   spaceBetween: 30,
-
-  // ページネーション
-  // pagination: {
-  //   el: ".swiper-pagination", // paginationのclass
-  //   clickable: true, // クリックでの切り替えを有効に
-  //   type: "bullets" // paginationのタイプ (※2)
-  // },
-
-  // ナビゲーション
-  // navigation: {
-  //   prevEl: ".swiper-button-prev", // 戻るボタンのclass
-  //   nextEl: ".swiper-button-next" // 進むボタンのclass
-  // },
-
-  // スクロールバー
-  // scrollbar: { // スクロールバーを表示したいとき
-  //   el: ".swiper-scrollbar", // スクロールバーのclass
-  //   hide: true, // 操作時のときのみ表示
-  //   draggable: true // スクロールバーを直接表示できるようにする
-  // },
-
-  // ブレイクポイントによって変える
-  // breakpoints: { 
-  //     768: {
-  //         slidesPerView: 1.2,
-  //         spaceBetween: 15,
-  //     },
-  //     1500: {
-  //         slidesPerView: 3,
-  //         spaceBetween: 40,
-  //     },
-  // }
 });
 
 /* ===================================================
@@ -214,8 +181,8 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
   loop: true,
   // loop: false,
   spaceBetween: 24,
-  slidesPerView: 1.2,
-  // slidesPerView: "auto",
+  // slidesPerView: 1.2,
+  slidesPerView: "auto",
   // slidesPerView: 1.5273,
   // centeredSlides: true,
   centeredSlides: false,
@@ -228,7 +195,7 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
   },
   breakpoints: {
     768: {
-      slidesPerView: 3.3,
+      // slidesPerView: 3.7,
       spaceBetween: 40,
     },
   //   // 600: {
@@ -279,13 +246,11 @@ $(function () {
       speed = 700;
 
   box.each(function () {
-    // $(this).append('<div class="color"></div>');
     $(this).prepend('<div class="color"></div>');
     var color = $(this).find('.color'),
         image = $(this).find('img');
     var counter = 0;
 
-    // color.css('width', '0%');
 
     // 初期状態
     image.css('opacity', '0');
@@ -297,54 +262,14 @@ $(function () {
 
     $(this).on('inview', function (event,isInView) {
       if (isInView && counter === 0) {
-        // color.delay(200).animate({ 'width': '100%' }, speed, function () {
         color.animate({left: '0%'}, speed, function () {
           image.css('opacity', '1');
-          // $(this).css({ 'left': '0', 'right': 'auto' });
-          // $(this).animate({ 'width': '0%' }, speed);
           color.animate({width: '0%'}, speed);
         });
         counter = 1;
       }
     });
   });
-
-
-  // $('.colorbox').on('inview', function (event, isInView) {
-  // if (isInView) {
-  //   console.log('inview動いてます！');
-  // }
 });
 });
-
-// ============================
-// ✅colorbox2 (画像のアニメーション)
-// ============================
-
-//要素の取得とスピードの設定
-var box = $('.colorbox2'),
-    speed = 700;
-
-//.colorboxの付いた全ての要素に対して下記の処理を行う
-box.each(function(){
-    $(this).append('<div class="color"></div>')
-    var color = $(this).find($('.color')),
-    image = $(this).find('img');
-    var counter = 0;
-
-    image.css('opacity','0');
-    color.css('width','0%');
-    //inviewを使って背景色が画面に現れたら処理をする
-    color.on('inview', function(){
-        if(counter == 0){
-      $(this).delay(200).animate({'width':'100%'},speed,function(){
-                   image.css('opacity','1');
-                   $(this).css({'left':'0' , 'right':'auto'});
-                   $(this).animate({'width':'0%'},speed);
-                })
-            counter = 1;
-          }
-     });
-});
-
 // });
