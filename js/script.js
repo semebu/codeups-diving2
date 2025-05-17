@@ -135,7 +135,7 @@ jQuery('a[href^="#"]').on("click",function(e) {
   loop: true,
 
   // 自動スライドについて
-  autoplay: { 
+  autoplay: {
     delay: 3000, // 何秒ごとにスライドを動かすか
     stopOnLastSlide: false, // 最後のスライドで自動再生を終了させるか
     disableOnInteraction: false, // ユーザーの操作時に止めない
@@ -179,8 +179,8 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
   loop: true,
   // loop: false,
   spaceBetween: 24,
-  // slidesPerView: 1.2,
-  slidesPerView: "auto",
+  slidesPerView: 1.2,
+  // slidesPerView: "auto",
   // slidesPerView: 1.5273,
   // centeredSlides: true,
   centeredSlides: false,

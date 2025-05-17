@@ -182,98 +182,156 @@ select::-ms-expand {
   padding-top: 2.25rem;
   padding-bottom: 66px;
   padding-bottom: 4.125rem;
-  padding-inline: 15px;
-  padding-inline: 0.9375rem;
 }
 @media screen and (min-width: 768px) {
   .about {
     padding-top: 7.3125rem;
     padding-bottom: 8.75rem;
-    padding-inline: 1.25rem;
   }
 }
 
 .about__inner {
-  position: relative;
-  max-width: 1083px;
-  max-width: 67.6875rem;
+  max-width: 1120px;
+  max-width: 70rem;
+  padding-inline: 15px;
+  padding-inline: 0.9375rem;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .about__inner {
+    padding-inline: 1.25rem;
+  }
 }
 
 .about__content {
-  margin-top: 54px;
-  margin-top: 3.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  gap: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .about__content {
-    margin-top: 7.5rem;
-  }
-}
-
-.about__images {
-  position: relative;
-}
-
-.about__image--left {
-  width: 194px;
-  width: 12.125rem;
-  position: absolute;
-  top: -26px;
-  top: -1.625rem;
-  left: 0px;
-  left: 0rem;
-  width: 128px;
-  width: 8rem;
-}
-@media screen and (min-width: 768px) {
-  .about__image--left {
-    width: 8rem;
-    position: absolute;
-    top: -5rem;
-    left: 0rem;
-    width: 25rem;
-    z-index: 99;
-  }
-}
-.about__image--left img {
-  width: 100%;
-}
-
-.about__image--right {
-  width: 281px;
-  width: 17.5625rem;
-  margin-left: auto;
-}
-@media screen and (min-width: 768px) {
-  .about__image--right {
     position: relative;
-    width: 55rem;
-  }
-}
-.about__image--right img {
-  width: 100%;
-}
-
-.about__text-block {
-  position: static;
-  margin-top: 40px;
-  margin-top: 2.5rem;
-}
-@media screen and (min-width: 768px) {
-  .about__text-block {
-    position: absolute;
-    margin-top: 0rem;
-    top: 7.5rem;
-    left: 12.4375rem;
-    z-index: 100;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 2.5625rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+    min-height: 40.625rem;
+  }
+}
+
+.about__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  gap: 16px;
+  gap: 1rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .about__images {
+    width: 50%;
+    max-width: 37.5rem;
+    position: static;
+  }
+}
+
+.about__image--left,
+.about__image--right {
+  position: static;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.about__image--left img,
+.about__image--right img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.about__image--left {
+  position: absolute;
+  top: 28px;
+  top: 1.75rem;
+  left: 0px;
+  left: 0rem;
+  aspect-ratio: 128/194;
+  width: 34vw;
+  z-index: 20;
+  max-width: 400px;
+  max-width: 25rem;
+}
+@media screen and (min-width: 768px) {
+  .about__image--left {
+    top: -5rem;
+    width: 37vw;
+  }
+}
+.about__image--right {
+  position: absolute;
+  top: 55px;
+  top: 3.4375rem;
+  right: 0px;
+  right: 0rem;
+  aspect-ratio: 281/186;
+  width: 74.44vw;
+  z-index: 10;
+  max-width: 880px;
+  max-width: 55rem;
+}
+@media screen and (min-width: 768px) {
+  .about__image--right {
+    top: 0rem;
+  }
+}
+
+.about__text-block {
+  margin-top: 258px;
+  margin-top: 16.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 881px;
+  max-width: 55.0625rem;
+  z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  .about__text-block {
+    position: absolute;
+    margin-top: 7.5rem;
+    top: 0rem;
+    left: 12.4375rem;
+    width: 100%;
+    max-width: 55.0625rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -288,32 +346,39 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .about__catchcopy {
     color: #fff;
-    font-family: "Gotu", sans-serif;
     font-size: 5rem;
-    font-weight: 400;
     line-height: 125%; /* 125% */
   }
 }
 
 .about__text-block__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 16px;
   margin-top: 1rem;
   z-index: 100;
   max-width: 400px;
   max-width: 25rem;
+  right: 0px;
+  right: 0rem;
+  top: 120px;
+  top: 7.5rem;
 }
 @media screen and (min-width: 768px) {
   .about__text-block__inner {
-    margin-top: 0rem;
+    margin-top: 1.5rem;
+    margin-inline: 2.5rem;
   }
 }
 
 .about__text {
-  color: #0D2936;
-  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 400;
   line-height: 150%; /* 150% */
 }
 @media screen and (min-width: 768px) {
@@ -323,8 +388,8 @@ select::-ms-expand {
 }
 
 .about__button {
-  margin-top: 50px;
-  margin-top: 3.125rem;
+  margin-top: 25px;
+  margin-top: 1.5625rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -812,10 +877,6 @@ select::-ms-expand {
   margin-bottom: 1.5rem;
 }
 
-.campaign__top {
-  padding-left: 0px;
-  padding-left: 0rem;
-}
 @media screen and (min-width: 768px) {
   .campaign__top {
     margin-left: 0rem;
@@ -2674,8 +2735,7 @@ select::-ms-expand {
   }
 }
 .voice-card__image img {
-  aspect-ratio: 151px 117px;
-  aspect-ratio: 9.4375rem 7.3125rem;
+  aspect-ratio: 151/117;
 }
 
 .voice-card__text {
