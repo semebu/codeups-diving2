@@ -177,12 +177,10 @@ custom：自由にカスタマイズ
 
 const campaignSwiper = new Swiper(".campaign-swiper", {
   loop: true,
-  // loop: false,
   spaceBetween: 24,
-  slidesPerView: 1.2,
-  // slidesPerView: "auto",
-  // slidesPerView: 1.5273,
-  // centeredSlides: true,
+  // slidesPerView: 1.2,//初期設定（SP）
+  slidesPerView: "auto",
+
   centeredSlides: false,
   slidesPerGroup: 1,
   keyboard: true,
@@ -193,7 +191,6 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
   },
   breakpoints: {
     768: {
-      slidesPerView: "auto",
       spaceBetween: 40,
     },
   //   // 600: {

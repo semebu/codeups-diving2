@@ -2,8 +2,10 @@
 
 .campaign-swiper__slide {
   height: auto;
-  // width: rem(333)!important;
-  width: auto;
+  width: rem(280);
   flex-shrink: 0;
-  // margin-right: rem(40);
+
+  @include mq(md) {
+    width: rem(333);
+  }
 }

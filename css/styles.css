@@ -738,8 +738,6 @@ select::-ms-expand {
   font-size: 1.25rem;
   line-height: 1;
   font-family: "Lato", sans-serif;
-  min-width: 60px;
-  min-width: 3.75rem;
 }
 .campaign-card__price--old::after {
   content: "";
@@ -832,9 +830,15 @@ select::-ms-expand {
 
 .campaign-swiper__slide {
   height: auto;
-  width: auto;
+  width: 280px;
+  width: 17.5rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+@media screen and (min-width: 768px) {
+  .campaign-swiper__slide {
+    width: 20.8125rem;
+  }
 }
 
 .campaign {
@@ -885,6 +889,10 @@ select::-ms-expand {
   margin-bottom: 1.5rem;
 }
 
+.campaign__top {
+  padding-left: 15px;
+  padding-left: 0.9375rem;
+}
 @media screen and (min-width: 768px) {
   .campaign__top {
     margin-left: 0rem;
@@ -2523,8 +2531,13 @@ select::-ms-expand {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 100%;
-  width: 333px;
-  width: 20.8125rem;
+  width: 280px;
+  width: 17.5rem;
+}
+@media screen and (min-width: 768px) {
+  .swiper-slide {
+    width: 20.8125rem;
+  }
 }
 
 .swiper-wrapper {
