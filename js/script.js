@@ -193,7 +193,7 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
   },
   breakpoints: {
     768: {
-      // slidesPerView: 3.7,
+      slidesPerView: "auto",
       spaceBetween: 40,
     },
   //   // 600: {
