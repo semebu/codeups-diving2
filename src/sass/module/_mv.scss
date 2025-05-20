@@ -26,11 +26,17 @@ position: relative;//テキストを絶対配置値できるようにする
 
 .mv__text {
 position: absolute;
-top: 49.5%;
+top: 49%;
 left: 50%;
 transform: translate(-50%, -50%);
 color: $white;
 text-align: center;
+
+@include mq(md) {
+  top: 49.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 }
 
 .mv__maintext {
@@ -38,22 +44,24 @@ text-align: center;
   letter-spacing: rem(21.6);
   font-family: $eg2-font-family;
   font-weight: $normal;
-  padding-left: rem(39);
-
+  padding-left: rem(19);
+  
   @include mq(md) {
+    padding-left: rem(39);
     font-size: rem(80);
     letter-spacing: rem(41.6);
   }
 }
 
 .mv__subtext {
+  margin-top: rem(-3);
   font-size: rem(20);
   font-weight: $normal;
   color: $white;
   font-family: $eg-font-family;
-  margin-top: rem(-9);
-
+  
   @include mq(md) {
+    margin-top: rem(-9);
     font-size: rem(20);
     // letter-spacing: rem(1.2);
   }

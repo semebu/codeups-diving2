@@ -10,14 +10,13 @@
     color: #408F95;
     z-index: 200;
     opacity: 1;
-    transition: opacity 1s ease 1.2s;//←スライド後にフェードイン
+    transition: opacity 1s ease 1.2s, color 1s ease 1.2s;//←スライド後にフェードイン
 
     &.show {
       opacity: 1;
       color: $white;
       transition-delay: 1.2s;
     }
-  
   }
 
   .heading__main {

@@ -1,9 +1,6 @@
 @use "global" as *;
 
  .loading {
-    // position: relative;
-    // width: 100vw;
-    // height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -15,13 +12,6 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
-    // transition: opacity 1s ease;
-    // transition: translate 1s ease;
-    // &.js-loading-end {
-    //   // opacity: 0;
-    //   translate: 0 -100%;
-    // }
   }
 
 

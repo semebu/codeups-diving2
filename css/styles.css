@@ -1849,8 +1849,8 @@ select::-ms-expand {
   color: #408F95;
   z-index: 200;
   opacity: 1;
-  -webkit-transition: opacity 1s ease 1.2s;
-  transition: opacity 1s ease 1.2s;
+  -webkit-transition: opacity 1s ease 1.2s, color 1s ease 1.2s;
+  transition: opacity 1s ease 1.2s, color 1s ease 1.2s;
 }
 .heading.show {
   opacity: 1;
@@ -1897,6 +1897,8 @@ select::-ms-expand {
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 .image-half.left {
   -webkit-clip-path: inset(0 50% 0 0);
@@ -2124,12 +2126,20 @@ select::-ms-expand {
 
 .mv__text {
   position: absolute;
-  top: 49.5%;
+  top: 49%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: #fff;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .mv__text {
+    top: 49.5%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
 .mv__maintext {
@@ -2139,27 +2149,29 @@ select::-ms-expand {
   letter-spacing: 1.35rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  padding-left: 39px;
-  padding-left: 2.4375rem;
+  padding-left: 19px;
+  padding-left: 1.1875rem;
 }
 @media screen and (min-width: 768px) {
   .mv__maintext {
+    padding-left: 2.4375rem;
     font-size: 5rem;
     letter-spacing: 2.6rem;
   }
 }
 
 .mv__subtext {
+  margin-top: -3px;
+  margin-top: -0.1875rem;
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 400;
   color: #fff;
   font-family: "Gotu", sans-serif;
-  margin-top: -9px;
-  margin-top: -0.5625rem;
 }
 @media screen and (min-width: 768px) {
   .mv__subtext {
+    margin-top: -0.5625rem;
     font-size: 1.25rem;
   }
 }
