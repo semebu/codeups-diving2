@@ -1,113 +1,133 @@
+jQuery(function ($) {
+// ============================
+// ✅ スムーススクロール
+// ============================
 
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-
-  // ページトップボタン処理
-  var topBtn = $('.pagetop');
-  topBtn.hide();
-
-  //スクロールでページトップボタン表示
-  $(window).scroll(function () {
-    if($(this).scrollTop()> 70) {
-      topBtn.fadeIn();
-    } else {
-      topBtn.fadeOut();
-    }
-  });
-
+jQuery('a[href^="#"]').on("click",function(e) {
+  const speed = 300;
+  const id = jQuery(this).attr("href");
+  const target = jQuery("#" == id ? "html" : id);
+  const position = jQuery(target).offset().top;
+  jQuery("html,body").animate(
+    {
+      scrollTop: position,
+    },
+    speed,
+    "swing"
+  );
+});
 
 
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
-    }
-  });
-
-  // ========================================
+  // ============================
   // ✅ ローディングアニメーション
-  // ========================================
-  window.addEventListener('load', () => {
-    const loadingScreen = document.getElementById('loading');
-    const leftImage = document.querySelector('.image-half.left');
-    console.log('leftImage', leftImage);
-    const rightImage = document.querySelector('.image-half.right');
-    const heading = document.querySelector('.heading');
+  // ============================
+  window.addEventListener("load", () => {
+    const loadingScreen = document.getElementById("loading");
+    const leftImage = document.querySelector(".image-half.left");
+    const rightImage = document.querySelector(".image-half.right");
+    const heading = document.querySelector(".heading");
 
-    // ローディングをまず表示させる(display:block;)
-    loadingScreen.style.display = "block";
+    if (loadingScreen) loadingScreen.style.display = "block";
 
-    // ③ テキストフェードイン
-      setTimeout(() => {
-        heading.classList.add('show');
-      }, 800);//テキストは2.２秒後
+    //headingがある場合だけ　showをつける
+    if(heading) {
+    setTimeout(() => heading?.classList.add("show"), 800);
+    }
 
-    // アニメーションスタート(左→右の順にクラス付与)
-    // まずは　①　左スライド
+    setTimeout(() => leftImage?.classList.add("js-slide-out-left"), 1800);
+    setTimeout(() => rightImage?.classList.add("js-slide-out-right"), 2600);
     setTimeout(() => {
-      leftImage.classList.add('js-slide-out-left');
-    }, 1800);
+      if (loadingScreen) loadingScreen.style.display = "none";
+    }, 5500);
+  });
 
-      // 次に　②　右スライド（さらに遅らせる）
-    setTimeout(() => {
-      rightImage.classList.add('js-slide-out-right');
-    }, 2600);
+  // ============================
+  // ✅ ハンバーガーメニュー
+  // ============================
+  const drawerIcon = document.querySelector(".drawer-icon");
+  const drawer = document.querySelector(".drawer");
+  const drawerNavItem = document.querySelectorAll('.drawer__body a[href^="#"]');
+  const header = document.querySelector("header");
+  const headerHeight = header ? header.offsetHeight : 0;
+  const breakpoint = 768;
+  let isMenuOpen = false;
+  let isMenuOpenAtBreakpoint = false;
 
-  
+  const openMenu = () => {
+    drawer?.classList.add("js-show");
+    drawerIcon?.classList.add("js-show");
+  };
 
-      // ④ 最終的にローディング自体を非表示に(全て終了後)
-      setTimeout(()=> {
-        loadingScreen.style.display = "none";
-      }, 5500);//全体終了後に非表示に
+  const closeMenu = () => {
+    drawer?.classList.remove("js-show");
+    drawerIcon?.classList.remove("js-show");
+    isMenuOpen = false;
+  };
+
+  const toggleMenu = () => {
+    if (drawer?.classList.contains("js-show")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+
+  drawerIcon?.addEventListener("click", toggleMenu);
+
+  window.addEventListener("resize", () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth > breakpoint && isMenuOpenAtBreakpoint) {
+      closeMenu();
+    } else if (windowWidth <= breakpoint && drawer?.classList.contains("js-show")) {
+      isMenuOpenAtBreakpoint = true;
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (drawer?.classList.contains("js-show") && !drawer.contains(e.target)) {
+      if (isMenuOpen) {
+        closeMenu();
+      } else {
+        isMenuOpen = true;
+      }
+    }
+  });
+
+  drawerNavItem.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      closeMenu();
+      const targetId = this.getAttribute("href");
+      const target = document.querySelector(targetId);
+      if (target) {
+        const offsetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+        window.scrollTo({ top: offsetTop, behavior: "smooth" });
+      }
     });
-
-    // }, loadingEndTime);
-  // });
-
-  // ボタンをクリックしたらスクロールして上に戻る
-  topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
-    return false;
   });
 
-
-  //ドロワーメニュー
-  $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
-
+  // ============================
+  // ✅ スムーススクロール
+  // ============================
+  document.querySelectorAll('a[href*="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const target = document.querySelector(this.hash);
+      if (!target) return;
+      e.preventDefault();
+      const offsetTop = target.offsetTop - headerHeight;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    });
   });
 
-
-
-
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
-
-  $(document).on('click', 'a[href*="#"]', function () {
-    let time = 400;
-    let header = $('header').innerHeight();
-    let target = $(this.hash);
-    if (!target.length) return;
-    let targetY = target.offset().top - header;
-    $('html,body').animate({ scrollTop: targetY }, time, 'swing');
-    return false;
-  });
-
-  // mvスワイパー
+  // ============================
+  // ✅ ファーストビュースワイパー
+  // ============================
   const mvSwiper = new Swiper('.mv__swiper', { // swiperの名前
   // 切り替えのモーション
-  // speed: 1000, // 表示切り替えのスピード
-  effect: "fade", // 切り替えのmotion (※1)　フェードする
-   fadeEffect: {
-        crossFade: true　//前後のスライドをクロスフェード
+  speed: 100000, // 表示切り替えのスピード
+  effect: "fade", // 切り替えのmotion (※1)
+  fadeEffect: {
+        crossFade: true
     },
   allowTouchMove: false, // スワイプで表示の切り替えを無効に
 
@@ -121,46 +141,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     disableOnInteraction: false, // ユーザーの操作時に止めない
     reverseDirection: false, // 自動再生を逆向きにする
   },
-
+  
   // 表示について
   centeredSlides: true, // 中央寄せにする
   slidesPerView: "auto",
   spaceBetween: 30,
-
-  // ページネーション
-  // pagination: {
-  //   el: ".swiper-pagination", // paginationのclass
-  //   clickable: true, // クリックでの切り替えを有効に
-  //   type: "bullets" // paginationのタイプ (※2)
-  // },
-
-  // ナビゲーション
-  // navigation: {
-  //   prevEl: ".swiper-button-prev", // 戻るボタンのclass
-  //   nextEl: ".swiper-button-next" // 進むボタンのclass
-  // },
-
-  // スクロールバー
-  scrollbar: { // スクロールバーを表示したいとき
-    el: ".swiper-scrollbar", // スクロールバーのclass
-    hide: true, // 操作時のときのみ表示
-    draggable: true // スクロールバーを直接表示できるようにする
-  },
-
-  // ブレイクポイントによって変える
-  // breakpoints: {
-  //     768: {
-  //         slidesPerView: 1.2,
-  //         spaceBetween: 15,
-  //     },
-  //     1500: {
-  //         slidesPerView: 3,
-  //         spaceBetween: 40,
-  //     },
-  // }
 });
 
-/* =================================================== 
+/* ===================================================
 ※1 effectについて
 slide：左から次のスライドが流れてくる
 fade：次のスライドがふわっと表示
@@ -183,5 +171,100 @@ custom：自由にカスタマイズ
 
 =====================================================*/
 
+// ============================
+// ✅ キャンペーンスワイパー
+// ============================
 
+const campaignSwiper = new Swiper(".campaign-swiper", {
+  loop: true,
+  spaceBetween: 24,
+  // slidesPerView: 1.2,//初期設定（SP）
+  slidesPerView: "auto",
+
+  centeredSlides: false,
+  slidesPerGroup: 1,
+  keyboard: true,
+
+  navigation: {
+    nextEl: "#js-campaign-next",
+    prevEl: "#js-campaign-prev",
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 40,
+    },
+  //   // 600: {
+  //   //   slidesPerView: 2,
+  //   //   centeredSlides: true,
+  //   // },
+  //   // 900: {
+  //   //   slidesPerView: 2.2,
+  //   //   centeredSlides: false,
+  //   // },
+  //   // 1200: {
+  //   //   slidesPerView: 3.2234,
+  //   //   spaceBetween: 32,
+  //   //   centeredSlides: false,
+  //   // },
+  },
 });
+
+/* ===================================================
+※1 effectについて
+slide：左から次のスライドが流れてくる
+fade：次のスライドがふわっと表示
+■ fadeの場合は下記を記述
+    fadeEffect: {
+        crossFade: true
+    },
+cube：スライドが立方体になり、3D回転を繰り返す
+coverflow：写真やアルバムジャケットをめくるようなアニメーション
+flip：平面が回転するようなアニメーション
+cards：カードを順番にみていくようなアニメーション
+creative：カスタマイズしたアニメーションを使うときに使用します
+
+=======================================================
+※2 paginationのタイプ
+bullets：スライド枚数と同じ数のドットが表示
+fraction：分数で表示（例：1 / 3）
+progressbar：スライドの進捗に応じてプログレスバーが伸びる
+custom：自由にカスタマイズ
+
+=====================================================*/
+
+// ============================
+// ✅colorbox (画像のアニメーション)
+// ============================
+
+$(function () {
+  var box = $('.colorbox'),
+      speed = 700;
+
+  box.each(function () {
+    $(this).prepend('<div class="color"></div>');
+    var color = $(this).find('.color'),
+        image = $(this).find('img');
+    var counter = 0;
+
+
+    // 初期状態
+    image.css('opacity', '0');
+    color.css({
+      width: '100%',
+      left: '100%',
+      right: 'auto',
+    });
+
+    $(this).on('inview', function (event,isInView) {
+      if (isInView && counter === 0) {
+        color.animate({left: '0%'}, speed, function () {
+          image.css('opacity', '1');
+          color.animate({width: '0%'}, speed);
+        });
+        counter = 1;
+      }
+    });
+  });
+});
+});
+// });

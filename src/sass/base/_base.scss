@@ -20,6 +20,10 @@ html {
   }
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* pcの電話番号発信対応 */
 a[href^="tel:"] {
   @include mq("md") {

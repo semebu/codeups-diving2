@@ -1,1 +1,11 @@
 @use "global" as *;
+
+.swiper-slide {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: rem(280);
+
+  @include mq(md) {
+    width: rem(333);
+  }
+}

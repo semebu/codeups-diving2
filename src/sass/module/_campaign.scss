@@ -1,0 +1,138 @@
+@use "global" as *;
+
+.campaign {
+  background-color: $white;
+  position: relative;
+  padding-top: rem(40);
+  padding-left: rem(0);
+  
+  @include mq(lg) {
+    padding-top: 120px;
+    padding-left: rem(15);
+  }
+
+  @include mq(md) {
+    padding-left: rem(20);
+  }
+}
+
+.campaign__outer {
+  position: relative;
+  padding-bottom: rem(40);
+
+  @include mq(md) {
+    padding-bottom: rem(20);
+  }
+}
+
+.campaign__inner {
+  position: absolute;
+  top: rem(-96);
+  right: rem(160);
+  max-width: rem(1080);
+  padding-left: rem(20);
+  padding-right: rem(20);
+  margin-inline: auto;
+  margin-bottom: rem(24);
+}
+
+.campaign__top {
+  padding-left: rem(15);
+
+  @include mq(md) {
+    margin-left: rem(0);
+    margin-top: rem(40);
+    display: flex;
+    column-gap: 32px;
+    padding-left: rem(160);
+  }
+}
+
+.campaign__slider {
+  width:100%;
+  margin-top: rem(28);
+
+
+  @include mq(lg) {
+    margin-top: 0;
+  }
+}
+
+.campaign__arrows {
+  position: relative;
+  z-index: 2;
+  max-width: 240px;
+  margin-top: -10px;
+  // margin-right: auto;
+  margin-left: auto;
+}
+
+.campaign__bottom {
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(xl) {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+}
+
+.campaign__decoration-english {
+  display: block;
+  width: 255px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1;
+
+  @include mq(lg) {
+    width: 360px;
+    margin-top: -45px;
+  }
+
+  @include mq(xl) {
+    width: 495px;
+    margin: 0;
+  }
+}
+
+.campaign__text-wrap {
+  margin-top: 15px;
+
+  @include mq(xl) {
+    margin-top: 0;
+  }
+}
+
+.campaign__text {
+  font-size: 11.444px;
+  color: #fff;
+  text-align: center;
+
+  @include mq(sm) {
+    font-size: 14px;
+  }
+
+  @include mq(xl) {
+    font-size: 16px;
+    text-align: right;
+  }
+}
+
+.campaign__button {
+   margin-top: rem(40);
+   text-align: center;
+
+  @include mq(xl) {
+    margin-top: rem(80);
+  }
+}
+
+
+
+
+
+

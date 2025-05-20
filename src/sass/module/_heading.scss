@@ -21,12 +21,21 @@
   }
 
   .heading__main {
+<<<<<<< HEAD
     font-size: rem(40);
     line-height: 125%;
     letter-spacing: rem(21.6);
 
     @include mq(md) {
       font-family: Lato;
+=======
+    font-family: $eg2-font-family;
+    font-size: rem(40);
+    font-weight: $normal;
+    letter-spacing: rem(21.6);
+
+    @include mq(md) {
+>>>>>>> price-pc-recover
       font-size: rem(80);
       line-height: 125%; /* 125% */
       letter-spacing: rem(43.2);
@@ -34,9 +43,13 @@
   }
 
   .heading__sub {
-    font-family: Gotu;
-    font-size: 20px;
-    font-weight: 400;
+    font-family: $eg-font-family;
+    font-size: rem(20);
+    font-weight: $normal;
     text-align: center;
+
+    @include mq(md) {
+      // 変更なし
+    }
   }
 

@@ -1,1 +1,7 @@
 @use "global" as *;
+
+.swiper-wrapper {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+

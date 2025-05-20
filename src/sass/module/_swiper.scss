@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.swiper__img {
+width: 100%;
+display: block;
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+}
