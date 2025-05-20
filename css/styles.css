@@ -494,7 +494,7 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .blog__inner {
     display: block;
-    padding-top: 6.25rem;
+    padding-top: 6.125rem;
     padding-inline: 1.25rem;
     background-image: url(../images/common/bg_blog.jpg);
     background-size: cover;
@@ -551,7 +551,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .blog__button {
-    margin-top: 4.9375rem;
+    margin-top: 5.0625rem;
   }
 }
 
@@ -2750,7 +2750,7 @@ select::-ms-expand {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 0.25rem;
-    margin-top: 1.5625rem;
+    margin-top: 1.4375rem;
   }
 }
 

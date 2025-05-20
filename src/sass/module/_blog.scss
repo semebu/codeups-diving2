@@ -22,7 +22,7 @@
 
   @include mq(md) {
     display: block;
-    padding-top: rem(100);
+    padding-top: rem(98);
     padding-inline: rem(20);
     background-image: url(../images/common/bg_blog.jpg);
     background-size: cover;
@@ -65,7 +65,7 @@
   text-align: center;
 
   @include mq(md) {
-    margin-top: rem(79);
+    margin-top: rem(81);
   }
 }
 
