@@ -21,21 +21,13 @@
   }
 
   .heading__main {
-<<<<<<< HEAD
     font-size: rem(40);
     line-height: 125%;
     letter-spacing: rem(21.6);
+    font-weight: $normal;
 
     @include mq(md) {
       font-family: Lato;
-=======
-    font-family: $eg2-font-family;
-    font-size: rem(40);
-    font-weight: $normal;
-    letter-spacing: rem(21.6);
-
-    @include mq(md) {
->>>>>>> price-pc-recover
       font-size: rem(80);
       line-height: 125%; /* 125% */
       letter-spacing: rem(43.2);

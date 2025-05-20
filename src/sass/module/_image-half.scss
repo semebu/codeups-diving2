@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .image-half {
-<<<<<<< HEAD
   position: absolute;
   bottom: 0;
   background-image: url("./../../images/common/bg_fv1_sp.jpg");
@@ -51,32 +50,6 @@
   transform: translateY(100%);
   z-index: 10;
   transition: transform 1s ease;
-=======
-    position: absolute;
-    bottom:0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("./../../images/common/bg_fv1_sp.jpg");
-    background-size: cover;
-    background-position: center;
-    transform: translateY(100%);
-    z-index: 10;
-    transition: transform 1s ease;
-
-
-  @include mq(md) {
-    // position: absolute;
-    // bottom:0;
-    // width: 100vw;
-    // height: 100vh;
-    background-image: url("./../../images/common/bg_fv1_pc.jpg");
-  //   background-size: cover;
-  // background-position: center;
-  //   transform: translateY(100%);
-  //   z-index: 10;
-  //   transition: transform 1s ease;
-  }
->>>>>>> price-pc-recover
 
     &.left {
       // left: 0;
