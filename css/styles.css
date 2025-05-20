@@ -704,7 +704,7 @@ select::-ms-expand {
     line-height: 150%; /* 150% */
     padding-top: 1rem;
     margin-top: 0.3125rem;
-    padding-right: 0.625rem;
+    padding-right: 0.9375rem;
   }
 }
 
@@ -2202,7 +2202,7 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .price__inner {
     width: 90%;
-    max-width: 68.125rem;
+    max-width: 67.375rem;
     margin: 0 auto;
     text-align: center;
   }
@@ -2257,38 +2257,12 @@ select::-ms-expand {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 5.5625rem;
-    margin-top: 2.5rem;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-bottom: 4.625rem;
-    display: flex;
-    -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  .price__contents {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     gap: 5.8125rem;
-    margin-top: 2.5rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-top: 2.5rem;
     margin-bottom: 5rem;
   }
-}
-@media screen and (min-width: 768px) {
   .price__contents::after {
     display: none;
   }
@@ -2304,14 +2278,8 @@ select::-ms-expand {
     background-repeat: no-repeat;
     width: 27.3125rem;
     height: 12.5625rem;
-    bottom: -10.8125rem;
-    left: -5.125rem;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  .price__contents::after {
     bottom: -11rem;
-    left: -4.6875rem;
+    left: -5.0625rem;
   }
 }
 
@@ -2326,7 +2294,6 @@ select::-ms-expand {
   gap: 42px;
   gap: 2.625rem;
   width: 100%;
-  width: 100%;
   margin-top: 40px;
   margin-top: 2.5rem;
 }
@@ -2336,14 +2303,9 @@ select::-ms-expand {
         -ms-flex: 1;
             flex: 1;
     min-width: 18.75rem;
-    gap: 2.6875rem;
+    gap: 2.625rem;
     width: 45.6824512535%;
-    padding-left: 0.3125rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .price__table {
-    width: 45.6824512535%;
+    margin-top: 0rem;
   }
 }
 
@@ -2360,6 +2322,12 @@ select::-ms-expand {
   text-align: left;
   padding-bottom: 3px;
   padding-bottom: 0.1875rem;
+}
+@media screen and (min-width: 768px) {
+  .price__category-title {
+    margin-bottom: 0.125rem;
+    padding-bottom: 0.25rem;
+  }
 }
 
 .price__list {
@@ -2380,8 +2348,15 @@ select::-ms-expand {
   padding: 4px 0 0;
   padding: 0.25rem 0 0;
 }
+@media screen and (min-width: 768px) {
+  .price__item {
+    padding: 0;
+  }
+}
 
 .price__name {
+  margin-top: 8px;
+  margin-top: 0.5rem;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
@@ -2389,24 +2364,14 @@ select::-ms-expand {
   line-height: 1.9;
   color: #0D2936;
   letter-spacing: 0.009em;
-  margin-top: 8px;
-  margin-top: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .price__name {
+    margin-top: 0.3125rem;
     font-size: 1rem;
-    font-size: 0.875rem;
-    line-height: 150%;
+    line-height: 160%;
     color: #0D2936;
     text-align: left;
-    margin-top: 0.125rem;
-    line-height: 150%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .price__name {
-    font-size: 1rem;
-    margin-top: 0.25rem;
   }
 }
 
@@ -2430,10 +2395,7 @@ select::-ms-expand {
   .price__cost {
     font-size: 1rem;
     color: #0D2936;
-  }
-}
-@media screen and (min-width: 768px) {
-  .price__cost {
+    margin-top: 0.34375rem;
     font-size: 1rem;
     line-height: 150%;
     font-family: "Noto Sans JP", sans-serif;
@@ -2447,16 +2409,8 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .price__image {
-    width: 46%;
-    width: 100%;
+    width: 45.7%;
   }
-}
-@media screen and (min-width: 768px) and (min-width: 768px) {
-  .price__image {
-    width: 45%;
-  }
-}
-@media screen and (min-width: 768px) {
   .price__image img {
     width: 100%;
     -webkit-transition: opacity 0.3s ease;
@@ -2957,7 +2911,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .voice__button {
-    margin-top: 5rem;
+    margin-top: 5.0625rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

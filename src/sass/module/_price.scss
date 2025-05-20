@@ -14,7 +14,7 @@
 
   @include mq(md) {
     width: 90%;
-    max-width: rem(1090);
+    max-width: rem(1078);
     margin: 0 auto;
     text-align: center;
   }
@@ -49,25 +49,10 @@ margin-bottom: rem(40);
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  gap: rem(89);
-  margin-top: rem(40);
+  gap: rem(93);
   flex-wrap: wrap; //スマホで折り返し可能に
-  margin-bottom: rem(74);
-  display: flex;
-  flex-direction: column-reverse;
-  margin-top: rem(24);
-  margin-bottom: rem(40);
-
-  @include mq(md) {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: rem(93);
-    margin-top: rem(40);
-    flex-wrap: wrap; //スマホで折り返し可能に
-    margin-bottom: rem(80);
-  }
+  margin-top: rem(40);
+  margin-bottom: rem(80);
 
   &::after {
     display: none;
@@ -82,16 +67,11 @@ margin-bottom: rem(40);
       background-repeat: no-repeat;
       width: rem(437);
       height: rem(201);
-      bottom: rem(-173);
-      left: rem(-82);
-    }
-
-    @include mq(md) {
       bottom: rem(-176);
-      left: rem(-75);
+      left: rem(-81);
     }
   }
-  }
+}
 }
 
 .price__table {
@@ -99,19 +79,14 @@ margin-bottom: rem(40);
   flex-direction: column;
   gap: rem(42);
   width: 100%;
+  margin-top: rem(40);
 
   @include mq(md) {
     flex: 1;
     min-width: rem(300);
-    gap: rem(43);
+    gap: rem(42);
     width: calc(rem(492) / rem(1077) * 100%);
-    padding-left: rem(5);
-  }
-  width: 100%;
-  margin-top: rem(40);
-
-  @include mq(md) {
-  width: calc(rem(492) / rem(1077) * 100%);
+    margin-top: rem(0);
   }
 }
 
@@ -128,6 +103,11 @@ margin-bottom: rem(40);
   font-size: rem(16);
   text-align: left;
   padding-bottom: rem(3);
+
+  @include mq(md) {
+    margin-bottom: rem(2);
+    padding-bottom: rem(4);
+  }
 }
 
 .price__list {
@@ -141,9 +121,14 @@ margin-bottom: rem(40);
   justify-content: space-between;
   align-items: flex-start;
   padding: rem(4) 0 0;
+
+  @include mq(md) {
+    padding: 0;
+  }
 }
 
 .price__name {
+margin-top: rem(8);
 font-family: $jp-font-family;
 font-size: rem(14);
 font-weight: $normal;
@@ -152,19 +137,11 @@ color: $font-color;
 letter-spacing: 0.009em;
 
   @include mq(md) {
+  margin-top: rem(5);
   font-size: rem(16);
-  font-size: rem(14);
-  line-height: 150%;
+  line-height: 160%;
   color: $font-color;
   text-align: left;
-  margin-top: rem(2);
-  line-height: 150%;
-  }
-  margin-top: rem(8);
-
-  @include mq(md) {
-  font-size: rem(16);
-  margin-top: rem(4);
   }
 }
 
@@ -174,11 +151,6 @@ letter-spacing: 0.009em;
   color: $font-color;
   text-align: right;
   margin-top: rem(8);
-
-  @include mq(md) {
-    font-size: rem(16);
-    color: $font-color;
-  }
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1.9;
@@ -187,10 +159,12 @@ letter-spacing: 0.009em;
   font-family: $jp-font-family;
 
   @include mq(md) {
-  font-size: rem(16);
-  // width: 30%;
-  line-height: 150%;
-  font-family: $jp-font-family;
+    font-size: rem(16);
+    color: $font-color;
+    margin-top: rem(5.5);
+    font-size: rem(16);
+    line-height: 150%;
+    font-family: $jp-font-family;
   }
 }
 
@@ -200,14 +174,9 @@ letter-spacing: 0.009em;
   height: auto;
 
   @include mq(md) {
-    width: 46%;
+    width: 45.7%;
 // width: calc(rem(746) / rem(1077) * 100%);
-width: 100%;
-
-@include mq(md) {
-  width: 45%;
-  // width: calc(rem(746) / rem(1077) * 100%);
-}
+// width: 100%;
 
   img {
     width: 100%;
