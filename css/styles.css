@@ -2380,7 +2380,6 @@ select::-ms-expand {
   font-weight: 400;
   line-height: 1.9;
   color: #0D2936;
-  letter-spacing: 0.009em;
 }
 @media screen and (min-width: 768px) {
   .price__name {
@@ -2405,7 +2404,6 @@ select::-ms-expand {
   font-weight: 400;
   line-height: 1.9;
   color: #0D2936;
-  letter-spacing: 0.02em;
   font-family: "Noto Sans JP", sans-serif;
 }
 @media screen and (min-width: 768px) {
@@ -2419,6 +2417,28 @@ select::-ms-expand {
   }
 }
 
+.price__image-wrapper {
+  aspect-ratio: 345/227;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .price__image-wrapper {
+    aspect-ratio: 492/746;
+    width: 45.7%;
+  }
+}
+.price__image-wrapper picture,
+.price__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
 .price__image {
   display: block;
   width: 100%;
@@ -2427,6 +2447,7 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .price__image {
     width: 45.7%;
+    aspect-ratio: 746/492;
   }
   .price__image img {
     width: 100%;
