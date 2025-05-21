@@ -1180,8 +1180,8 @@ select::-ms-expand {
   text-align: center;
   border-top: 1px solid #4e7f85;
   border-top: 0.0625rem solid #4e7f85;
-  padding-top: 11px;
-  padding-top: 0.6875rem;
+  padding-top: 16px;
+  padding-top: 1rem;
   color: #0D2936;
 }
 @media screen and (min-width: 768px) {
@@ -1250,9 +1250,14 @@ select::-ms-expand {
 }
 
 .contact__button {
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 41px;
+  margin-top: 2.5625rem;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .contact__button {
+    margin-top: 2.5rem;
+  }
 }
 
 .contact__decoration {
@@ -1688,8 +1693,8 @@ select::-ms-expand {
 }
 
 .footer__copy {
-  margin-top: 39px;
-  margin-top: 2.4375rem;
+  margin-top: 37px;
+  margin-top: 2.3125rem;
   color: #fff;
   text-align: center;
   font-family: "Gotu", sans-serif;
@@ -1981,8 +1986,8 @@ select::-ms-expand {
 }
 
 .information__content {
-  margin-top: 29px;
-  margin-top: 1.8125rem;
+  margin-top: 28px;
+  margin-top: 1.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2250,8 +2255,8 @@ select::-ms-expand {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  gap: 40px;
-  gap: 2.5rem;
+  gap: 0px;
+  gap: 0rem;
 }
 @media screen and (min-width: 768px) {
   .price__contents {
@@ -2303,8 +2308,8 @@ select::-ms-expand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 42px;
-  gap: 2.625rem;
+  gap: 39px;
+  gap: 2.4375rem;
   width: 100%;
   margin-top: 40px;
   margin-top: 2.5rem;
@@ -2327,8 +2332,8 @@ select::-ms-expand {
   font-family: "Noto Sans JP", sans-serif;
   border-bottom: 1px solid #4e7f85;
   border-bottom: 0.0625rem solid #4e7f85;
-  margin-bottom: 4px;
-  margin-bottom: 0.25rem;
+  margin-bottom: 3px;
+  margin-bottom: 0.1875rem;
   font-size: 16px;
   font-size: 1rem;
   text-align: left;
@@ -2357,8 +2362,8 @@ select::-ms-expand {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 4px 0 0;
-  padding: 0.25rem 0 0;
+  padding: 3px 0 0;
+  padding: 0.1875rem 0 0;
 }
 @media screen and (min-width: 768px) {
   .price__item {
@@ -2367,8 +2372,8 @@ select::-ms-expand {
 }
 
 .price__name {
-  margin-top: 8px;
-  margin-top: 0.5rem;
+  margin-top: 2px;
+  margin-top: 0.125rem;
   font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
@@ -2393,8 +2398,8 @@ select::-ms-expand {
   line-height: 150%;
   color: #0D2936;
   text-align: right;
-  margin-top: 8px;
-  margin-top: 0.5rem;
+  margin-top: 2px;
+  margin-top: 0.125rem;
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: 400;
