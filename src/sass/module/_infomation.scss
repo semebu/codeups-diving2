@@ -9,8 +9,13 @@
   }
 }
 .information__inner {
-  max-width: rem(1084);
+  max-width: calc($inner + $padding-pc * 2);//1080+20*2
+  padding-inline: rem(15);
   margin: 0 auto;
+
+  @include mq(md) {
+    padding-inline: rem(20);
+  }
 }
 .information__content {
     margin-top: rem(28);

@@ -7,6 +7,14 @@
   overflow: hidden;
   max-width: rem(333);
   margin: auto;
+
+  @include mq(md) {
+    
+    &:hover {
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+  }
 }
 
 .blog-card__image img {

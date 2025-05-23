@@ -12,7 +12,7 @@ padding-bottom: rem(66);
 }
 
 .about__inner {
-  max-width: rem(1120);//1080+20*2
+  max-width: calc($inner + $padding-pc * 2);//1080+20*2
   padding-inline: rem(15);
   margin: 0 auto;
 

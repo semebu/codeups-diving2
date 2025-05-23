@@ -119,34 +119,7 @@ jQuery('a[href^="#"]').on("click",function(e) {
     });
   });
 
-  // ============================
-  // ✅ ファーストビュースワイパー
-  // ============================
-  const mvSwiper = new Swiper('.mv__swiper', { // swiperの名前
-  // 切り替えのモーション
-  speed: 10000, // 表示切り替えのスピード
-  effect: "fade", // 切り替えのmotion (※1)
-  fadeEffect: {
-        crossFade: true
-    },
-  allowTouchMove: false, // スワイプで表示の切り替えを無効に
 
-  // 最後→最初に戻るループ再生を有効に
-  loop: true,
-
-  // 自動スライドについて
-  autoplay: {
-    delay: 3000, // 何秒ごとにスライドを動かすか
-    stopOnLastSlide: false, // 最後のスライドで自動再生を終了させるか
-    disableOnInteraction: false, // ユーザーの操作時に止めない
-    reverseDirection: false, // 自動再生を逆向きにする
-  },
-  
-  // 表示について
-  centeredSlides: true, // 中央寄せにする
-  slidesPerView: "auto",
-  spaceBetween: 30,
-});
 
 /* ===================================================
 ※1 effectについて
@@ -171,43 +144,7 @@ custom：自由にカスタマイズ
 
 =====================================================*/
 
-// ============================
-// ✅ キャンペーンスワイパー
-// ============================
 
-const campaignSwiper = new Swiper(".campaign-swiper", {
-  loop: true,
-  spaceBetween: 24,
-  // slidesPerView: 1.2,//初期設定（SP）
-  slidesPerView: "auto",
-
-  centeredSlides: false,
-  slidesPerGroup: 1,
-  keyboard: true,
-
-  navigation: {
-    nextEl: "#js-campaign-next",
-    prevEl: "#js-campaign-prev",
-  },
-  breakpoints: {
-    768: {
-      spaceBetween: 40,
-    },
-  //   // 600: {
-  //   //   slidesPerView: 2,
-  //   //   centeredSlides: true,
-  //   // },
-  //   // 900: {
-  //   //   slidesPerView: 2.2,
-  //   //   centeredSlides: false,
-  //   // },
-  //   // 1200: {
-  //   //   slidesPerView: 3.2234,
-  //   //   spaceBetween: 32,
-  //   //   centeredSlides: false,
-  //   // },
-  },
-});
 
 /* ===================================================
 ※1 effectについて
@@ -267,4 +204,71 @@ $(function () {
   });
 });
 });
-// });
+
+
+  // ============================
+  // ✅ ファーストビュースワイパー
+  // ============================
+  const mvSwiper = new Swiper('.mv__swiper', { // swiperの名前
+  // 切り替えのモーション
+  speed: 1000, // 表示切り替えのスピード
+  effect: "fade", // 切り替えのmotion (※1)
+  fadeEffect: {
+        crossFade: true
+    },
+  allowTouchMove: false, // スワイプで表示の切り替えを無効に
+
+  // 最後→最初に戻るループ再生を有効に
+  loop: true,
+
+  // 自動スライドについて
+  autoplay: {
+    delay: 3000, // 何秒ごとにスライドを動かすか
+    stopOnLastSlide: false, // 最後のスライドで自動再生を終了させるか
+    disableOnInteraction: false, // ユーザーの操作時に止めない
+    reverseDirection: false, // 自動再生を逆向きにする
+  },
+
+  // 表示について
+  centeredSlides: true, // 中央寄せにする
+  slidesPerView: "auto",
+  spaceBetween: 30,
+});
+
+// ============================
+// ✅ キャンペーンスワイパー
+// ============================
+
+const campaignSwiper = new Swiper(".campaign-swiper", {
+  loop: true,
+  spaceBetween: 24,
+  // slidesPerView: 1.2,//初期設定（SP）
+  slidesPerView: "auto",
+
+  centeredSlides: false,
+  slidesPerGroup: 1,
+  keyboard: true,
+
+  navigation: {
+    nextEl: "#js-campaign-next",
+    prevEl: "#js-campaign-prev",
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 40,
+    },
+  //   // 600: {
+  //   //   slidesPerView: 2,
+  //   //   centeredSlides: true,
+  //   // },
+  //   // 900: {
+  //   //   slidesPerView: 2.2,
+  //   //   centeredSlides: false,
+  //   // },
+  //   // 1200: {
+  //   //   slidesPerView: 3.2234,
+  //   //   spaceBetween: 32,
+  //   //   centeredSlides: false,
+  //   // },
+  },
+});
