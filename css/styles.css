@@ -623,8 +623,7 @@ select::-ms-expand {
 .btn-border__inner:hover .btn-border__arrow {
   border-color: #4e7f85;
 }
-
-.btn-border__arrow {
+.btn-border__inner .btn-border__arrow {
   position: absolute;
   top: 50%;
   right: 44px;
@@ -1060,14 +1059,26 @@ select::-ms-expand {
 }
 
 .contact {
-  padding: 0px 20px;
-  padding: 0rem 1.25rem;
+  padding-block: 0px;
+  padding-block: 0rem;
   position: relative;
   background-color: #fff;
 }
 @media screen and (min-width: 768px) {
   .contact {
-    padding: 8.75rem 1.25rem;
+    padding-block: 8.75rem;
+  }
+}
+
+.contact__inner {
+  max-width: 1130px;
+  padding-inline: 15px;
+  padding-inline: 0.9375rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .contact__inner {
+    padding-inline: 1.25rem;
   }
 }
 
@@ -1441,16 +1452,14 @@ select::-ms-expand {
 }
 
 .footer__inner {
-  max-width: 1110px;
-  max-width: 69.375rem;
+  max-width: 1130px;
   padding-inline: 15px;
   padding-inline: 0.9375rem;
   margin-inline: auto;
 }
 @media screen and (min-width: 768px) {
   .footer__inner {
-    padding-left: 0.9375rem;
-    padding-right: 5.5rem;
+    padding-inline: 1.25rem;
   }
 }
 
@@ -1474,7 +1483,8 @@ select::-ms-expand {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 2.5rem;
+    gap: 2.6875rem;
+    margin-left: 0.1875rem;
   }
 }
 
@@ -1514,6 +1524,11 @@ select::-ms-expand {
   gap: 16px;
   gap: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__sns {
+    margin-bottom: 0.3125rem;
+  }
+}
 
 .footer__sns-link {
   width: 24px;
@@ -1547,7 +1562,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .footer__nav {
-    margin-top: 1.6875rem;
+    margin-top: 1.5rem;
     gap: 7.5rem;
   }
 }
@@ -1572,7 +1587,7 @@ select::-ms-expand {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 7.5rem;
+    gap: 6.5625rem;
   }
 }
 
@@ -1599,6 +1614,7 @@ select::-ms-expand {
         -ms-flex-direction: row;
             flex-direction: row;
     gap: 7.5rem;
+    margin-right: 4.8125rem;
   }
 }
 
@@ -1658,14 +1674,19 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .footer__category-title::before {
-    left: -0.5625rem;
-    top: 0.125rem;
+    left: 0.3125rem;
+    top: -0.0625rem;
   }
 }
 .footer__category-title a {
   display: block;
   padding-left: 21px;
   padding-left: 1.3125rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__category-title a {
+    padding-left: 1.6875rem;
+  }
 }
 
 .footer__br {
@@ -1701,6 +1722,11 @@ select::-ms-expand {
   line-height: 112.5%; /* 112.5% */
   padding-left: 22px;
   padding-left: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__item a {
+    padding-left: 1.6875rem;
+  }
 }
 
 .footer__copy {
@@ -1981,23 +2007,25 @@ select::-ms-expand {
 
 .information {
   background-color: #DDF0F1;
-  padding: 80px 15px 76px;
-  padding: 5rem 0.9375rem 4.75rem;
+  padding-block: 80px 76px;
+  padding-block: 5rem 4.75rem;
 }
 @media screen and (min-width: 768px) {
   .information {
-    padding: 6.1875rem 0.9375rem 6.25rem;
+    padding-block: 6.1875rem 6.25rem;
   }
 }
 
 .information__inner {
-  max-width: 1130px;
+  max-width: 600px;
+  max-width: 37.5rem;
   padding-inline: 15px;
   padding-inline: 0.9375rem;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .information__inner {
+    max-width: 1130px;
     padding-inline: 1.25rem;
   }
 }
@@ -2298,7 +2326,6 @@ select::-ms-expand {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: 2.5rem;
-    margin-bottom: 5rem;
   }
   .price__contents::after {
     display: none;
@@ -2899,6 +2926,7 @@ select::-ms-expand {
 }
 
 .voice__inner {
+  max-width: 1130px;
   padding-inline: 15px;
   padding-inline: 0.9375rem;
   margin-inline: auto;
@@ -2907,7 +2935,6 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .voice__inner {
     padding-inline: 1.25rem;
-    max-width: 70.125rem;
   }
 }
 
@@ -2921,11 +2948,17 @@ select::-ms-expand {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 40px;
-  gap: 2.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .voice__items {
+    gap: 2.5rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .voice__items {

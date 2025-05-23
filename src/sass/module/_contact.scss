@@ -1,17 +1,23 @@
 @use "global" as *;
 
 .contact {
-  padding: rem(0) rem(20);
+  padding-block: rem(0);
   position: relative;
   background-color: $white;
   
   @include mq(md) {
-  padding: rem(140) rem(20);
+  padding-block: rem(140);
 }
 }
 
 .contact__inner {
- 
+  max-width: calc($inner + $padding-pc * 2);//1080+20*2
+  padding-inline: rem(15);
+  margin: 0 auto;
+
+  @include mq(md) {
+    padding-inline: rem(20);
+  }
 }
 
 .contact__content {
