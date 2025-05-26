@@ -83,46 +83,49 @@
 
 .footer__nav {
   margin-top: rem(40);
-  gap: rem(16);
+  // gap: rem(16);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   @include mq(md) {
     margin-top: rem(24);
-    gap: rem(120);
+    gap: rem(21);
   }
 }
 
 .footer__nav-left-inner {
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  // gap: rem(40);
 
   @include mq(md) {
+    width: 50%;
     display: flex;
     flex-direction: row;
-    gap: rem(105);
+    gap: rem(36);
   }
 }
 
 .footer__nav-right-inner {
   display: flex;
   flex-direction: column;
-  gap: rem(40);
-  margin-right: rem(10);
+  // gap: rem(40);
+  // margin-right: rem(10);
 
    @include mq(md) {
+    width: 50%;
     display: flex;
     flex-direction: row;
-    gap: rem(120);
-    margin-right: rem(77);
+    gap: rem(7);
+    // margin-right: rem(77);
   }
 }
 
 
 
 .footer__list {
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: rem(40);
