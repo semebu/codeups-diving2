@@ -485,7 +485,20 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .blog {
-    padding-bottom: 20.6875rem;
+    position: relative;
+  }
+  .blog::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 31.25rem;
+    background-image: url(../images/common/bg_blog.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -502,12 +515,6 @@ select::-ms-expand {
     display: block;
     padding-top: 6.125rem;
     padding-inline: 1.25rem;
-    background-image: url(../images/common/bg_blog.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 31.375rem;
-    position: relative;
   }
 }
 
@@ -536,6 +543,8 @@ select::-ms-expand {
           flex-direction: column;
   gap: 40px;
   gap: 2.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
   .blog__cards {
@@ -648,8 +657,15 @@ select::-ms-expand {
   background: #fff;
   -webkit-box-shadow: 0.125rem 0.125rem 0.625rem 0rem rgba(0, 0, 0, .25);
           box-shadow: 0.125rem 0.125rem 0.625rem 0rem rgba(0, 0, 0, .25);
-  overflow: hidden;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .campaign-card {
@@ -660,6 +676,7 @@ select::-ms-expand {
 .campaign-card__image img {
   width: 100%;
   display: block;
+  aspect-ratio: 333/223;
 }
 
 .campaign-card__body {
@@ -838,6 +855,11 @@ select::-ms-expand {
   background-position: center right 40%;
 }
 
+.campaign-swiper {
+  padding-bottom: 10px;
+  padding-bottom: 0.625rem;
+}
+
 .campaign-swiper__slide {
   height: auto;
   width: 280px;
@@ -858,16 +880,25 @@ select::-ms-expand {
   padding-top: 2.5rem;
   padding-left: 0px;
   padding-left: 0rem;
+  overflow: visible;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .campaign {
     padding-top: 120px;
     padding-left: 0.9375rem;
   }
 }
+
+.campaign__inner {
+  max-width: 1130px;
+  padding-inline: 15px;
+  padding-inline: 0.9375rem;
+  margin: 0 auto;
+  overflow: visible;
+}
 @media screen and (min-width: 768px) {
-  .campaign {
-    padding-left: 1.25rem;
+  .campaign__inner {
+    padding-inline: 1.25rem;
   }
 }
 
@@ -882,26 +913,16 @@ select::-ms-expand {
   }
 }
 
-.campaign__inner {
-  position: absolute;
-  top: -96px;
-  top: -6rem;
-  right: 160px;
-  right: 10rem;
-  max-width: 1080px;
-  max-width: 67.5rem;
-  padding-left: 20px;
-  padding-left: 1.25rem;
-  padding-right: 20px;
-  padding-right: 1.25rem;
-  margin-inline: auto;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+.campaign__slider__wrapper {
+  width: 100vw;
+  overflow: visible;
 }
 
 .campaign__top {
   padding-left: 15px;
   padding-left: 0.9375rem;
+  overflow: hidden;
+  margin-right: calc(50% - 50vw);
 }
 @media screen and (min-width: 768px) {
   .campaign__top {
@@ -913,7 +934,7 @@ select::-ms-expand {
     -webkit-column-gap: 32px;
        -moz-column-gap: 32px;
             column-gap: 32px;
-    padding-left: 10rem;
+    padding-left: 0rem;
   }
 }
 
@@ -921,6 +942,9 @@ select::-ms-expand {
   width: 100%;
   margin-top: 28px;
   margin-top: 1.75rem;
+  margin-left: calc(50% - 50vw);
+  padding-inline: 20px;
+  width: 100vw;
 }
 @media screen and (min-width: 1024px) {
   .campaign__slider {
@@ -1020,12 +1044,18 @@ select::-ms-expand {
   position: relative;
   width: 100%;
   overflow: hidden;
+  aspect-ratio: 540/356;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .colorbox img {
   display: block;
   width: 100%;
+  height: 100%;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .colorbox .color {
@@ -1851,8 +1881,7 @@ select::-ms-expand {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  padding: 0 15px;
-  padding: 0 0.9375rem;
+  padding: 0;
 }
 @media screen and (min-width: 768px) {
   .header__logo a {
@@ -2758,6 +2787,11 @@ select::-ms-expand {
   max-width: 100%;
   width: 280px;
   width: 17.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media screen and (min-width: 768px) {
   .swiper-slide {
@@ -2769,6 +2803,16 @@ select::-ms-expand {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.swiper {
+  overflow: visible;
 }
 
 .swiper__img {

@@ -4,6 +4,8 @@
   box-sizing: border-box;
   max-width: 100%;
   width: rem(280);
+  display: flex;
+  flex-shrink: 0;
 
   @include mq(md) {
     width: rem(333);

@@ -1,5 +1,9 @@
 @use "global" as *;
 
+.swiper {
+ overflow: visible;
+}
+
 .swiper__img {
 width: 100%;
 display: block;

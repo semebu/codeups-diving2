@@ -4,7 +4,21 @@
   padding-top: rem(0);
 
   @include mq(md) {
-    padding-bottom: rem(331);//273+31(背景画像の下からセクションの一番下までの距離)
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: rem(500);
+      background-image: url(../images/common/bg_blog.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }
 
@@ -24,12 +38,12 @@
     display: block;
     padding-top: rem(98);
     padding-inline: rem(20);
-    background-image: url(../images/common/bg_blog.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: rem(502);
-    position: relative;
+    // background-image: url(../images/common/bg_blog.jpg);
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // height: rem(502);
+    // position: relative;
   }
 }
 
@@ -50,6 +64,7 @@
   display: flex;
   flex-direction: column;
   gap: rem(40);
+  flex-wrap: wrap;
 
   @include mq(md) {
     margin-top: rem(81);
