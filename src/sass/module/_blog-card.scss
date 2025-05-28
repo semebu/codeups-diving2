@@ -6,10 +6,14 @@
   box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
   overflow: hidden;
   max-width: rem(333);
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex:1 1 calc((100% - rem(80)) / 3);//3列　＋gap調整（40px * 2)
+  height: auto;
 
   @include mq(md) {
-    
+
     &:hover {
       opacity: 0.8;
       transition: opacity 0.3s ease;
@@ -20,10 +24,16 @@
 .blog-card__image img {
   width: 100%;
   display: block;
+  aspect-ratio: 301/201;
+  object-fit: cover;
 }
 
 .blog-card__content {
 margin-top: rem(22);
+flex-grow:1;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
 
 @include mq(md) {
   // 変更なし

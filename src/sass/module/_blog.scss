@@ -63,8 +63,10 @@
   margin-top: rem(28);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: rem(40);
   flex-wrap: wrap;
+  justify-content: flex-start;//左詰めにする
 
   @include mq(md) {
     margin-top: rem(81);
@@ -72,6 +74,7 @@
     flex-direction: row;
     gap: rem(40);
     max-width: rem(1080);
+    align-items: stretch;
   }
 }
 

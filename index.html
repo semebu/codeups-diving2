@@ -527,11 +527,13 @@
         <!-- ブログカード１枚目 -->
           <a class="blog-card">
             <div class="blog-card__image">
-              <img src="./images/common/img_blog1.jpg" alt="珊瑚の写真">
+              <img src="./images/common/img_blog1.jpg" alt="珊瑚の写真" width="301" height="201">
             </div>
             <div class="blog-card__content">
               <time class="blog-card__date" datetime="2023-11-17">2023.11.17</time>
               <h3 class="blog-card__title">ライセンス取得</h3>
+              <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
               <p class="blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
             </div>
@@ -539,7 +541,7 @@
         <!-- ブログカード２枚目 -->
           <a class="blog-card">
             <div class="blog-card__image">
-              <img src="./images/common/img_blog2.jpg" alt="海亀が青い海中で泳いでいる写真">
+              <img src="./images/common/img_blog2.jpg" alt="海亀が青い海中で泳いでいる写真" width="301" height="201">
             </div>
             <div class="blog-card__content">
               <time class="blog-card__date" datetime="2023-11-17">2023.11.17</time>
@@ -551,7 +553,7 @@
         <!-- ブログカード３枚目 -->
           <a class="blog-card">
             <div class="blog-card__image">
-              <img src="./images/common/img_blog3.jpg" alt="珊瑚の中から顔を出すオレンジ色の熱帯魚の写真">
+              <img src="./images/common/img_blog3.jpg" alt="珊瑚の中から顔を出すオレンジ色の熱帯魚の写真" width="301" height="201">
             </div>
             <div class="blog-card__content">
               <time class="blog-card__date" datetime="2023-11-17">2023.11.17</time>
@@ -647,7 +649,7 @@
 
             <div class="voice-card__image">
               <div class="colorbox">
-                <img src="./images/common/img_voice1.jpg" alt="溢れ日の中麦わら帽子を被ってポーズをとっている若い女性の写真">
+                <img src="./images/common/img_voice1.jpg" alt="溢れ日の中麦わら帽子を被ってポーズをとっている若い女性の写真" width="151" height="117">
               </div>
             </div>
 
@@ -819,12 +821,14 @@
           </div>
         </div>
         <div class="price__image-wrapper">
-          <picture class="price__image">
-                      <!-- PCタブレット用 -->
-                      <source media="(min-width: 768px)" srcset="./images/common/img_price_pc.jpg" alt="海中の珊瑚に赤い小さい魚が沢山いる風景" width="492" height="746"/>
-                      <!-- スマホ用 -->
-                      <img src="./images/common/img_price_sp.jpg" alt="海亀が海を泳いでいる"/>
-                    </picture>
+          <div class="colorbox">
+              <picture class="price__image">
+              <!-- PCタブレット用 -->
+              <source media="(min-width: 768px)" srcset="./images/common/img_price_pc.jpg"/>
+              <!-- スマホ用 -->
+              <img src="./images/common/img_price_sp.jpg" alt="海亀が海を泳いでいる" width="345" height="227"/>
+          </picture>
+          </div>
         </div>
       </div>
       <div class="price__button">
@@ -893,7 +897,7 @@
     <div class="footer__icons">
       <div class="footer__logo">
         <a href="index.html">
-          <img src="./images/common/logo_codeups.svg" alt="CodeUpsのロゴ">
+          <img src="./images/common/logo_codeups.svg" alt="CodeUpsのロゴ" width="200" height="75">
         </a>
     </div>
     <div class="footer__sns">
@@ -907,7 +911,7 @@
     </div>
 
     <nav class="footer__nav">
-      <div class="footer__nav-left-inner">
+      <!-- <div class="footer__nav-left-inner"> -->
         <!-- １列目 -->
       <ul class="footer__list">
       <li class="footer__category">
@@ -937,8 +941,8 @@
         <p class="footer__category-title"><a href="#">ブログ</a></p>
       </li>
       </ul>
-      </div>
-      <div class="footer__nav-right-inner">
+      <!-- </div> -->
+      <!-- <div class="footer__nav-right-inner"> -->
         <!-- ３列目 -->
       <ul class="footer__list">
         <li class="footer__category">
@@ -968,7 +972,7 @@
           <p class="footer__category-title"><a href="#">お問合せ</a></p>
         </li>
       </ul>
-      </div>
+      <!-- </div> -->
 
     </nav>
     <div class="footer__copy">

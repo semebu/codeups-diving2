@@ -157,6 +157,7 @@ color: $font-color;
   color: $font-color;
   text-align: right;
   margin-top: rem(2);
+  margin-left: rem(10);
   font-size: rem(14);
   font-weight: $normal;
   line-height: 1.9;
@@ -201,9 +202,7 @@ color: $font-color;
 
   @include mq(md) {
     width: 45.7%;
-    aspect-ratio: 746/492;
-// width: calc(rem(746) / rem(1077) * 100%);
-// width: 100%;
+  }
 
   img {
     width: 100%;
@@ -211,9 +210,15 @@ color: $font-color;
     // height: auto;
     transition: opacity 0.3s ease;
     display: block;
+    aspect-ratio: 345/227;
+    object-fit: cover;
+
+    @include mq(md) {
+      aspect-ratio: 746/492;
+      object-fit: cover;
+    }
     }
   }
-}
 
 .price__button {
   margin-top: rem(36);

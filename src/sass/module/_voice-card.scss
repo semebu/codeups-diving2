@@ -122,14 +122,23 @@
   width: 100%;
   margin-left: rem(9);
   margin-top: rem(11);
+  flex-shrink: 0;//縮まないようにする
+  width: rem(151);
+  height: rem(117);
+
 
   @include mq(md) {
     margin-top: rem(0);
-    width: rem(311);
+    width: rem(180);
   }
 
   img {
     aspect-ratio: 151 / 117;
+    object-fit: cover;
+
+    @include mq(md) {
+      aspect-ratio: 180 / 140;
+    }
   }
 }
 
