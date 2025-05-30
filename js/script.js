@@ -48,6 +48,7 @@ jQuery('a[href^="#"]').on("click",function(e) {
   const drawer = document.querySelector(".drawer");
   const drawerNavItem = document.querySelectorAll('.drawer__body a[href^="#"]');
   const header = document.querySelector("header");
+  const drawerLogo = document.querySelector(".drawer-logo");
   const headerHeight = header ? header.offsetHeight : 0;
   const breakpoint = 768;
   let isMenuOpen = false;
@@ -56,11 +57,13 @@ jQuery('a[href^="#"]').on("click",function(e) {
   const openMenu = () => {
     drawer?.classList.add("js-show");
     drawerIcon?.classList.add("js-show");
+    drawerLogo?.classList.add("is-show");
   };
 
   const closeMenu = () => {
     drawer?.classList.remove("js-show");
     drawerIcon?.classList.remove("js-show");
+    drawerLogo?.classList.remove("is-show");
     isMenuOpen = false;
   };
 

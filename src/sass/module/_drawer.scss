@@ -3,6 +3,7 @@
 .drawer {
   position: fixed;
   z-index: 101;
+  // z-index: 9999;
   top:0;
   right: 0;
   width: 100%;
@@ -15,16 +16,32 @@
   visibility: hidden;
   // translate: 101%;
   // transition: translate 0.5s ease;
-  transition: opacity 0.5s ease;
+  // transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  transition:opacity 0.5s ease;
 
   &.js-show {
-    // translate: 0;
     opacity: 1;
     visibility: visible;
+
+    .drawer__body {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease;
+    }
+  }
+  &.is-active + .drawer-logo {
+    display: block;
   }
 }
 
+
 .drawer__body {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  transition: opacity 0.3s ease;
+  max-width: 400px;
+  margin-inline: auto;
   width: 100%;
   height: fit-content;
   padding: rem(24) rem(37);

@@ -17,8 +17,12 @@
 .campaign-card__image img {
     width: 100%;
     display: block;
-    aspect-ratio: 333/223;
+    aspect-ratio: 280/188;
     object-fit: cover;
+
+    @include mq(md) {
+      aspect-ratio: 333/223;
+    }
   }
 
 .campaign-card__body {

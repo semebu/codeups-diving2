@@ -714,9 +714,14 @@ select::-ms-expand {
 .campaign-card__image img {
   width: 100%;
   display: block;
-  aspect-ratio: 333/223;
+  aspect-ratio: 280/188;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .campaign-card__image img {
+    aspect-ratio: 333/223;
+  }
 }
 
 .campaign-card__body {
@@ -931,8 +936,8 @@ select::-ms-expand {
 
 .campaign__inner {
   max-width: 1130px;
-  padding-inline: 15px;
-  padding-inline: 0.9375rem;
+  padding-inline: 0px;
+  padding-inline: 0rem;
   margin: 0 auto;
   overflow: visible;
 }
@@ -963,6 +968,8 @@ select::-ms-expand {
   padding-left: 0.9375rem;
   overflow: hidden;
   margin-right: calc(50% - 50vw);
+  padding-top: 38px;
+  padding-top: 2.375rem;
 }
 @media screen and (min-width: 768px) {
   .campaign__top {
@@ -975,6 +982,7 @@ select::-ms-expand {
        -moz-column-gap: 32px;
             column-gap: 32px;
     padding-left: 0rem;
+    padding-top: 0rem;
   }
 }
 
@@ -1001,15 +1009,17 @@ select::-ms-expand {
 }
 
 .campaign__bottom {
+  margin-top: 29px;
+  margin-top: 1.8125rem;
   margin-right: auto;
   margin-left: auto;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .campaign__bottom {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1019,7 +1029,7 @@ select::-ms-expand {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 2.5rem;
   }
 }
 
@@ -1070,11 +1080,11 @@ select::-ms-expand {
 }
 
 .campaign__button {
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 29px;
+  margin-top: 1.8125rem;
   text-align: center;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .campaign__button {
     margin-top: 5rem;
   }
@@ -1381,9 +1391,9 @@ select::-ms-expand {
   width: 2rem;
   height: 24px;
   height: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1412,27 +1422,27 @@ select::-ms-expand {
   transition: all 0.3s ease;
   border-radius: 624.9375rem;
 }
-.drawer-icon__bar:nth-last-of-type(1) {
+.drawer-icon__bar:nth-of-type(1) {
   top: 0px;
   top: 0rem;
 }
-.drawer-icon__bar:nth-last-of-type(2) {
+.drawer-icon__bar:nth-of-type(2) {
   top: 12px;
   top: 0.75rem;
 }
-.drawer-icon__bar:nth-last-of-type(3) {
+.drawer-icon__bar:nth-of-type(3) {
   top: 24px;
   top: 1.5rem;
 }
 
-.drawer-icon.js-show .drawer-icon__bar:nth-last-of-type(1) {
+.drawer-icon.js-show .drawer-icon__bar:nth-of-type(1) {
   rotate: 40deg;
   translate: 0 12px;
 }
-.drawer-icon.js-show .drawer-icon__bar:nth-last-of-type(2) {
+.drawer-icon.js-show .drawer-icon__bar:nth-of-type(2) {
   display: none;
 }
-.drawer-icon.js-show .drawer-icon__bar:nth-last-of-type(3) {
+.drawer-icon.js-show .drawer-icon__bar:nth-of-type(3) {
   rotate: -40deg;
   translate: 0 -12px;
 }
@@ -1443,14 +1453,18 @@ select::-ms-expand {
   top: 1.3125rem;
   left: 15px;
   left: 0.9375rem;
-  z-index: 102;
+  z-index: 1001;
   width: 102px;
   width: 6.375rem;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .drawer-logo {
     display: none;
   }
+}
+.drawer-logo.is-show {
+  display: block;
 }
 
 .drawer {
@@ -1474,8 +1488,24 @@ select::-ms-expand {
   opacity: 1;
   visibility: visible;
 }
+.drawer.js-show .drawer__body {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+.drawer.is-active + .drawer-logo {
+  display: block;
+}
 
 .drawer__body {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  max-width: 400px;
+  margin-inline: auto;
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -2607,6 +2637,8 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .price__image img {
+    width: 30.75rem;
+    height: 46.625rem;
     aspect-ratio: 746/492;
     -o-object-fit: cover;
        object-fit: cover;

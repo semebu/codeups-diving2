@@ -214,6 +214,8 @@ color: $font-color;
     object-fit: cover;
 
     @include mq(md) {
+      width: rem(492);
+      height: rem(746);
       aspect-ratio: 746/492;
       object-fit: cover;
     }

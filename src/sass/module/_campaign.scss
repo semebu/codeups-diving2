@@ -15,7 +15,7 @@
 
 .campaign__inner {
   max-width: calc($inner + $padding-pc * 2);//1080+20*2
-  padding-inline: rem(15);
+  padding-inline: rem(0);
   margin: 0 auto;
   overflow: visible;
 
@@ -55,6 +55,7 @@
   padding-left: rem(15);
   overflow: hidden;
   margin-right: calc(50% - 50vw);
+  padding-top: rem(38);
 
   @include mq(md) {
     margin-left: rem(0);
@@ -62,6 +63,7 @@
     display: flex;
     column-gap: 32px;
     padding-left: rem(0);
+    padding-top: rem(0);
   }
 }
 
@@ -88,16 +90,17 @@
 }
 
 .campaign__bottom {
+  margin-top: rem(29);
   margin-right: auto;
   margin-left: auto;
 
-  @include mq(xl) {
+  @include mq(md) {
     display: flex;
-    gap: 30px;
+    gap: rem(30);
     align-items: center;
     justify-content: center;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: rem(40);
   }
 }
 
@@ -143,10 +146,10 @@
 }
 
 .campaign__button {
-   margin-top: rem(40);
+   margin-top: rem(29);
    text-align: center;
 
-  @include mq(xl) {
+  @include mq(md) {
     margin-top: rem(80);
   }
 }
