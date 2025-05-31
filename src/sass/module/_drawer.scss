@@ -26,6 +26,7 @@
     .drawer__body {
       opacity: 1;
       visibility: visible;
+      pointer-events: auto;//表示時はクリック可能に
       transition: opacity 0.3s ease;
     }
   }
@@ -36,10 +37,12 @@
 
 
 .drawer__body {
-  opacity: 1;
-  visibility: visible;
+  // opacity: 1;
+  opacity: 0;
+  // visibility: visible;
+  visibility: hidden;
   display: block;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   max-width: 400px;
   margin-inline: auto;
   width: 100%;
@@ -68,6 +71,26 @@
   font-size: rem(16);
   font-weight: $bold;
   line-height: 112.5%; /* 112.5% */
+  position: relative;
+
+     &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(18);
+    height: rem(18);
+    left:rem(-22);
+    top:rem(0);
+    // transform: translateY(-50%);
+    background-image: url(../images/common/deco_starfish.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include mq(md) {
+    // left:rem(5);
+    // top:rem(-1);
+  }
+}
 }
 
 .drawer__sub-list {

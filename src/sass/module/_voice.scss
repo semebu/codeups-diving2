@@ -24,13 +24,9 @@
   margin-top: rem(44);
   display: flex;
   flex-direction: column;
-  // gap: rem(40);
+  gap: rem(40);
   align-items: center;
   justify-content: space-between;
-
-  @include mq(md) {
-    gap: rem(40);
-  }
 
   @include mq(md) {
     margin-top: rem(29);

@@ -60,7 +60,7 @@
 
 .contact__info {
   width: 100%;
-  padding-inline: rem(20);
+  padding-inline: $padding-pc;
   padding-block: rem(80) rem(0);
 
   @include mq(md) {

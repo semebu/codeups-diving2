@@ -85,11 +85,15 @@
 .footer__nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: rem(40);
-  column-gap: rem(6);
-  margin-top: rem(25);
+  row-gap: rem(36);
+  // column-gap: rem(19);
+  margin-top: rem(39);
+  // display: flex;
+  // flex-direction: column;
+  // gap: rem(40);
 
   @include mq(md) {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-right: rem(69);
     gap: rem(88);
@@ -107,7 +111,13 @@
   //   margin-top: rem(24);
   //   gap: rem(21);
   // }
+   // 並び順を調整（SP時）
+  .footer__list:nth-of-type(1) { order: 1; }
+  .footer__list:nth-of-type(3) { order: 2; }
+  .footer__list:nth-of-type(2) { order: 3; }
+  .footer__list:nth-of-type(4) { order: 4; }
 }
+
 
 .footer__nav-left-inner {
   display: flex;
@@ -138,7 +148,16 @@
   // width: 100%!important;
   display: flex;
   flex-direction: column;
-  gap: rem(42);
+  gap: rem(34);
+
+  &:nth-of-type(3) {
+    margin-left: rem(9);
+    gap: rem(40);
+  }
+  &:nth-of-type(4) {
+    margin-left: rem(9);
+    gap: rem(43);
+  }
 
   @include mq(md) {
     // width: 50%;
@@ -234,12 +253,12 @@ padding-left: rem(22);
 }
 
 .footer__copy {
-  margin-top: rem(37);
+  margin-top: rem(39);
   text-align: center;
   color: $white;
   font-family: $eg-font-family;
   font-size: rem(12);
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   // font-weight: $normal;
   // line-height: 150%;
 
@@ -247,5 +266,6 @@ padding-left: rem(22);
   margin-top: rem(73);
   font-size: rem(14);
   // line-height: 128.571%;
+   letter-spacing: 0.09em;
   }
 }
