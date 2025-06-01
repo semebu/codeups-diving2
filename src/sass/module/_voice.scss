@@ -5,12 +5,12 @@
   position: relative;
 
 @include mq(md) {
-  padding-block:rem(139) rem(137);
+  padding-block:rem(136) rem(137);
 }
 }
 
 .voice__inner {
-  max-width: calc($inner + $padding-pc * 2);//1080+20*2
+  max-width: calc($inner + $padding-sp * 2);//1080+20*2
   padding-inline: rem(15);
   margin-inline: auto;
   position: relative;
@@ -52,7 +52,7 @@
 @include mq(md) {
   display: block;
   position: absolute;
-  bottom: rem(-67);
+  bottom: rem(-69);
   right: rem(21);
   width: rem(71);
   // height: 100%;

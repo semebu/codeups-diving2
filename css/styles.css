@@ -191,7 +191,7 @@ select::-ms-expand {
 }
 
 .about__inner {
-  max-width: 1130px;
+  max-width: 1120px;
   padding-inline: 15px;
   padding-inline: 0.9375rem;
   margin: 0 auto;
@@ -1000,6 +1000,14 @@ select::-ms-expand {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .campaign__arrow__wrapper {
+    position: absolute;
+    top: -5.9375rem;
+    right: 0.6875rem;
+  }
+}
+
 .campaign__arrows {
   position: relative;
   z-index: 2;
@@ -1086,7 +1094,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .campaign__button {
-    margin-top: 5rem;
+    margin-top: 4.375rem;
   }
 }
 
@@ -1181,7 +1189,7 @@ select::-ms-expand {
         -ms-flex-direction: row;
             flex-direction: row;
     border-right: 0.0625rem solid #4e7f85;
-    max-width: 67.5rem;
+    max-width: 67.6875rem;
     gap: 0rem;
     background: #fff;
     -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, .25);
@@ -1239,6 +1247,7 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .contact__title {
     margin-inline: auto;
+    margin-bottom: 0.125rem;
     width: 12.5rem;
   }
   .contact__title a {
@@ -1912,8 +1921,8 @@ select::-ms-expand {
       -ms-flex-align: center;
           align-items: center;
   margin-inline: auto;
-  max-width: 1360px;
-  max-width: 85rem;
+  max-width: 1396px;
+  max-width: 87.25rem;
   width: 100%;
   height: inherit;
 }
@@ -2222,8 +2231,8 @@ select::-ms-expand {
           flex-direction: column;
   gap: 0px;
   gap: 0rem;
-  max-width: 1080px;
-  max-width: 67.5rem;
+  max-width: 1087px;
+  max-width: 67.9375rem;
 }
 @media screen and (min-width: 768px) {
   .information__content {
@@ -2296,7 +2305,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .information__text {
-    margin-top: 0.5rem;
+    margin-top: 0.625rem;
   }
 }
 
@@ -2437,7 +2446,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .price {
-    padding: 6.25rem 0rem;
+    padding: 6.125rem 0rem;
   }
 }
 
@@ -2524,8 +2533,8 @@ select::-ms-expand {
     background-repeat: no-repeat;
     width: 27.3125rem;
     height: 12.5625rem;
-    bottom: -11rem;
-    left: -5.0625rem;
+    bottom: -10.5625rem;
+    left: -4.6875rem;
   }
 }
 
@@ -2573,6 +2582,7 @@ select::-ms-expand {
   .price__category-title {
     margin-bottom: 0.125rem;
     padding-bottom: 0.25rem;
+    padding-left: 0.4375rem;
   }
 }
 
@@ -2591,12 +2601,12 @@ select::-ms-expand {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 3px 0 0;
-  padding: 0.1875rem 0 0;
+  padding: 3px 0px 0px;
+  padding: 0.1875rem 0rem 0rem;
 }
 @media screen and (min-width: 768px) {
   .price__item {
-    padding: 0;
+    padding: 0rem 0rem 0rem 0.4375rem;
   }
 }
 
@@ -2706,7 +2716,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .price__button {
-    margin-top: 5rem;
+    margin-top: 4.4375rem;
   }
 }
 .price__button a:hover {
@@ -2929,7 +2939,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .voice-card {
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 1.6875rem;
     overflow: hidden;
     max-width: 32.5rem;
   }
@@ -3144,12 +3154,12 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .voice {
-    padding-block: 8.6875rem 8.5625rem;
+    padding-block: 8.5rem 8.5625rem;
   }
 }
 
 .voice__inner {
-  max-width: 1130px;
+  max-width: 1120px;
   padding-inline: 15px;
   padding-inline: 0.9375rem;
   margin-inline: auto;
@@ -3212,7 +3222,7 @@ select::-ms-expand {
   .voice__decoration {
     display: block;
     position: absolute;
-    bottom: -4.1875rem;
+    bottom: -4.3125rem;
     right: 1.3125rem;
     width: 4.4375rem;
   }

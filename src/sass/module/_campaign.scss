@@ -80,6 +80,14 @@
   }
 }
 
+.campaign__arrow__wrapper {
+  @include mq(md) {
+    position: absolute;
+    top: rem(-95);
+    right: rem(11);
+  }
+}
+
 .campaign__arrows {
   position: relative;
   z-index: 2;
@@ -150,7 +158,7 @@
    text-align: center;
 
   @include mq(md) {
-    margin-top: rem(80);
+    margin-top: rem(70);
   }
 }
 

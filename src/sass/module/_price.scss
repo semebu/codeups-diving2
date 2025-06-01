@@ -5,7 +5,7 @@
   background-color: $light-green;
 
   @include mq(md) {
-    padding: rem(100) rem(0);
+    padding: rem(98) rem(0);
   }
 }
 
@@ -74,8 +74,8 @@ margin-bottom: rem(40);
       background-repeat: no-repeat;
       width: rem(437);
       height: rem(201);
-      bottom: rem(-176);
-      left: rem(-81);
+      bottom: rem(-169);
+      left: rem(-75);
     }
   }
 }
@@ -114,6 +114,7 @@ margin-bottom: rem(40);
   @include mq(md) {
     margin-bottom: rem(2);
     padding-bottom: rem(4);
+    padding-left: rem(7);
   }
 }
 
@@ -127,10 +128,10 @@ margin-bottom: rem(40);
   // flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: rem(3) 0 0;
+  padding: rem(3) rem(0) rem(0);
 
   @include mq(md) {
-    padding: 0;
+    padding: rem(0) rem(0) rem(0) rem(7);
   }
 }
 
@@ -227,7 +228,7 @@ color: $font-color;
   text-align: center;
 
   @include mq(md) {
-    margin-top: rem(80);
+    margin-top: rem(71);
   }
 
   a {
