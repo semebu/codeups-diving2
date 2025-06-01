@@ -86,36 +86,29 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: rem(36);
-  // column-gap: rem(19);
   margin-top: rem(39);
-  // display: flex;
-  // flex-direction: column;
-  // gap: rem(40);
+
+  // 並び順を調整（SP時：HTML順は 1, 2, 3, 4）
+  .footer__list:nth-of-type(1) { order: 1; } // キャンペーン
+  .footer__list:nth-of-type(2) { order: 3; } // お客様の声 → 本来3番目に出したい
+  .footer__list:nth-of-type(3) { order: 2; } // ダイビング情報 → 本来2番目に出したい
+  .footer__list:nth-of-type(4) { order: 4; } // よくある質問
 
   @include mq(md) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-right: rem(69);
     gap: rem(88);
-  }
-  // margin-top: rem(40);
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-  // flex-wrap: wrap;
-  // max-width: rem(368);
-  // margin-inline: auto;
 
-  // @include mq(md) {
-  //   max-width: rem(1080);
-  //   margin-top: rem(24);
-  //   gap: rem(21);
-  // }
+      // PCではHTML順通りでOKなので order は不要
+    .footer__list:nth-of-type(n) { order: initial; }
+  }
+
    // 並び順を調整（SP時）
-  .footer__list:nth-of-type(1) { order: 1; }
-  .footer__list:nth-of-type(3) { order: 2; }
-  .footer__list:nth-of-type(2) { order: 3; }
-  .footer__list:nth-of-type(4) { order: 4; }
+  // .footer__list:nth-of-type(1) { order: 1; }
+  // .footer__list:nth-of-type(3) { order: 2; }
+  // .footer__list:nth-of-type(2) { order: 3; }
+  // .footer__list:nth-of-type(4) { order: 4; }
 }
 
 
