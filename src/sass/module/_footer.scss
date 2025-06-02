@@ -97,7 +97,7 @@
   @include mq(md) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin-right: rem(69);
+    margin-right: rem(47);
     gap: rem(88);
 
       // PCではHTML順通りでOKなので order は不要

@@ -20,6 +20,7 @@ body {
 }
 
 html {
+  height: 100%;
   font-size: 16px;
 }
 @media (max-width: 375px) {
@@ -39,6 +40,7 @@ html {
 }
 
 body {
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -1726,7 +1728,7 @@ select::-ms-expand {
   .footer__nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin-right: 4.3125rem;
+    margin-right: 2.9375rem;
     gap: 5.5rem;
   }
   .footer__nav .footer__list:nth-of-type(n) {
@@ -2364,7 +2366,20 @@ select::-ms-expand {
   overflow: hidden;
 }
 
+.mv {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .mv {
+    height: 100vh;
+  }
+}
+
 .mv__swiper-slide {
+  height: 100vh;
   position: relative;
 }
 
