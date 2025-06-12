@@ -58,12 +58,14 @@ jQuery('a[href^="#"]').on("click",function(e) {
     drawer?.classList.add("js-show");
     drawerIcon?.classList.add("js-show");
     drawerLogo?.classList.add("is-show");
+    document.body.classList.add("no-scroll");
   };
 
   const closeMenu = () => {
     drawer?.classList.remove("js-show");
     drawerIcon?.classList.remove("js-show");
     drawerLogo?.classList.remove("is-show");
+    document.body.classList.remove("no-scroll");
     isMenuOpen = false;
   };
 
@@ -214,7 +216,7 @@ $(function () {
   // ============================
   const mvSwiper = new Swiper('.mv__swiper', { // swiperの名前
   // 切り替えのモーション
-  speed: 1000, // 表示切り替えのスピード
+  speed: 10000000, // 表示切り替えのスピード
   effect: "fade", // 切り替えのmotion (※1)
   fadeEffect: {
         crossFade: true

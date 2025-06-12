@@ -28,7 +28,7 @@
   height: inherit;
 
   @include mq(md) {
-    padding-inline:rem(20);
+    padding-inline:rem(40);
     justify-content: space-between;
   }
 }

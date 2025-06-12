@@ -934,7 +934,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .campaign {
-    padding-top: 120px;
+    margin-top: 120px;
     padding-left: 0.9375rem;
   }
 }
@@ -1151,14 +1151,14 @@ select::-ms-expand {
 }
 
 .contact {
-  padding-block: 0px;
-  padding-block: 0rem;
+  margin-block: 0px;
+  margin-block: 0rem;
   position: relative;
   background-color: #fff;
 }
 @media screen and (min-width: 768px) {
   .contact {
-    padding-block: 8.75rem;
+    margin-block: 8.75rem;
   }
 }
 
@@ -1936,7 +1936,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .header__inner {
-    padding-inline: 1.25rem;
+    padding-inline: 2.5rem;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -2395,7 +2395,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .mv__text {
-    top: 49.5%;
+    top: 42.5%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -2434,6 +2434,11 @@ select::-ms-expand {
     margin-top: -0.5625rem;
     font-size: 1.25rem;
   }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .pagetop {
@@ -2932,7 +2937,7 @@ select::-ms-expand {
 }
 .swiper__img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 

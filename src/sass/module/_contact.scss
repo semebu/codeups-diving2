@@ -1,12 +1,12 @@
 @use "global" as *;
 
 .contact {
-  padding-block: rem(0);
+  margin-block: rem(0);
   position: relative;
   background-color: $white;
   
   @include mq(md) {
-  padding-block: rem(140);
+  margin-block: rem(140);
 }
 }
 
