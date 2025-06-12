@@ -539,6 +539,9 @@ select::-ms-expand {
   padding-top: 5.0625rem;
   padding-inline: 20px;
   padding-inline: 1.25rem;
+  max-width: 1080px;
+  max-width: 67.5rem;
+  margin-inline: auto;
   position: relative;
 }
 @media screen and (min-width: 768px) {
