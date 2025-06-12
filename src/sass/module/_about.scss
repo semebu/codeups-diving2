@@ -1,12 +1,12 @@
 @use "global" as *;
 
 .about {
-padding-top: rem(36);
-padding-bottom: rem(66);
+margin-top: rem(36);
+margin-bottom: rem(66);
 
 @include mq(md) {
-  padding-top: rem(117);
-  padding-bottom: rem(73);
+  margin-top: rem(117);
+  margin-bottom: rem(73);
   }
 }
 

@@ -180,15 +180,15 @@ select::-ms-expand {
 }
 
 .about {
-  padding-top: 36px;
-  padding-top: 2.25rem;
-  padding-bottom: 66px;
-  padding-bottom: 4.125rem;
+  margin-top: 36px;
+  margin-top: 2.25rem;
+  margin-bottom: 66px;
+  margin-bottom: 4.125rem;
 }
 @media screen and (min-width: 768px) {
   .about {
-    padding-top: 7.3125rem;
-    padding-bottom: 4.5625rem;
+    margin-top: 7.3125rem;
+    margin-bottom: 4.5625rem;
   }
 }
 
@@ -923,8 +923,8 @@ select::-ms-expand {
 .campaign {
   background-color: #fff;
   position: relative;
-  padding-top: 40px;
-  padding-top: 2.5rem;
+  margin-top: 40px;
+  margin-top: 2.5rem;
   padding-left: 0px;
   padding-left: 0rem;
   overflow: visible;
@@ -1928,8 +1928,6 @@ select::-ms-expand {
       -ms-flex-align: center;
           align-items: center;
   margin-inline: auto;
-  max-width: 1396px;
-  max-width: 87.25rem;
   width: 100%;
   height: inherit;
 }
