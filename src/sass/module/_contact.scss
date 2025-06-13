@@ -68,7 +68,8 @@
   display: flex;
   flex-direction: column;
   gap: rem(5);
-  padding: rem(78) rem(82) rem(72) rem(50);
+  padding-block: rem(78) rem(72);
+  padding-left: rem(0);
   }
 }
 
@@ -106,6 +107,10 @@
     gap: rem(21);
     border-top: rem(1) solid $green;
     padding-top: rem(24);
+    justify-content: center;
+    max-width: rem(440);
+    margin-inline: auto;
+    overflow: hidden;
   }
 }
 
@@ -114,12 +119,12 @@
   border-top: rem(1) solid $green;
   padding-top: rem(16);
   color: $font-color;
-  
+
   @include mq(md) {
     border-top: none;
     text-align: left;
     padding-top: rem(0);
-    min-width: rem(104);
+    min-width: rem(145);
   }
 }
 
@@ -150,7 +155,7 @@
 
   iframe {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
 }
 
