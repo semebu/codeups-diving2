@@ -41,7 +41,7 @@ color: $white;
 text-align: center;
 
 @include mq(md) {
-  top: 42.5%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

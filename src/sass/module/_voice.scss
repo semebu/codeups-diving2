@@ -1,11 +1,11 @@
 @use "../global" as *;
 
 .voice {
-  padding-block: rem(76);
+  margin-block: rem(76);
   position: relative;
 
 @include mq(md) {
-  padding-block:rem(136) rem(137);
+  margin-block:rem(136) rem(137);
 }
 }
 
