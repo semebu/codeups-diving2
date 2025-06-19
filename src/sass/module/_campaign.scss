@@ -4,25 +4,25 @@
   background-color: $white;
   position: relative;
   margin-top: rem(40);
-  padding-left: rem(0);
+  // padding-left: rem(0);
   overflow: visible;
   
   @include mq(md) {
     margin-top: 120px;
-    padding-left: rem(15);
+    // padding-left: rem(15);
   }
 }
 
-.campaign__inner {
-  max-width: calc($inner + $padding-pc * 2);//1080+20*2
-  padding-inline: rem(0);
-  margin: 0 auto;
-  overflow: visible;
+// .campaign__inner {
+//   max-width: calc($inner + $padding-pc * 2);//1080+20*2
+//   padding-inline: rem(0);
+//   margin: 0 auto;
+//   overflow: visible;
 
-  @include mq(md) {
-    padding-inline: rem(20);
-  }
-}
+//   @include mq(md) {
+//     padding-inline: rem(20);
+//   }
+// }
 
 .campaign__outer {
   position: relative;

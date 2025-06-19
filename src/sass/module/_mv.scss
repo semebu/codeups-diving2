@@ -49,15 +49,15 @@ text-align: center;
 
 .mv__maintext {
   font-size: rem(40);
-  letter-spacing: rem(21.6);
+  text-indent: .54em;
+  letter-spacing: .54em;
   font-family: $eg2-font-family;
   font-weight: $normal;
-  padding-left: rem(19);
   
   @include mq(md) {
-    padding-left: rem(39);
+    // padding-left: rem(39);
     font-size: rem(80);
-    letter-spacing: rem(41.6);
+    // text-indent: .54em;
   }
 }
 

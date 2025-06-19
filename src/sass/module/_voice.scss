@@ -31,6 +31,8 @@
   @include mq(md) {
     margin-top: rem(29);
     flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
   }
 }
 .voice__decoration--top {

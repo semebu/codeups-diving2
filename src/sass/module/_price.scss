@@ -207,18 +207,12 @@ color: $font-color;
 
   img {
     width: 100%;
-    // opacity: 0;
-    // height: auto;
+    height: 100%;
     transition: opacity 0.3s ease;
     display: block;
-    aspect-ratio: 345/227;
     object-fit: cover;
 
     @include mq(md) {
-      width: rem(492);
-      height: rem(746);
-      aspect-ratio: 746/492;
-      object-fit: cover;
     }
     }
   }
